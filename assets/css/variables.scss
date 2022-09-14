@@ -1,0 +1,50 @@
+@import "animations";
+
+$small-width: 640px;
+$large-width: 1024px;
+$huge-width: 1281px;
+
+$borderWidth: 4px;
+
+:root {
+	--backRGB: 255, 255, 255;
+	--frontRGB: 0, 0, 0;
+
+	--front-r: 0;
+	--front-g: 0;
+	--front-b: 0;
+
+	--back-r: 255;
+	--back-g: 255;
+	--back-b: 255;
+
+	--back: #ffffff;
+	--front: #000000;
+
+	--borderOpacity: 0.07;
+
+	--primary: #FA6800;
+	--secondary: #145AC8;
+
+	--primaryDark: #EE6300;
+
+	--siteBackground: #FAECDF;
+
+	--green: #03B96C;
+	--blue: #3380FF;
+}
+
+.-dark {
+	--back: #000000;
+	--front: #ffffff;
+	
+	--backRGB: 0, 0, 0;
+	--frontRGB: 255, 255, 255;
+
+	--borderOpacity: 0.14;
+
+	--primary: #FA6800;
+	--secondary: #145AC8;
+
+	--siteBackground: #080808;
+}

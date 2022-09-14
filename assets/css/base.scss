@@ -1,0 +1,117 @@
+@import "mixins";
+
+html {
+  font-family: 'Noto Sans', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Noto Sans', serif;
+  }
+}
+
+body {
+  background-color: var(--siteBackground);
+  transition: all 100ms $ease;
+
+  &.-dark {
+
+  }
+}
+
+html, 
+p {
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(var(--frontRGB), 0.75);
+}
+
+// Headers
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.-h1,
+.-h2,
+.-h3,
+.-h4,
+.-h5,
+.-h6 {
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--front);
+}
+
+h1, 
+.-h1 {
+	@include r('font-size', 64, 64);
+}
+
+h2, 
+.-h2 {
+	@include r('font-size', 48, 48);
+}
+
+h3, 
+.-h3 {
+	@include r('font-size', 32, 32);
+}
+
+h4, 
+.-h4 {
+	@include r('font-size', 26, 26);
+}
+
+h5, 
+.-h5 {
+	@include r('font-size', 22, 22);
+}
+
+h6, 
+.-h6 {
+	@include r('font-size', 18, 18);
+}
+
+// Body
+
+.-p1,
+.-p2,
+.-p3,
+.-p4,
+.-p5,
+.-p6 {
+  margin: 0;
+  font-weight: 300;
+  color: var(--front);
+}
+
+.-p1 {
+	@include r('font-size', 27, 27);
+}
+
+.-p2 {
+	@include r('font-size', 24, 24);
+}
+
+.-p3 {
+	@include r('font-size', 20, 20);
+}
+
+.-p4 {
+	@include r('font-size', 16, 16);
+}
+
+.-p5 {
+	@include r('font-size', 14, 14);
+}
+
+.-p6 {
+	@include r('font-size', 12, 12);
+}
