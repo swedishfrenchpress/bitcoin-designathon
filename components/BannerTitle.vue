@@ -431,7 +431,8 @@
 export default {
 
   props: [
-    'palette'
+    'palette',
+    'moving'
   ],
 
   data() {
@@ -462,6 +463,10 @@ export default {
       const c = [
         'banner-title'
       ]
+
+      if(this.moving) {
+        c.push('-moving')
+      }
 
       return c.join(' ')
     },
@@ -524,109 +529,129 @@ export default {
   #hf, #hs,
   #of, #os,
   #nf2, #ns2 {
-    animation: letter-hover 5018ms ease-in-out infinite;
+    // animation: letter-hover 5018ms ease-in-out infinite;
 
     .wrap {
       transform-origin: center center;
-      animation: bubble 2000ms $easeOutBack;
+      // animation: bubble 2000ms $easeOutBack;
     }
   }
 
-  #df, #ds {
-    animation-duration: 5000ms;
+  &.-moving {
+    #df, #ds,
+    #ef, #es,
+    #sf, #ss,
+    #if, #is,
+    #gf, #gs,
+    #nf, #ns,
+    #af, #as,
+    #tf, #ts,
+    #hf, #hs,
+    #of, #os,
+    #nf2, #ns2 {
+      animation: letter-hover 5018ms ease-in-out infinite;
 
-    .wrap {
-      animation-delay: 250ms;
+      .wrap {
+        animation: bubble 2000ms $easeOutBack;
+      }
     }
-  }
 
-  #ef, #es {
-    animation-duration: 4837ms;
-    animation-delay: -1200ms;
+    #df, #ds {
+      animation-duration: 5000ms;
 
-    .wrap {
-      animation-delay: 200ms;
+      .wrap {
+        animation-delay: 250ms;
+      }
     }
-  }
 
-  #sf, #ss {
-    animation-duration: 5200ms;
-    animation-delay: -450ms;
+    #ef, #es {
+      animation-duration: 4837ms;
+      animation-delay: -1200ms;
 
-    .wrap {
-      animation-delay: 150ms;
+      .wrap {
+        animation-delay: 200ms;
+      }
     }
-  }
 
-  #if, #is {
-    animation-duration: 5100ms;
-    animation-delay: -3300ms;
+    #sf, #ss {
+      animation-duration: 5200ms;
+      animation-delay: -450ms;
 
-    .wrap {
-      animation-delay: 100ms;
+      .wrap {
+        animation-delay: 150ms;
+      }
     }
-  }
 
-  #gf, #gs {
-    animation-duration: 4900ms;
-    animation-delay: -1276ms;
+    #if, #is {
+      animation-duration: 5100ms;
+      animation-delay: -3300ms;
 
-    .wrap {
-      animation-delay: 50ms;
+      .wrap {
+        animation-delay: 100ms;
+      }
     }
-  }
 
-  #nf, #ns {
-    animation-duration: 5300ms;
-    animation-delay: -1589ms;
+    #gf, #gs {
+      animation-duration: 4900ms;
+      animation-delay: -1276ms;
 
-    .wrap {
-
+      .wrap {
+        animation-delay: 50ms;
+      }
     }
-  }
 
-  #af, #as {
-    animation-duration: 5050ms;
-    animation-delay: -4761ms;
+    #nf, #ns {
+      animation-duration: 5300ms;
+      animation-delay: -1589ms;
 
-    .wrap {
-      animation-delay: 50ms;
+      .wrap {
+
+      }
     }
-  }
 
-  #tf, #ts {
-    animation-duration: 4850ms;
-    animation-delay: -3651ms;
+    #af, #as {
+      animation-duration: 5050ms;
+      animation-delay: -4761ms;
 
-    .wrap {
-      animation-delay: 100ms;
+      .wrap {
+        animation-delay: 50ms;
+      }
     }
-  }
 
-  #hf, #hs {
-    animation-duration: 5125ms;
-    animation-delay: -1786ms;
+    #tf, #ts {
+      animation-duration: 4850ms;
+      animation-delay: -3651ms;
 
-    .wrap {
-      animation-delay: 150ms;
+      .wrap {
+        animation-delay: 100ms;
+      }
     }
-  }
 
-  #of, #os {
-    animation-duration: 4812ms;
-    animation-delay: -2653ms;
+    #hf, #hs {
+      animation-duration: 5125ms;
+      animation-delay: -1786ms;
 
-    .wrap {
-      animation-delay: 200ms;
+      .wrap {
+        animation-delay: 150ms;
+      }
     }
-  }
 
-  #nf2, #ns2 {
-    animation-duration: 5018ms;
-    animation-delay: -198ms;
+    #of, #os {
+      animation-duration: 4812ms;
+      animation-delay: -2653ms;
 
-    .wrap {
-      animation-delay: 250ms;
+      .wrap {
+        animation-delay: 200ms;
+      }
+    }
+
+    #nf2, #ns2 {
+      animation-duration: 5018ms;
+      animation-delay: -198ms;
+
+      .wrap {
+        animation-delay: 250ms;
+      }
     }
   }
 }

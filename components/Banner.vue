@@ -12,6 +12,7 @@
       />
       <BannerTitle
         :palette="palette"
+        :moving="moving"
         @hoverLetter="hoverLetter"
         @unhoverLetter="unhoverLetter"
       />
@@ -85,7 +86,7 @@ export default {
 
     this.onResize()
 
-    setTimeout(this.animate.bind(this), 5)
+    setTimeout(this.animate.bind(this), 100)
   },
 
   computed: {
@@ -178,7 +179,7 @@ export default {
       @include r('height', 120, 160);
       margin: 0;
       @include r('margin-bottom', 20, 40);
-      transition: all 400ms $easeOutBack;
+      transition: all 600ms $easeOutBack;
       transform: translateY(50px);
       opacity: 0;
     }
@@ -189,7 +190,7 @@ export default {
       @include r('font-size', 18, 27);
       text-align: center;
       color: #3F3B38;
-      transition: all 400ms $easeOutBack;
+      transition: all 600ms $easeOutBack;
       transform: translateY(-50px);
       opacity: 0;
     }
@@ -198,6 +199,11 @@ export default {
       display: flex;
       gap: 30px;
       @include r('margin-top', 40, 40);
+      transition:
+        background-color 150ms ease-in-out,
+        transform 600ms $easeOutBack;
+      transform: translateY(-100px);
+      opacity: 0;
 
       a {
         display: inline-block;
@@ -209,11 +215,6 @@ export default {
         font-weight: 900;
         padding: 5px 50px 6px 50px;
         color: black;
-        transition:
-          background-color 150ms ease-in-out,
-          transform 400ms $easeOutBack;
-        transform: translateY(-100px);
-        opacity: 0;
 
         svg {
           width: 25px;
@@ -293,10 +294,10 @@ export default {
       }
 
       .options {
-        a {
-          opacity: 1;
-          transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
 
+        a {
           &:hover {
             // transform: scale(1.05, 1.05);
             animation: buttonHover 500ms infinite $easeInOutSine alternate-reverse;
