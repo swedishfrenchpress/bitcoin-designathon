@@ -6,10 +6,12 @@
       :isMobile="isMobile"
     />
     <div class="title">
-      <img
-        src="~/assets/images/seal.svg"
-        alt="Bitcoin design community logo"
-      />
+      <a href="https://bitcoin.design" title="Bitcoin Design">
+        <img
+          src="~/assets/images/seal.svg"
+          alt="Bitcoin design community logo"
+        />
+      </a>
       <BannerTitle
         :palette="palette"
         :moving="moving"
@@ -174,14 +176,17 @@ export default {
     align-items: center;
     justify-content: center;
 
-    img {
-      @include r('width', 120, 160);
-      @include r('height', 120, 160);
+    > a {
       margin: 0;
       @include r('margin-bottom', 20, 40);
       transition: all 600ms $easeOutBack;
       transform: translateY(50px);
       opacity: 0;
+
+      img {
+        @include r('width', 120, 160);
+        @include r('height', 120, 160);
+      }
     }
 
     p {
@@ -283,7 +288,7 @@ export default {
 
   &.-moving {
     .title {
-      img {
+      > a {
         opacity: 1;
         transform: translateY(0);
       }
