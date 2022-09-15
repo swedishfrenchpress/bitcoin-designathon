@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <Banner :windowSize="windowSize" />
+    <Banner
+      :isMobile="isMobile"
+    />
     <IdeaList
       v-if="false"
       :ideas="ideas"
@@ -13,17 +15,20 @@
 export default {
 
   data() {
-    let windowSize
+    let windowSize, isMobile
 
     if(process.browser) {
       windowSize = {
         width: window.innerWidth,
         height: window.innerHeight
       }
+
+      isMobile = window.innerWidth < 640
     }
 
     return {
-      windowSize
+      windowSize,
+      isMobile: isMobile
     }
   },
 
@@ -58,6 +63,8 @@ export default {
           width: window.innerWidth,
           height: window.innerHeight
         }
+
+        this.isMobile = window.innerWidth < 640
       }
     }
   }

@@ -2,7 +2,8 @@
   <div :class="classObject" :style="styleObject" ref="canvas">
     <BannerCircles
       :palette="palette"
-      :windowSize="bannerSize"
+      :bannerSize="bannerSize"
+      :isMobile="isMobile"
     />
     <div class="title">
       <img
@@ -27,7 +28,7 @@
 export default {
 
   props: [
-    'windowSize'
+    'isMobile'
   ],
 
   data() {
@@ -147,6 +148,7 @@ export default {
 
 .banner {
   position: relative;
+  overflow-x: hidden;
 
   .title {
     position: absolute;
@@ -160,8 +162,8 @@ export default {
     justify-content: center;
 
     img {
-      @include r('width', 50, 140);
-      @include r('height', 50, 140);
+      @include r('width', 120, 160);
+      @include r('height', 120, 160);
       margin: 0;
       @include r('margin-bottom', 20, 40);
       transition: all 400ms $easeOutBack;
@@ -208,6 +210,16 @@ export default {
         height: calc(100% + 16px);
         pointer-events: none;
         border-radius: 1000px;
+        transition: all 150ms ease-in-out;
+      }
+
+      &:hover {
+        &:before {
+          left: -6px;
+          top: -6px;
+          width: calc(100% + 8px);
+          height: calc(100% + 8px);
+        }
       }
     }
   }
@@ -242,6 +254,10 @@ export default {
       a {
         opacity: 1;
         transform: translateY(0);
+
+        &:hover {
+          transform: scale(1.05, 1.05);
+        }
       }
     }
   }

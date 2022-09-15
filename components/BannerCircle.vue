@@ -11,7 +11,7 @@ export default {
 
   props: [
     'info',
-    'windowSize',
+    'bannerSize',
     'palette'
   ],
 
@@ -64,12 +64,12 @@ export default {
         transitionDuration: this.info.duration+'ms'
       }
 
-      let x = Math.round(this.windowSize.width * this.info.startX)
-      let y = Math.round(this.windowSize.height * this.info.startY)
+      let x = Math.round(this.bannerSize.width * this.info.startX)
+      let y = Math.round(this.bannerSize.height * this.info.startY)
 
       if(this.moving) {
-        x = Math.round(this.windowSize.width * this.info.endX)
-        y = Math.round(this.windowSize.height * this.info.endY)
+        x = Math.round(this.bannerSize.width * this.info.endX)
+        y = Math.round(this.bannerSize.height * this.info.endY)
       }
 
       result.transform = 'translate('+x+'px, '+y+'px)'
@@ -99,8 +99,8 @@ export default {
       }
 
       if(this.moving) {
-        result.width = Math.round(this.info.size * this.windowSize.width)+'px'
-        result.height = Math.round(this.info.size * this.windowSize.width)+'px'
+        result.width = Math.round(this.info.size * this.bannerSize.width)+'px'
+        result.height = Math.round(this.info.size * this.bannerSize.width)+'px'
       }
 
       return result

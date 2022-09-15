@@ -1,11 +1,11 @@
 <template>
   <div :class="classObject">
     <BannerCircle
-      v-if="windowSize"
+      v-if="bannerSize"
       v-for="info in circles"
       :key="'stuff_'+info.id"
       :info="info"
-      :windowSize="windowSize"
+      :bannerSize="bannerSize"
       :palette="palette"
       @die="circleDeath"
     />
@@ -17,7 +17,8 @@ export default {
 
   props: [
     'palette',
-    'windowSize'
+    'bannerSize',
+    'isMobile'
   ],
 
   data() {
@@ -54,9 +55,15 @@ export default {
       const xRange = 0.1
       const yRange = 0.05
       const xEndRange = 0.8
-      const yEndRange = 0.4
-      const sizeMin = 0.05
-      const sizeMax = 0.25
+      let yEndRange = 0.4
+      let sizeMin = 0.05
+      let sizeMax = 0.25
+
+      if(this.isMobile) {
+        sizeMin = 0.1
+        sizeMax = 0.5
+        yEndRange = 0.8
+      }
 
       const data = {
         id: id,

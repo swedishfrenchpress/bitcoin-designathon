@@ -503,6 +503,12 @@ export default {
     height : auto;
   }
 
+  @include media-query(small) {
+    svg {
+      width: 90vw;
+    }
+  }
+
   path {
     transition: fill 150ms ease-in-out;
   }
