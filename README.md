@@ -1,4 +1,4 @@
-# bitcoin-designathon
+# Bitcoin Designathon 2020
 
 Use node version 16.13.0.
 
