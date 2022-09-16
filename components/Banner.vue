@@ -43,7 +43,8 @@
 export default {
 
   props: [
-    'isMobile'
+    'isMobile',
+    'palette'
   ],
 
   data() {
@@ -59,26 +60,8 @@ export default {
       }
     }
 
-    /*
-
-    1-3 for circles and letters
-    4 for letter outline
-    5 for background
-    6 general light/dark theme
-
-     */
-    const palettes = [
-      ['#E88BCA', '#B1F5FD', '#E63E2A', '#E63E2A'],
-      ['#A64AC9', '#FFB38F', '#FD6E23', '#FFFFFF', '#1F185B', 'dark'],
-      ['#EA2E00', '#16A9E1', '#17E9E0', '#FFFFFF'],
-      ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF']
-    ]
-
     return {
       moving: false,
-      hoveredLetter: null,
-      palettes,
-      palette: palettes[0],
       bannerSize
     }
   },
@@ -110,7 +93,7 @@ export default {
       const s = {}
 
       if(this.palette.length > 4) {
-        s.backgroundColor = this.palette[4]
+        // s.backgroundColor = this.palette[4]
       }
 
       return s
@@ -141,15 +124,11 @@ export default {
     },
 
     hoverLetter(letter) {
-      this.hoveredLetter = letter
-
-      this.palette = this.palettes[letter%this.palettes.length]
+      this.$emit('hoverLetter', letter);
     },
 
     unhoverLetter(letter) {
-      if(this.hoveredLetter == letter) {
-        this.hoveredLetter = null
-      }
+      this.$emit('unhoverLetter', letter);
     }
   }
 
@@ -162,11 +141,12 @@ export default {
 @import "@/assets/css/mixins.scss";
 
 .banner {
-  position: relative;
-  overflow-x: hidden;
+  // position: relative;
+  // overflow-x: hidden;
+  // overflow-y: visible;
 
   .title {
-    position: absolute;
+    // position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -175,6 +155,15 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    @include media-query(small) {
+      min-height: 600px;
+    }
+
+    @include media-query(medium-up) {
+      min-height: 900px;
+    }
 
     > a {
       margin: 0;

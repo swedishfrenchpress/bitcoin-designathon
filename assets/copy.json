@@ -1,0 +1,60 @@
+{
+  "info": {
+    "title": "Hi there!",
+    "description": "Sometimes it’s good to forget about the day-to-day for a moment and take time to tinker. In this designathon we invite you to stretch your creative side in new and different ways. Explore a creative concept you’ve had lingering in your mind. Design something for your favorite bitcoin project. Learn a new tool or technology. Help someone else with your interests and expertise. Up to you."
+  },
+  "sponsors": {
+    "title": "Interested in sponsoring?",
+    "description": "You are free to work on whatever you find interesting (as long as it’s related to bitcoin somehow). If you’re not quite sure yet, here are some ideas. If nothing sticks out, just join a team and dive into something new.",
+    "link": "https://bitcoin.design",
+    "linkLabel": "Sponsor info"
+  },
+  "questions": {
+    "title": "Questions?",
+    "questions": [
+      {
+        "q": "What’s a designathon?",
+        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+      },
+      {
+        "q": "Who can take part?",
+        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+      },
+      {
+        "q": "How will projects be judged?",
+        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+      },
+      {
+        "q": "What will we be doing?",
+        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Co-mingle",
+    "description": "The designathon starts at the same time as several other events. Those are great opportunities to meet others, find interesting projects, help out, etc.",
+    "partners": [
+      {
+        "image": "legends-of-lightning.jpg",
+        "retina": "legends-of-lightning@2x.jpg",
+        "name": "Legends of Lightning tournament",
+        "description": "Enter your project into this 2-month tournament and maybe win a big price of one bitcoin. Or if you are already part of the tournament, use the designathon to get design support.",
+        "link": "https://bitcoin.design"
+      },
+      {
+        "image": "tabconf.jpg",
+        "retina": "tabconf@2x.jpg",
+        "name": "TABConf",
+        "description": "Stephen will host a Bitcoin Design table at the TABConf Builder Day, which starts the same day as the designathon.",
+        "link": "https://bitcoin.design"
+      },
+      {
+        "image": "bitcoin-amsterdam.jpg",
+        "retina": "bitcoin-amsterdam@2x.jpg",
+        "name": "Bitcoin Amsterdam",
+        "description": "Several people in the Bitcoin Design Community will be attending this conference, which also starts the same day as the designathon.",
+        "link": "https://bitcoin.design"
+      }
+    ]
+  }
+}

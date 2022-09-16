@@ -104,12 +104,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/css/mixins.scss";
 
 .banner-circles {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  // height: 100vh;
+
+  @include media-query(small) {
+    min-height: 600px;
+  }
+
+  @include media-query(medium-up) {
+    min-height: 800px;
+  }
 }
 
 </style>
