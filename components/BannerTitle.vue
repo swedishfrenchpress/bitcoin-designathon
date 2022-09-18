@@ -529,6 +529,7 @@ export default {
   #hf, #hs,
   #of, #os,
   #nf2, #ns2 {
+    transform: scale(0.01, 0.01);
     // animation: letter-hover 5018ms ease-in-out infinite;
 
     .wrap {
