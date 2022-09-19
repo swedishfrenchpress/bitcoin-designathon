@@ -25,8 +25,19 @@ html,
 p {
   margin: 0;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.4;
+  letter-spacing: -0.01rem;
   color: rgba(var(--frontRGB), 0.75);
+}
+
+p {
+  b {
+    font-weight: 900;
+  }
+
+  a {
+    color: rgba(var(--frontRGB), 0.75);
+  }
 }
 
 // Headers
@@ -45,7 +56,8 @@ h6,
 .-h6 {
   margin: 0;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.2;
+  letter-spacing: -0.01rem;
   color: var(--front);
 }
 
@@ -114,4 +126,15 @@ h6,
 
 .-p6 {
 	@include r('font-size', 12, 12);
+}
+
+.-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  @include r('padding-left', 20, 50);
+  @include r('padding-right', 20, 50);
+  @include r('padding-top', 30, 50);
+  @include r('padding-bottom', 30, 50);
 }

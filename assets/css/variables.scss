@@ -32,6 +32,11 @@ $borderWidth: 4px;
 
 	--green: #03B96C;
 	--blue: #3380FF;
+
+	--palette-0: #E88BCA;
+	--palette-1: #B1F5FD;
+	--palette-2: #E63E2A;
+	--palette-3: #E63E2A;
 }
 
 .-dark {
@@ -47,4 +52,22 @@ $borderWidth: 4px;
 	--secondary: #145AC8;
 
 	--siteBackground: #080808;
+}
+
+.-palette-1 {
+	--palette-0: #A64AC9;
+	--palette-1: #FFB38F;
+	--palette-2: #FD6E23;
+}
+
+.-palette-2 {
+	--palette-0: #EA2E00;
+	--palette-1: #16A9E1;
+	--palette-2: #17E9E0;
+}
+
+.-palette-3 {
+	--palette-0: #EA2E00;
+	--palette-1: #9DBDB8;
+	--palette-2: #ffcaaf;
 }
