@@ -65,21 +65,21 @@
         "image": "legends-of-lightning.jpg",
         "retina": "legends-of-lightning@2x.jpg",
         "name": "Legends of Lightning tournament",
-        "description": "Enter your project into this 2-month tournament and maybe win a big price of one bitcoin. Or if you are already part of the tournament, use the designathon to get design support.",
+        "description": "Enter your project into this 2-month online global tournament and compete for prizes of up to ~$60,000 in bitcoin. Or if you are already part of the tournament, use the designathon to get design&nbsp;support.",
         "link": "https://bitcoin.design"
       },
       {
         "image": "tabconf.jpg",
         "retina": "tabconf@2x.jpg",
         "name": "TABConf",
-        "description": "Stephen will host a Bitcoin Design table at the TABConf Builder Day, which starts the same day as the designathon.",
+        "description": "Stephen will host a Bitcoin Design table at the TABConf Builder Day, which starts the same day as the designathon. Stop by and hack on your designathon&nbsp;project.",
         "link": "https://tabconf.com"
       },
       {
         "image": "bitcoin-amsterdam.jpg",
         "retina": "bitcoin-amsterdam@2x.jpg",
         "name": "Bitcoin Amsterdam",
-        "description": "Several people in the Bitcoin Design Community will be attending this conference, which also starts the same day as the designathon.",
+        "description": "Several members of the Bitcoin Design Community will be attending this conference, which also starts the same day as the designathon. Say hi and let's kick off the events&nbsp;together.",
         "link": "https://b.tc/conference/amsterdam"
       }
     ]

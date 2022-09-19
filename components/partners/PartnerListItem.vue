@@ -19,7 +19,7 @@
         rel="nofollow noindex"
       >{{ partner.name }}</a>
     </h3>
-    <p>{{ partner.description }}</p>
+    <p v-html="partner.description" />
   </div>
 </template>
 
