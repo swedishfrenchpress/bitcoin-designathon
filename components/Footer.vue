@@ -44,6 +44,11 @@ export default {
       a {
         color: var(--front);
         text-decoration: none;
+        transition: all 100ms $ease; 
+
+        &:hover {
+          color: var(--palette-0);
+        }
       }
     }
   }

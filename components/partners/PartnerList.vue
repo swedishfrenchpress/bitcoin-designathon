@@ -4,6 +4,7 @@
       v-for="(item, index) in partners"
       :key="index"
       :partner="item"
+      :palette="palette"
     />
   </div>
 </template>
@@ -12,7 +13,8 @@
 export default {
 
   props: [
-    'partners'
+    'partners',
+    'palette'
   ]
 
 }

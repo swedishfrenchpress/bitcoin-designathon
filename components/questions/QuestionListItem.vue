@@ -1,10 +1,24 @@
 <template>
-  <div :class="classObject">
-    <h3 role="button" @click="toggleExpand">
+  <div :class="classObject" v-if="!question.hidden">
+    <h3
+      role="button"
+      :aria-controls="'question_'+this.index"
+      :aria-expanded="expanded"
+      @click="toggleExpand"
+    >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.0781 10.7682L6.64018 18.6332C5.98886 19.176 5 18.7128 5 17.865L5 2.13504C5 1.2872 5.98886 0.824045 6.64018 1.36682L16.0781 9.23178C16.5579 9.63157 16.5579 10.3684 16.0781 10.7682Z" :fill="palette[0]" stroke="black"/>
         </svg>{{ question.q }}</h3>
-    <p v-if="expanded">{{ question.a }}</p>
+    <div
+      :id="'question_'+this.index"
+      :aria-hidden="expanded ? 'false' : 'true'"
+      :style="contentStyle"
+    >
+      <div
+        ref="content"
+        v-html="question.a"
+      />
+    </div>
   </div>
 </template>
 
@@ -13,7 +27,8 @@ export default {
 
   props: [
     'question',
-    'palette'
+    'palette',
+    'index'
   ],
 
   data() {
@@ -31,6 +46,16 @@ export default {
       }
 
       return c.join(' ')
+    },
+
+    contentStyle() {
+      let height = 0
+
+      if(this.expanded) {
+        height = this.$refs.content.offsetHeight
+      }
+
+      return { height: height + 'px' }
     }
   },
 
@@ -43,13 +68,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @import "@/assets/css/animations.scss";
 @import "@/assets/css/mixins.scss";
 
 .question-list-item {
-  border-top: 1px solid rgba(var(--frontRGB), 0.5);
+  border-top: 1px solid rgba(var(--frontRGB), 0.1);
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -58,9 +83,10 @@ export default {
   }
 
   h3 {
-    @include r('font-size', 18, 24);
+    @include r('font-size', 18, 21);
     font-weight: 900;
     cursor: pointer;
+    transition: all 100ms $ease;
 
     svg {
       margin-right: 10px;
@@ -71,13 +97,33 @@ export default {
         stroke: var(--front);
       }
     }
+
+    &:hover {
+      color: var(--palette-0);
+    }
   }
 
   p {
-    margin-top: 5px;
     padding-left: 30px;
-    @include r('font-size', 15, 22);
+    @include r('font-size', 15, 20);
     // color: #606060;
+  }
+
+  ul {
+    li {
+      & + li {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  > div {
+    overflow-y: hidden;
+    transition: height 400ms $ease;
+
+    > div {
+      padding-top: 10px;
+    }
   }
 
   &.-expanded {

@@ -1,10 +1,12 @@
 <template>
-  <a
+  <component
+    :is="componentType"
     :class="classObject"
     :style="styleObject"
     :href="link"
-    target="_blank"
-  >{{ label }}</a>
+    :target="target"
+    @click="click"
+  >{{ label }}</component>
 </template>
 
 <script>
@@ -16,6 +18,10 @@ export default {
     'color',
     'size'
   ],
+
+  mounted() {
+    console.log('pp', this.link, this.label)
+  },
 
   computed: {
     classObject() {
@@ -38,6 +44,20 @@ export default {
       }
 
       return s
+    },
+
+    componentType() {
+      return this.link ? 'a' : 'button'
+    },
+
+    target() {
+      return this.link ? '_blank' : null
+    }
+  },
+
+  methods: {
+    click() {
+      this.$emit('click')
     }
   }
 

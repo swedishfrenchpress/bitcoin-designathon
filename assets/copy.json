@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "Hi there!",
-    "description": "Sometimes it’s good to forget about the day-to-day for a moment and take time to tinker. In this designathon we invite you to stretch your creative side in new and different ways. Explore a creative concept you’ve had lingering in your mind. Design something for your favorite bitcoin project. Learn a new tool or technology. Help someone else with your interests and expertise. Up to you."
+    "description": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">bitcoin design community</a> is organising a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem."
   },
   "sponsors": {
     "title": "Interested in sponsoring?",
@@ -14,19 +14,35 @@
     "questions": [
       {
         "q": "What’s a designathon?",
-        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+        "a": "<p>Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!</p>"
       },
       {
-        "q": "Who can take part?",
-        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+        "q": "Who can take take part?",
+        "a": "<p>Anyone! Innovation is created by exploring creativity and this is exactly your place to do that. Feel free to stretch your creative side or explore a design concept that you’ve had.<br/><br/>We’d love to involve anyone that wants to take part, designers, developers, PM’s, consultants, total noobs. Everyone is welcome!</p>"
       },
       {
-        "q": "How will projects be judged?",
-        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+        "q": "When and where will it take place?",
+        "a": "<p>The bitcoin designathon will take place online between 12th-23rd October (Wed-Sun). All workshops, talks from day one will be streamed straight onto <a href=\"https://www.youtube.com/c/BitcoinDesign\" target=\"_blank\" rel=\"me\">Bitcoin Design Youtube Channel</a>, so you can join us live or catch up in your own time!<br/><br/>All communications, team building, news, updates, schedules, mentorship, and everything else will take place inside of <a href=\"https://bitcoindesign.slack.com/archives/C0402AVBLPQ\" target=\"_blank\" rel=\"me\">Bitcoin Design Slack channel</a>, feel free to hop in and say hi 👋 to other makers, begin forming teams, discussing project ideas.</p>"
       },
       {
         "q": "What will we be doing?",
-        "a": "Genesis block Merkle Tree block height, soft fork, difficulty stacking sats halvening peer-to-peer. Sats public key cryptocurrency digital signature wallet proof-of-work, genesis block private key? Outputs nonce electronic cash digital signature, outputs blocksize address, timestamp server. Peer-to-peer key pair whitepaper, consensus SHA-256 decentralized!"
+        "a": "<p>Our first few days will be dedicated to ensuring all makers are matched up in teams. You can also choose to work on your project alone, totally up to you! The remainder of the event will be free and open for you to explore your design creativity. Next to that there will be live workshops you can join such as how to do remote design sprints, Figma and UI Kit intro, research as well as some technical topics.<br/><br/>On the final day makers will submit their projects for review and will have a chance to present them live to the community as well as our judges.</p>"
+      },
+      {
+        "q": "This is my first time joining a hackathon, will there be help?",
+        "a": "<p>Our first few days of the designation will be dedicated to providing makers with some amazing workshops. Next to that we will also be providing guidance in terms of online tutorials and resources you can use to enjoy your design journey.<br/><br/>This should provide some good tools and resources for you to start designing and most importantly having fun! Next to that our <a href=\"https://bitcoindesign.slack.com/archives/C0402AVBLPQ\" target=\"_blank\" rel=\"me\">Slack channel</a> is always open for you to post your question and we will gladly direct you to any additional help you may need.</p>"
+      },
+      {
+        "q": "Looking for a team to hack with?",
+        "a": "<p>Looking for a team to hack with? Jump into our <a href=\"https://bitcoindesign.slack.com/archives/C0402AVBLPQ\" target=\"_blank\" rel=\"me\">Slack</a> and introduce yourself in our #team-building channel. Let other makers know who you are, where you’re from, what skills, resources, and time you can offer, plus what you’re excited to design!<br/><br/>Teams will organise themselves however we suggest organising your team with a variety of skill sets. Some of the team could be more design focussed, some more technical, artists, it totally depends on what you are working on. </p>"
+      },
+      {
+        "q": "How will projects be judged?",
+        "a": "<p>Design projects will be judged on the following criteria:</p><ul><li><p><b>🌈 Innovation</b><br/>The design should be something new and never seen before in the bitcoin space. This can be a brand new concept, or a fresh take on something we already know.</p></li><li><p><b>⚡ Bitcoin Integration</b><br/>The design should make intelligent use of bitcoin (and/or surrounding technologies like lightning).</p></li><li><p><b>👀 Open design</b><br/>Encouraging designers to work and collaborate in public. Has the team been transparent throughout their design journey?</p></li><li><p><b>✅ Execution</b><br/>Designers should focus on attention to detail. How well has the project been executed? How strong was their design process?</p></li><li><p><b>🍒 UI/UX Design</b><br/>The design follows good design principles and is well-crafted. How well has the application or feature been designed?</p></li><li><p><b>🔥 Je ne sais quoi</b><br/>The design should have an extra level of pizazz, personality, creativity, or coolness.</p></li>"
+      },
+      {
+        "q": "Is my idea appropriate for the designathon?",
+        "a": "<p>The bitcoin designation is open to anything your mind can imagine. If you have an idea in mind and are wondering if it would be a great fit for the designathon. Below you’ll find a list of idea categories which might help!</p><ul><li><p>Education</p></li><li><p>Games</p></li><li><p>Future tech (Taro, Fedimint, Taproot…)</p></li><li><p>Adoption (getting current tech to more people in new and interesting ways)</p></li><li><p>Finance (RoboSats, LN Markets, Stable coins on Taro, etc)</p></li><li><p>Decentralized identity (Log in with bitcoin via Alby)</p></li><li><p>Lightning</p></li><li><p>Hardware</p></li><li><p>Use cases in your personal context (for your kids, people in your community, inheritance)</p></li><li><p>Art</p></li></ul>"
       }
     ]
   },
@@ -46,14 +62,14 @@
         "retina": "tabconf@2x.jpg",
         "name": "TABConf",
         "description": "Stephen will host a Bitcoin Design table at the TABConf Builder Day, which starts the same day as the designathon.",
-        "link": "https://bitcoin.design"
+        "link": "https://tabconf.com"
       },
       {
         "image": "bitcoin-amsterdam.jpg",
         "retina": "bitcoin-amsterdam@2x.jpg",
         "name": "Bitcoin Amsterdam",
         "description": "Several people in the Bitcoin Design Community will be attending this conference, which also starts the same day as the designathon.",
-        "link": "https://bitcoin.design"
+        "link": "https://b.tc/conference/amsterdam"
       }
     ]
   }

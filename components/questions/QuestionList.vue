@@ -3,6 +3,7 @@
     <QuestionsQuestionListItem
       v-for="(item, index) in questions"
       :key="index"
+      :index="index"
       :question="item"
       :palette="palette"
     />
@@ -27,7 +28,7 @@ export default {
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 </style>

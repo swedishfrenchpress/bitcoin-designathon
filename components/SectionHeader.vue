@@ -1,10 +1,13 @@
 <template>
   <div class="section-header">
     <h1>{{ title }}</h1>
-    <p v-if="description">{{ description }}</p>
+    <p 
+      v-if="description" 
+      v-html="description"
+    />
     <SuperButton
       v-if="link"
-      :href="link"
+      :link="link"
       :label="linkLabel"
       :color="color"
     />
@@ -25,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @import "@/assets/css/animations.scss";
 @import "@/assets/css/mixins.scss";
@@ -43,6 +46,15 @@ export default {
   p {
     margin-top: 10px;
     @include r('font-size', 18, 22);
+
+    a {
+      color: var(--palette-2);
+      transition: all 100ms $ease;
+
+      &:hover {
+        color: var(--palette-0);
+      }
+    }
   }
 
   .super-button {

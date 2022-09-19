@@ -90,6 +90,12 @@ export default {
         c.push('-'+this.palette[5])
       }
 
+      let paletteIndex = 0
+      if(this.hoveredLetter) {
+        paletteIndex = this.hoveredLetter%this.palettes.length
+      }
+      c.push('-palette-'+paletteIndex)
+
       return c.join(' ')
     },
 

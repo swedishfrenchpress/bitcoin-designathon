@@ -5,7 +5,10 @@
       :description="copy.description"
       color="0"
     />
-    <PartnersPartnerList :partners="partners" />
+    <PartnersPartnerList
+      :partners="partners"
+      :palette="palette"
+    />
   </div>
 </template>
 
@@ -15,7 +18,7 @@ import copy from "~/assets/copy.json";
 export default {
 
   props: [
-
+    'palette'
   ],
 
   data() {
