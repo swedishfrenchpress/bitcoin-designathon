@@ -145,3 +145,14 @@ export default {
 
 }
 </script>
+
+<style lang="scss" scoped>
+
+@import "@/assets/css/animations.scss";
+@import "@/assets/css/mixins.scss";
+
+.home {
+  transition: background-color 350ms $ease;
+}
+
+</style>

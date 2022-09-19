@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "Hi there!",
-    "description": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a> is organising a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. The designathon will happen in coordination with the <a href=\"https://bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a>, and we are working on coordinating with the <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a><br/><br/>For updates, join us on Slack in the <a href=\"https://bitcoindesign.slack.com/archives/C0402AVBLPQ\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>."
+    "description": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a> is organising a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. The designathon will happen in coordination with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a>, and we are working on coordinating with the <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a><br/><br/>For updates, join us on Slack in the <a href=\"https://bitcoindesign.slack.com/archives/C0402AVBLPQ\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>."
   },
   "sponsors": {
     "title": "Interested in sponsoring prizes?",
@@ -70,7 +70,7 @@
         "retina": "legends-of-lightning@2x.jpg",
         "name": "Bolt.fun Legends of Lightning tournament",
         "description": "Enter your project into this 2-month online global tournament and compete for prizes of up to ~$60,000 in bitcoin. Or if you are already part of the tournament, use the designathon to get design&nbsp;support.",
-        "link": "https://bolt.fun/tournaments/1/overview"
+        "link": "https://makers.bolt.fun/tournaments/1/overview"
       },
       {
         "image": "tabconf.jpg",
