@@ -28,13 +28,24 @@ export default {
   mounted() {
     if(process.browser) {
       window.addEventListener('hashchange', this.hashChange.bind(this))
+      
+      this.updateHash()
     }
   },
 
   methods: {
     hashChange() {
-      console.log('hashChange', window.location)
-      this.hash = window.location.substr(1)
+      this.updateHash()
+    },
+
+    updateHash() {
+      const hash = window.location.hash
+
+      if(!!hash && hash.length > 1) {
+        this.hash = hash.substr(1)
+      } else {
+        this.hash = null
+      }
     }
   }
 

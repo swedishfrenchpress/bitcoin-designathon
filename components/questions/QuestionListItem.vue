@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="!question.hidden"
-    :id="question.i"
+    :id="elementId"
     :class="classObject"
   >
     <h3
@@ -37,14 +37,17 @@ export default {
   ],
 
   data() {
+    const elementId = this.question.i
+
     return {
-      expanded: this.hash == this.question.i
+      elementId: 'question-' + elementId,
+      expanded: this.hash == elementId
     }
   },
 
   watch: {
     hash() {
-      if(!this.expanded && this.hash == this.question.i) {
+      if(!this.expanded && this.hash == this.elementId) {
         this.expanded = true
       }
     }
