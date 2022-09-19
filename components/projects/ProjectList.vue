@@ -1,6 +1,6 @@
 <template>
-  <div class="idea-list">
-    <IdeaListItem
+  <div class="project-list">
+    <ProjectListItem
       v-for="item in ideas"
       :key="item.id"
       :idea="item"

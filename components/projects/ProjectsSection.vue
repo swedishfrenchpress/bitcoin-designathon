@@ -1,10 +1,12 @@
 <template>
-  <div class="questions-section -section">
+  <div class="projects-section -section">
     <SectionHeader
       :title="copy.title"
-      :palette="palette"
+      :description="copy.description"
+      :color="palette[2]"
     />
-    <QuestionsQuestionList
+    <ProjectsProjectList
+      v-if="false"
       :questions="questions"
       :palette="palette"
     />
@@ -17,13 +19,14 @@ import copy from "~/assets/copy.json";
 export default {
 
   props: [
-    'palette'
+    'palette',
+    'projects',
+    'ideas'
   ],
 
   data() {
     return {
-      copy: copy.questions,
-      questions: copy.questions.questions
+      copy: copy.projects
     }
   }
 

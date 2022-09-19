@@ -7,14 +7,19 @@
       @unhoverLetter="unhoverBannerLetter"
     />
     <InfoSection :palette="palette" />
-    <SponsorSearchSection :palette="palette" />
-    <PartnersSection :palette="palette" />
-    <QuestionsSection :palette="palette" />
-    <IdeaList
-      v-if="false"
+    <IdeasSection
+      :palette="palette"
       :ideas="ideas"
       :projects="projects"
     />
+    <ProjectsSection
+      :palette="palette"
+      :ideas="ideas"
+      :projects="projects"
+    />
+    <SponsorSearchSection :palette="palette" />
+    <PartnersSection :palette="palette" />
+    <QuestionsSection :palette="palette" />
     <Footer :palette="palette" />
   </div>
 </template>
@@ -56,7 +61,9 @@ export default {
       isMobile: isMobile,
       palettes,
       palette: palettes[paletteIndex],
-      hoveredLetter: null
+      hoveredLetter: null,
+      projects: null,
+      ideas: null
     }
   },
 

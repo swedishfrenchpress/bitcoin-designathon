@@ -1,5 +1,5 @@
 <template>
-  <div class="idea-list-item">
+  <div class="project-list-item">
     <h2>{{ name }}</h2>
     <p>{{ description }}</p>
     <div class="projects" v-if="projectList">

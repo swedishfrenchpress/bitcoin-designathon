@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "Hi there!",
-    "description": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a> is organising a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. The designathon will happen in coordination with the <a href=\"https://bolt.fun/hackathons/shock-the-web-2/\" target=\"_blank\" rel=\"me\">bolt.fun tournament</a>, and we are working on coordinating with the <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>."
+    "description": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a> is organising a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. The designathon will happen in coordination with the <a href=\"https://bolt.fun/hackathons/shock-the-web-2/\" target=\"_blank\" rel=\"me\">bolt.fun tournament</a>, and we are working on coordinating with the <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day<br/><br/>For updates, join us on Slack in the <a href=\"https://bitcoindesign.slack.com/archives/C0402AVBLPQ\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>.</a>."
   },
   "sponsors": {
     "title": "Interested in sponsoring prizes?",
@@ -53,9 +53,13 @@
   },
   "ideas": {
     "title": "Ideas",
-    "description": "...",
+    "description": "It all starts with ideas. In the time leading up to the designathon, we invite you to submit your ideas that either you would like to work on, or you think would be fantastic if someone else brought to life. After a super quick review, submissions will appear here.",
     "link": "https://airtable.com/shrPq4Yjb68x9vEO2",
-    "linkLabel": ""
+    "linkLabel": "Submit your idea"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Once we are closer to the start date, we will open up registrations for projects. Projects can be based on ideas previously submitted to this site, and allow for participants to better organize and collaborate."
   },
   "partners": {
     "title": "Co-mingle",

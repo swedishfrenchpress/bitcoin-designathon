@@ -133,6 +133,7 @@ export default {
 .banner-circle {
   position: absolute;
   transition-timing-function: ease-out;
+  pointer-events: none;
 
   .inner {
     transform: translate(-50%, -50%);

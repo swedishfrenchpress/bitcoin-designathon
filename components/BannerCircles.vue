@@ -113,6 +113,7 @@ export default {
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
+  pointer-events: none;
   // height: 100vh;
 
   @include media-query(small) {
