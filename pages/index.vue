@@ -38,6 +38,8 @@ export default {
       ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF']
     ]
 
+    const paletteIndex = Math.floor(Math.random()*palettes.length)
+
     let windowSize, isMobile
 
     if(process.browser) {
@@ -53,7 +55,7 @@ export default {
       windowSize,
       isMobile: isMobile,
       palettes,
-      palette: palettes[0],
+      palette: palettes[paletteIndex],
       hoveredLetter: null
     }
   },

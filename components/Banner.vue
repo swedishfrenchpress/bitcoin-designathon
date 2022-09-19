@@ -18,8 +18,8 @@
         @hoverLetter="hoverLetter"
         @unhoverLetter="unhoverLetter"
       />
-      <p>Let’s get creative with bitcoin.<br/>October 12 to 23, 2022.<br/>More info soon.</p>
-      <div class="options">
+      <p>Let’s get creative with bitcoin.<br/>October 12 to 23, 2022.</p>
+      <div class="options" v-if="showButtons">
         <a
           href="https://bitcoin.design"
           :style="linkStyle"
@@ -62,6 +62,7 @@ export default {
 
     return {
       moving: false,
+      showButtons: false,
       bannerSize
     }
   },
