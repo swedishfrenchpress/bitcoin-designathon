@@ -1,5 +1,9 @@
 <template>
-  <div :class="classObject" v-if="!question.hidden">
+  <div
+    v-if="!question.hidden"
+    :id="question.i"
+    :class="classObject"
+  >
     <h3
       role="button"
       :aria-controls="'question_'+this.index"
@@ -28,12 +32,21 @@ export default {
   props: [
     'question',
     'palette',
-    'index'
+    'index',
+    'hash'
   ],
 
   data() {
     return {
-      expanded: false
+      expanded: this.hash == this.question.i
+    }
+  },
+
+  watch: {
+    hash() {
+      if(!this.expanded && this.hash == this.question.i) {
+        this.expanded = true
+      }
     }
   },
 

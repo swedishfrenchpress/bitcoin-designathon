@@ -23,10 +23,6 @@ export default {
     return {
       copy: copy.sponsors
     }
-  },
-
-  mounted() {
-    console.log('copy', this.copy)
   }
 
 }

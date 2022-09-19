@@ -19,10 +19,6 @@ export default {
     'size'
   ],
 
-  mounted() {
-    console.log('pp', this.link, this.label)
-  },
-
   computed: {
     classObject() {
       const c = ['super-button']

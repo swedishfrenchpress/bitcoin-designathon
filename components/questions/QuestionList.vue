@@ -6,6 +6,7 @@
       :index="index"
       :question="item"
       :palette="palette"
+      :hash="hash"
     />
   </div>
 </template>
@@ -16,7 +17,26 @@ export default {
   props: [
     'questions',
     'palette'
-  ]
+  ],
+
+  data() {
+    return {
+      hash: null
+    }
+  },
+
+  mounted() {
+    if(process.browser) {
+      window.addEventListener('hashchange', this.hashChange.bind(this))
+    }
+  },
+
+  methods: {
+    hashChange() {
+      console.log('hashChange', window.location)
+      this.hash = window.location.substr(1)
+    }
+  }
 
 }
 </script>

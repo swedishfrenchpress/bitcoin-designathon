@@ -3,9 +3,12 @@
     <SectionHeader
       :title="copy.title"
       :palette="palette"
+      :link="copy.link"
+      :linkLabel="copy.linkLabel"
     />
-    <QuestionsQuestionList
-      :questions="questions"
+    <IdeasIdeaList
+      v-if="false"
+      :ideas="ideas"
       :palette="palette"
     />
   </div>
@@ -22,8 +25,8 @@ export default {
 
   data() {
     return {
-      copy: copy.questions,
-      questions: copy.questions.questions
+      copy: copy.ideas,
+      ideas: copy.ideas.ideas
     }
   }
 
