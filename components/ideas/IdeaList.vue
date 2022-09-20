@@ -1,12 +1,21 @@
 <template>
   <div class="idea-list">
-    <IdeasIdeaListItem
-      v-for="item in ideas"
-      :key="item.id"
-      :palette="palette"
-      :idea="item"
-      :projects="projects"
-      @select="select"
+    <div class="wrap">
+      <IdeasIdeaListItem
+        v-for="item in filteredIdeas"
+        :key="item.id"
+        :palette="palette"
+        :idea="item"
+        :projects="projects"
+        @select="select"
+      />
+    </div>
+    <Pagination
+      v-if="paginationPages > 1"
+      :index="paginationIndex"
+      :pages="paginationPages"
+      :color="palette[0]"
+      @paginate="paginate"
     />
     <IdeasIdeaListItemOverlay
       :activeId="activeId"
@@ -29,7 +38,32 @@ export default {
 
   data() {
     return {
-      activeId: null
+      activeId: null,
+      paginationIndex: 0,
+      perPage: 9
+    }
+  },
+
+  computed: {
+    paginationPages() {
+      let result = 0
+
+      if(this.ideas && this.ideas.length > 0) {
+        result = Math.ceil(this.ideas.length / this.perPage)
+      }
+
+      return result
+    },
+
+    filteredIdeas() {
+      let result = this.ideas
+
+      if(this.paginationPages > 1) {
+        const start = this.paginationIndex * this.perPage
+        result = this.ideas.slice(start, start + this.perPage)
+      }
+
+      return result
     }
   },
 
@@ -46,6 +80,10 @@ export default {
       }
 
       this.activeId = null
+    },
+
+    paginate(page) {
+      this.paginationIndex = page
     }
   }
 
@@ -60,11 +98,21 @@ export default {
 .idea-list {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
-  max-width: 1340px;
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1340px;
+  }
 
   @include media-query(small) {
-    flex-direction: column;
+    .wrap {
+      flex-direction: column;
+    }
   }
 }
 

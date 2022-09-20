@@ -75,15 +75,20 @@ export default {
   },
 
   async asyncData({ $axios, env }) {
+    // return {
+    //   ideas: dummyIdeas,
+    //   projects: []
+    // }
+
+    const baseUrl = 'https://api.airtable.com/v0/'
+
+    const ideasUrl = baseUrl + 'appE17V3A75B99zBa/Ideas?api_key=' + env.airtableApiKey
+    const ideas = await $axios.$get(ideasUrl)
+
     return {
-      ideas: dummyIdeas,
+      ideas: ideas.records,
       projects: []
     }
-
-    // const baseUrl = 'https://api.airtable.com/v0/'
-
-    // const ideasUrl = baseUrl + 'appE17V3A75B99zBa/Ideas?api_key=' + env.airtableApiKey
-    // const ideas = await $axios.$get(ideasUrl)
 
     // const projectsUrl = baseUrl + 'appE17V3A75B99zBa/Projects?api_key=' + env.airtableApiKey
     // const projects = await $axios.$get(projectsUrl)
@@ -111,7 +116,7 @@ export default {
 
       c.push('-palette-'+this.paletteIndex)
 
-      console.log('classObject', this.paletteIndex, this.palette, this.palette.length)
+      // console.log('classObject', this.paletteIndex, this.palette, this.palette.length)
 
       return c.join(' ')
     },
@@ -119,7 +124,7 @@ export default {
     styleObject() {
       const s = {}
 
-      console.log('styleObject', this.paletteIndex, this.palette, this.palette.length)
+      // console.log('styleObject', this.paletteIndex, this.palette, this.palette.length)
 
       if(this.palette.length > 4) {
         s.backgroundColor = this.palette[4]

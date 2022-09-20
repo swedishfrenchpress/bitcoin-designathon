@@ -9,7 +9,7 @@
     />
     <IdeasIdeaList
       v-if="ideas"
-      :ideas="ideas"
+      :ideas="cleanIdeas"
       :projects="projects"
       :palette="palette"
     />
@@ -30,6 +30,27 @@ export default {
   data() {
     return {
       copy: copy.ideas
+    }
+  },
+
+  computed: {
+    cleanIdeas() {
+      const result = []
+
+      let idea
+      for(let i=0; i<this.ideas.length; i++) {
+        idea = this.ideas[i]
+
+        if(idea.fields.Name && 
+          idea.fields.Name.length > 0 && 
+          idea.fields.Description && 
+          idea.fields.Description.length > 0
+        ) {
+          result.push(idea)
+        }
+      }
+
+      return result
     }
   }
 

@@ -11,7 +11,7 @@
       :hovering="hovering"
     />
     <h3 role="button" @click="select">{{ name }}</h3>
-    <p v-html="shortenedDescription" />
+    <p v-if="description" v-html="shortenedDescription" />
     <IdeasIdeaListItemProjects
       :idea="idea"
       :projects="projects"
@@ -109,6 +109,7 @@ export default {
   box-shadow: -8px 8px 0 rgba(black, 0.07);
   flex-grow: 1;
   transition: all 250ms $ease;
+  box-sizing: border-box;
 
   h3 {
     text-align: center;
@@ -148,7 +149,7 @@ export default {
   }
 
   @include media-query(large) {
-    flex-basis: 30%;
+    flex-basis: 26%;
   }
 }
 

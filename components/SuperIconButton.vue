@@ -5,8 +5,12 @@
     :style="styleObject"
     :href="link"
     :target="target"
+    :disabled="disabled"
     @click="click"
-  >{{ label }}</component>
+  >
+    <svg v-if="icon == 'left'" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.8995 1L1.70709 10.1924C1.31656 10.5829 1.31656 11.2161 1.70709 11.6066L10.8995 20.799" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/></svg>
+    <svg v-if="icon == 'right'" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.10046 1.20117L10.2929 10.3936C10.6834 10.7841 10.6834 11.4172 10.2929 11.8078L1.10047 21.0002" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/></svg>
+  </component>
 </template>
 
 <script>
@@ -14,15 +18,16 @@ export default {
 
   props: [
     'link',
-    'label',
+    'icon',
     'color',
     'size',
-    'invert'
+    'invert',
+    'disabled'
   ],
 
   computed: {
     classObject() {
-      const c = ['super-button']
+      const c = ['super-icon-button']
 
       if(this.size) {
         c.push('-'+this.size)
@@ -32,6 +37,14 @@ export default {
 
       if(this.invert) {
         c.push('-invert')
+      }
+
+      if(this.disabled) {
+        c.push('-disabled')
+      }
+
+      if(this.icon) {
+        c.push('-'+this.icon)
       }
 
       return c.join(' ')
@@ -58,7 +71,9 @@ export default {
 
   methods: {
     click() {
-      this.$emit('click')
+      if(!this.disabled) {
+        this.$emit('click')
+      }
     }
   }
 
@@ -70,24 +85,27 @@ export default {
 @import "@/assets/css/animations.scss";
 @import "@/assets/css/mixins.scss";
 
-.super-button {
-  display: inline-block;
+.super-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   border: 2px solid var(--front);
   text-decoration: none;
   border-radius: 1000px;
   @include r('font-size', 17, 22);
   font-weight: 900;
-  padding: 6px 50px 7px 50px;
+  padding: 0;
   color: var(--front);
   text-align: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
 
   svg {
     width: 25px;
     height: 25px;
-    margin-right: 10px;
-    vertical-align: middle;
-    transform: translateY(-2px);
+    color: var(--front);
   }
 
   &:nth-child(2) {
@@ -117,6 +135,14 @@ export default {
   &.-small {
     @include r('font-size', 15, 17);
     border-width: 1px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
 
     &:before {
       left: -7px;
@@ -133,6 +159,23 @@ export default {
     &:before {
       border-color: rgba(black, 0.2);
     }
+  }
+
+  &.-left {
+    svg {
+      transform: translateX(-2px);
+    }
+  }
+
+  &.-right {
+    svg {
+      transform: translateX(2px);
+    }
+  }
+
+  &.-disabled {
+    opacity: 0.25;
+    cursor: default;
   }
 
   &:hover {

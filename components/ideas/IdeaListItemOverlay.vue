@@ -178,6 +178,7 @@ export default {
         @include r('font-size', 22, 27);
         font-weight: 900;
         color: black;
+        padding-right: 25px;
       }
 
       p {
