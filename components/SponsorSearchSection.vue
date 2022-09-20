@@ -1,5 +1,5 @@
 <template>
-  <div class="sponsor-search-section -section">
+  <div id="sponsor-search" class="sponsor-search-section -section">
     <SectionHeader
       :title="copy.title"
       :description="copy.description"

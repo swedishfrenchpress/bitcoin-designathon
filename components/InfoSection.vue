@@ -1,5 +1,5 @@
 <template>
-  <div class="info-section -section">
+  <div id="info" class="info-section -section">
     <SectionHeader
       :title="copy.title"
       :description="copy.description"

@@ -25,7 +25,7 @@
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
-          <p v-html="description" />
+          <p v-html="formattedDescription" />
           <IdeasIdeaListItemProjects
             :idea="idea"
             :projects="projects"
@@ -80,6 +80,11 @@ export default {
 
     description() {
       return this.idea.fields.Description
+    },
+
+    formattedDescription() {
+      console.log('f', this.$md)
+      return this.$md.render(this.description)
     },
 
     projectList() {

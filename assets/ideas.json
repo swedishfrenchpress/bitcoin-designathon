@@ -1,18 +1,58 @@
 [
     {
+        "id": "recCUNxJFSoy2niWh",
+        "createdTime": "2022-09-20T16:47:27.000Z",
+        "fields": {
+            "Name": "Learn bitcoin coding via a game",
+            "Description": "Starting to build on bitcoin can be tough. Can we conceptualize, mock-up and prototype a game-like experience around simple coding exercises?\n"
+        }
+    },
+    {
+        "id": "recFTNGXvy7zQUQq9",
+        "createdTime": "2022-09-20T16:32:14.000Z",
+        "fields": {
+            "Name": "Blank slate",
+            "Description": "Forget about how you use bitcoin today and think of your ideal experience now and in the future. What should that feel like? How would it manifest itself in your day-to-day? Whether it's realistic or Iron Man holographic UI, this project is about blue sky exploration.\n"
+        }
+    },
+    {
+        "id": "recNo1SaoTYgYRhLJ",
+        "createdTime": "2022-09-20T16:38:05.000Z",
+        "fields": {
+            "Name": "A bitcoin app for kids",
+            "Description": "How can we gently introduce the next generation to bitcoin and managing money? What is appropriate at different ages, and how can this be expressed in different user experiences? Let's explore different scenarios and see how far we can take them.\n"
+        }
+    },
+    {
+        "id": "recanb2hzIWpULZId",
+        "createdTime": "2022-09-20T16:36:04.000Z",
+        "fields": {
+            "Name": "Taro in 2, 3, 5 years",
+            "Description": "Taro will allow for the creation and use of assets on the lightning network. What will those assets be? How will we interact with them? What will they enable us to do? Let's envision use cases and user experiences for this.\n\n[More about Taro](https://bitcoinmagazine.com/technical/how-bitcoin-taro-protocol-works)\n"
+        }
+    },
+    {
+        "id": "recd90OXCtbtOaMb5",
+        "createdTime": "2022-09-20T16:51:22.000Z",
+        "fields": {
+            "Name": "Tech adoption & standards",
+            "Description": "It can take a long time for technical changes to be broadly adopted by wallets, exchanges, etc. The Bitcoin Design Community is a good candidate to help promote standards and adoption, as the recent [Unified QR code](https://bitcoinqr.dev) effort has shown. Another one is in progress around Taproot. Let's think through what else we can do.\n\n"
+        }
+    },
+    {
         "id": "recocibRiWfHIV0s1",
         "createdTime": "2022-09-13T08:43:38.000Z",
         "fields": {
-            "Description": "We need many different solutions for bitcoin custody that work for diverse individuals and communities around the globe. For example, FediMint is a protocol for payments and custody in a community-context. How will this be used considering cultural and geographical differences? What other custody solutions do we need?",
-            "Name": "Our keys, our coins"
+            "Description": "The foundation of Lightning is maturing, and new protocols and capabilities are built in top. Lightning applications are becoming incredibly easy to build. What new and exciting things can we do with that?\n",
+            "Name": "Future of lightning"
         }
     },
     {
         "id": "recudoRs8nmX4WMFI",
         "createdTime": "2022-09-13T08:43:38.000Z",
         "fields": {
-            "Description": "The foundation of Lightning is maturing, and new protocols and capabilities are built in top. Lightning applications are becoming incredibly easy to build. What new and exciting things can we do with that?",
-            "Name": "Future of lightning"
+            "Description": "We need many different solutions for bitcoin custody that work for diverse individuals and communities around the globe. For example, FediMint is a protocol for payments and custody in a community-context. How will this be used considering cultural and geographical differences? What other custody solutions do we need?\n",
+            "Name": "Our keys, our coins"
         }
     },
     {
@@ -22,7 +62,7 @@
             "Projects": [
                 "recCDvi5Lkqb0KgBd"
             ],
-            "Description": "Images created through artificial intelligence (Dall-E, Midjourney, Stable Diffusion) have been a hot trend (see <a href=\"https://lexica.art\">lexica.art</a>). Let’s explore these new tools together.",
+            "Description": "Images created through artificial intelligence (Dall-E, Midjourney, Stable Diffusion) have been a hot trend (see <a href=\\\\\"<https://lexica.art\\>\">lexica.art</a>). Let’s explore these new tools together.\n",
             "Name": "Bitcoin AI art"
         }
     }
