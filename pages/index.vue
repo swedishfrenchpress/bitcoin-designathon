@@ -25,6 +25,9 @@
 </template>
 
 <script>
+import dummyIdeas from "~/assets/ideas.json";
+import dummyProjects from "~/assets/projects.json";
+
 export default {
 
   data() {
@@ -68,7 +71,10 @@ export default {
   },
 
   async asyncData({ $axios, env }) {
-    return {}
+    return {
+      ideas: dummyIdeas,
+      projects: []
+    }
 
     // const baseUrl = 'https://api.airtable.com/v0/'
 

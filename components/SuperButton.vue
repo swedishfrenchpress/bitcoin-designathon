@@ -16,7 +16,8 @@ export default {
     'link',
     'label',
     'color',
-    'size'
+    'size',
+    'invert'
   ],
 
   computed: {
@@ -24,9 +25,13 @@ export default {
       const c = ['super-button']
 
       if(this.size) {
-        c.push('-size')
+        c.push('-'+this.size)
       } else {
         c.push('-medium')
+      }
+
+      if(this.invert) {
+        c.push('-invert')
       }
 
       return c.join(' ')
@@ -47,7 +52,7 @@ export default {
     },
 
     target() {
-      return this.link ? '_blank' : null
+      return (this.link && this.link.substr(0, 1) !== '#') ? '_blank' : null
     }
   },
 
@@ -71,10 +76,11 @@ export default {
   border: 2px solid var(--front);
   text-decoration: none;
   border-radius: 1000px;
-  @include r('font-size', 18, 27);
+  @include r('font-size', 17, 22);
   font-weight: 900;
-  padding: 5px 50px 6px 50px;
+  padding: 6px 50px 7px 50px;
   color: var(--front);
+  text-align: center;
 
   svg {
     width: 25px;
@@ -106,6 +112,27 @@ export default {
     pointer-events: none;
     border-radius: 1000px;
     transition: all 150ms ease-in-out;
+  }
+
+  &.-small {
+    @include r('font-size', 15, 17);
+    border-width: 1px;
+
+    &:before {
+      left: -7px;
+      top: -7px;
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      border-width: 1px;
+    }
+  }
+
+  &.-invert {
+    border-color: black;
+
+    &:before {
+      border-color: rgba(black, 0.2);
+    }
   }
 
   &:hover {

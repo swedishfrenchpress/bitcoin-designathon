@@ -1,5 +1,8 @@
 <template>
-  <div class="project-list-item">
+  <div
+    :id="elementId"
+    class="project-list-item"
+  >
     <h2>{{ name }}</h2>
     <p>{{ description }}</p>
     <div class="projects" v-if="projectList">
@@ -20,6 +23,10 @@ export default {
   ],
 
   computed: {
+    elementId() {
+      return 'project-'+this.idea.id
+    },
+
     name() {
       return this.idea.fields.Name
     },

@@ -5,11 +5,12 @@
       :description="copy.description"
       :link="copy.link"
       :linkLabel="copy.linkLabel"
-      :color="palette[1]"
+      :color="palette[0]"
     />
     <IdeasIdeaList
-      v-if="false"
+      v-if="ideas"
       :ideas="ideas"
+      :projects="projects"
       :palette="palette"
     />
   </div>
