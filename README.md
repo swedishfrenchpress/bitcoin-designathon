@@ -2,6 +2,8 @@
 
 Use node version 16.13.0.
 
+For local dev, also create a .env file to set your Airtable API key ('AIRTABLE_API_KEY=').
+
 ## Build Setup
 
 ```bash

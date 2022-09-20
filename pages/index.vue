@@ -48,6 +48,8 @@ export default {
 
     const paletteIndex = Math.floor(Math.random()*palettes.length)
 
+    // console.log('paletteIndex', paletteIndex)
+
     let windowSize, isMobile
 
     if(process.browser) {
@@ -63,6 +65,7 @@ export default {
       windowSize,
       isMobile: isMobile,
       palettes,
+      paletteIndex,
       palette: palettes[paletteIndex],
       hoveredLetter: null,
       projects: null,
@@ -105,11 +108,7 @@ export default {
         c.push('-'+this.palette[5])
       }
 
-      let paletteIndex = 0
-      if(this.hoveredLetter) {
-        paletteIndex = this.hoveredLetter%this.palettes.length
-      }
-      c.push('-palette-'+paletteIndex)
+      c.push('-palette-'+this.paletteIndex)
 
       return c.join(' ')
     },
@@ -128,7 +127,8 @@ export default {
   methods: {
     hoverBannerLetter(letter) {
       this.hoveredLetter = letter
-      this.palette = this.palettes[letter%this.palettes.length]
+      this.paletteIndex = letter%this.palettes.length
+      this.palette = this.palettes[this.paletteIndex]
     },
     
     unhoverBannerLetter(letter) {
