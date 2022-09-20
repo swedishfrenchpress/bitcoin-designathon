@@ -47,8 +47,9 @@ export default {
     ]
 
     const paletteIndex = Math.floor(Math.random()*palettes.length)
+    const palette = palettes[paletteIndex]
 
-    // console.log('paletteIndex', paletteIndex)
+    console.log('paletteIndex', paletteIndex, palette)
 
     let windowSize, isMobile
 
@@ -66,7 +67,7 @@ export default {
       isMobile: isMobile,
       palettes,
       paletteIndex,
-      palette: palettes[paletteIndex],
+      palette,
       hoveredLetter: null,
       projects: null,
       ideas: null
@@ -110,11 +111,15 @@ export default {
 
       c.push('-palette-'+this.paletteIndex)
 
+      console.log('classObject', this.paletteIndex, this.palette, this.palette.length)
+
       return c.join(' ')
     },
 
     styleObject() {
       const s = {}
+
+      console.log('styleObject', this.paletteIndex, this.palette, this.palette.length)
 
       if(this.palette.length > 4) {
         s.backgroundColor = this.palette[4]
