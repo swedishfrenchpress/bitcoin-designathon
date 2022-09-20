@@ -127,6 +127,8 @@ export default {
 
   ul {
     li {
+      color: rgba(var(--frontRGB), 0.75);
+
       & + li {
         margin-top: 10px;
       }
