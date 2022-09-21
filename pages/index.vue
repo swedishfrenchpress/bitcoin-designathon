@@ -85,7 +85,7 @@ export default {
   // },
 
   async asyncData({ $axios, env }) {
-    const useDummyData = true
+    const useDummyData = !true
 
     if(useDummyData) {
       return {
