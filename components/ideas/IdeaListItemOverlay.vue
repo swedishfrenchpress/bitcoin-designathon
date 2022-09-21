@@ -83,8 +83,11 @@ export default {
     },
 
     formattedDescription() {
-      console.log('f', this.$md)
-      return this.$md.render(this.description)
+      let result = this.$md.render(this.description)
+
+      result = result.split('<a').join('<a target="_blank" rel="nofollow noindex"')
+
+      return result
     },
 
     projectList() {

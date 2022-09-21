@@ -40,16 +40,18 @@ export default {
 
      */
     const palettes = [
-      ['#E88BCA', '#B1F5FD', '#E63E2A', '#E63E2A'],
+      ['#E88BCA', '#B1F5FD', '#E63E2A', '#E63E2A', null, null],
       ['#A64AC9', '#FFB38F', '#FD6E23', '#FFFFFF', '#1F185B', 'dark'],
-      ['#EA2E00', '#16A9E1', '#17E9E0', '#FFFFFF'],
-      ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF']
+      ['#EA2E00', '#16A9E1', '#17E9E0', '#FFFFFF', null, null],
+      ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF', null, null]
     ]
 
     const paletteIndex = Math.floor(Math.random()*palettes.length)
     const palette = palettes[paletteIndex]
 
-    console.log('paletteIndex', paletteIndex, palette)
+    // console.log('data', this.paletteIndex)
+
+    // console.log('paletteIndex', paletteIndex, palette)
 
     let windowSize, isMobile
 
@@ -74,10 +76,18 @@ export default {
     }
   },
 
-  async asyncData({ $axios, env }) {
-    const useFakeData = false
+  // beforeMount() {
+  //   console.log('mounted', this.paletteIndex)
+  // },
 
-    if(useFakeData) {
+  // mounted() {
+  //   console.log('mounted', this.paletteIndex)
+  // },
+
+  async asyncData({ $axios, env }) {
+    const useDummyData = true
+
+    if(useDummyData) {
       return {
         ideas: dummyIdeas,
         projects: []
@@ -114,13 +124,16 @@ export default {
     classObject() {
       const c = ['home']
 
-      if(this.palette.length > 5) {
+      // Dark theme
+      if(this.palette[5]) {
         c.push('-'+this.palette[5])
       }
 
       c.push('-palette-'+this.paletteIndex)
 
-      console.log('classObject', this.paletteIndex, this.palette, this.palette.length)
+      // console.log('classObject', this.paletteIndex)
+      // console.log('palette', this.palette)
+      // console.log('c', c)
 
       return c.join(' ')
     },
@@ -128,11 +141,13 @@ export default {
     styleObject() {
       const s = {}
 
-      console.log('styleObject', this.paletteIndex, this.palette, this.palette.length)
-
-      if(this.palette.length > 4) {
+      if(process.browser && this.palette[4]) {
         s.backgroundColor = this.palette[4]
       }
+
+      // console.log('styleObject', this.paletteIndex)
+      // console.log('palette', this.palette)
+      // console.log('s', s)
 
       return s
     }

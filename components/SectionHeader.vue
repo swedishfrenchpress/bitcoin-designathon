@@ -48,7 +48,7 @@ export default {
     @include r('font-size', 18, 22);
 
     a {
-      color: var(--palette-2);
+      color: var(--palette-0);
       transition: all 100ms $ease;
 
       &:hover {
