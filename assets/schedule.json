@@ -1,0 +1,42 @@
+[
+    {
+        "id": "recWNXfwT1Iu6jzCz",
+        "createdTime": "2022-09-21T09:02:06.000Z",
+        "fields": {
+            "Name": "Kick-off call",
+            "Description": "Test copy.\n",
+            "Date": "2022-10-12T14:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+        }
+    },
+    {
+        "id": "recWNXfwT1Iu6jzCz",
+        "createdTime": "2022-09-21T09:02:06.000Z",
+        "fields": {
+            "Name": "Panel on open design",
+            "Description": "Let’s discuss how we collaborate in open source.",
+            "Date": "2022-10-12T15:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+        }
+    },
+    {
+        "id": "recWNXfwT1Iu6jzCz",
+        "createdTime": "2022-09-21T09:02:06.000Z",
+        "fields": {
+            "Name": "Open design session",
+            "Description": "Stop by on Jitsi to discuss your project and tune in to what others are working on.",
+            "Date": "2022-10-13T10:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+        }
+    },
+    {
+        "id": "recWNXfwT1Iu6jzCz",
+        "createdTime": "2022-09-21T09:02:06.000Z",
+        "fields": {
+            "Name": "Intro to the Bitcoin UI Kit",
+            "Description": "A 1-hour collaborative work session using the UI Kit to design a simple mobile app. If there’s interest, we can spend the first half with Figma basics.",
+            "Date": "2022-10-13T17:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+        }
+    }
+]

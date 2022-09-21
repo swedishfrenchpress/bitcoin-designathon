@@ -7,6 +7,10 @@
       @unhoverLetter="unhoverBannerLetter"
     />
     <InfoSection :palette="palette" />
+    <ScheduleSection
+      :schedule="schedule"
+      :palette="palette"
+    />
     <IdeasSection
       :palette="palette"
       :ideas="ideas"
@@ -27,6 +31,7 @@
 <script>
 import dummyIdeas from "~/assets/ideas.json";
 import dummyProjects from "~/assets/projects.json";
+import dummySchedule from "~/assets/schedule.json";
 
 export default {
 
@@ -85,12 +90,13 @@ export default {
   // },
 
   async asyncData({ $axios, env }) {
-    const useDummyData = !true
+    const useDummyData = true
 
     if(useDummyData) {
       return {
         ideas: dummyIdeas,
-        projects: []
+        projects: [],
+        schedule: dummySchedule
       }
     } else {
       const baseUrl = 'https://api.airtable.com/v0/'
@@ -98,9 +104,15 @@ export default {
       const ideasUrl = baseUrl + 'appE17V3A75B99zBa/Ideas?api_key=' + env.airtableApiKey
       const ideas = await $axios.$get(ideasUrl)
 
+      const scheduleUrl = baseUrl + 'appE17V3A75B99zBa/Schedule?api_key=' + env.airtableApiKey
+      const schedule = await $axios.$get(scheduleUrl)
+
+      console.log('s', schedule)
+
       return {
         ideas: ideas.records,
-        projects: []
+        projects: [],
+        schedule: schedule
       }
     }
 
