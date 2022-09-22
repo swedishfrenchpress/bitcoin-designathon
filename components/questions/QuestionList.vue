@@ -28,7 +28,6 @@ export default {
   },
 
   mounted() {
-    console.log('a', this.questions)
     if(process.browser) {
       window.addEventListener('hashchange', this.checkHash.bind(this))
       
