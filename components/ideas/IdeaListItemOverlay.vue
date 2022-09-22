@@ -129,6 +129,7 @@ export default {
 
     close() {
       this.$emit('close')
+      history.pushState("", document.title, window.location.pathname);
     },
 
     clickBackground(event) {

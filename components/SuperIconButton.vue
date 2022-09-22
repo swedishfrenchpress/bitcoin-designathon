@@ -101,6 +101,7 @@ export default {
   width: 48px;
   height: 48px;
   cursor: pointer;
+  transition: all 150ms ease-in-out;
 
   svg {
     width: 25px;

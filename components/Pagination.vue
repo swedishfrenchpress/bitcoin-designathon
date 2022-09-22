@@ -105,7 +105,7 @@ export default {
       border-radius: 100px;
       transition: all 150ms $ease;
       transform: translate(-50%, -50%);
-      border: 1px solid black;
+      border: 1px solid var(--front);
     }
   }
 }

@@ -33,22 +33,21 @@ export default {
     'question',
     'palette',
     'index',
-    'hash'
+    'activeId'
   ],
 
   data() {
     const elementId = this.question.i
 
     return {
-      elementId: 'question-' + elementId,
-      expanded: this.hash == elementId
+      elementId: 'question-' + elementId
     }
   },
 
   watch: {
     hash() {
       if(!this.expanded && this.hash == this.elementId) {
-        this.expanded = true
+        // this.expanded = true
       }
     }
   },
@@ -64,6 +63,10 @@ export default {
       return c.join(' ')
     },
 
+    expanded() {
+      return this.activeId == this.question.i
+    },
+
     contentStyle() {
       let height = 0
 
@@ -77,7 +80,12 @@ export default {
 
   methods: {
     toggleExpand() {
-      this.expanded = !this.expanded
+      if(this.expanded) {
+        this.$emit('close', this.question.i)
+        history.pushState(null, null, '')
+      } else {
+        window.location.hash = 'question-'+this.question.i
+      }
     }
   }
 

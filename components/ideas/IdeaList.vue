@@ -1,5 +1,12 @@
 <template>
   <div class="idea-list">
+    <Pagination
+      v-if="paginationPages > 1"
+      :index="paginationIndex"
+      :pages="paginationPages"
+      :color="palette[0]"
+      @paginate="paginate"
+    />
     <div class="wrap">
       <IdeasIdeaListItem
         v-for="item in filteredIdeas"
@@ -10,13 +17,6 @@
         @select="select"
       />
     </div>
-    <Pagination
-      v-if="paginationPages > 1"
-      :index="paginationIndex"
-      :pages="paginationPages"
-      :color="palette[0]"
-      @paginate="paginate"
-    />
     <IdeasIdeaListItemOverlay
       :activeId="activeId"
       :palette="palette"
@@ -41,6 +41,15 @@ export default {
       activeId: null,
       paginationIndex: 0,
       perPage: 9
+    }
+  },
+
+  mounted() {
+    // On load, check if deep-linking to an idea
+    // If so, show overlay and scroll to ideas section
+    // Hash is not available during build, so doing this here
+    if(process.browser) {
+      this.checkHash(true)
     }
   },
 
@@ -84,6 +93,28 @@ export default {
 
     paginate(page) {
       this.paginationIndex = page
+    },
+
+    checkHash(scrollToSection) {
+      // Looks like #idea-recd90OXCtbtOaMb5
+      const fullHash = window.location.hash
+
+      if(fullHash && fullHash.indexOf('-') !== -1) {
+        let hash = fullHash.split('-')[1]
+
+        for(let i=0; i<this.ideas.length; i++) {
+          if(this.ideas[i].id == hash) {
+            this.activeId = hash
+
+            if(scrollToSection) {
+              const ideaSection = document.getElementById('ideas')
+              window.scrollTo(0, ideaSection.offsetTop)
+            }
+
+            break;
+          }
+        }
+      }
     }
   }
 
@@ -96,7 +127,7 @@ export default {
 @import "@/assets/css/mixins.scss";
 
 .idea-list {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
