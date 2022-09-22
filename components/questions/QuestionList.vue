@@ -6,7 +6,9 @@
       :index="index"
       :question="item"
       :palette="palette"
-      :hash="hash"
+      :activeId="activeId"
+      @close="close"
+      @select="select"
     />
   </div>
 </template>
@@ -21,30 +23,51 @@ export default {
 
   data() {
     return {
-      hash: null
+      activeId: null
     }
   },
 
   mounted() {
+    console.log('a', this.questions)
     if(process.browser) {
-      window.addEventListener('hashchange', this.hashChange.bind(this))
+      window.addEventListener('hashchange', this.checkHash.bind(this))
       
-      this.updateHash()
+      this.checkHash(true)
     }
   },
 
   methods: {
-    hashChange() {
-      this.updateHash()
+    select(activeId) {
+      this.activeId = activeId
     },
 
-    updateHash() {
-      const hash = window.location.hash
+    close(id) {
+      if(this.activeId == id) {
+        this.activeId = null
+      }
+    },
 
-      if(!!hash && hash.length > 1) {
-        this.hash = hash.substr(1)
+    checkHash(scrollToSection) {
+      // Looks like #question-when-and-where
+      const fullHash = window.location.hash
+
+      if(fullHash && fullHash.indexOf('-') !== -1) {
+        let hash = fullHash.substr(fullHash.indexOf('-')+1)
+
+        for(let i=0; i<this.questions.length; i++) {
+          if(this.questions[i].i == hash) {
+            this.activeId = hash
+
+            if(scrollToSection) {
+              const questionsSection = document.getElementById('questions')
+              window.scrollTo(0, questionsSection.offsetTop)
+            }
+
+            break;
+          }
+        }
       } else {
-        this.hash = null
+        this.activeId = null
       }
     }
   }
