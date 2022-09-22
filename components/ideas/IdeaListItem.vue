@@ -1,13 +1,30 @@
 <template>
-  <div class="idea-list-item">
-    <h2>{{ name }}</h2>
-    <p>{{ description }}</p>
-    <div class="projects" v-if="projectList">
-      <h3
-        v-for="project in projectList"
-        :key="project.id"
-      >{{ project.fields.Name }}</h3>
-    </div>
+  <div
+    :id="elementId"
+    class="idea-list-item" 
+    role="button"
+    @mouseenter="hover" 
+    @mouseleave="unhover"
+  >
+    <BoxSideDepth
+      :color="palette[0]"
+      :hovering="hovering"
+    />
+    <h3 role="button" @click="select">{{ name }}</h3>
+    <p v-if="description" v-html="shortenedDescription" />
+    <IdeasIdeaListItemProjects
+      :idea="idea"
+      :projects="projects"
+      align="center"
+    />
+    <SuperButton
+      :link="'#idea-'+this.idea.id"
+      label="More info"
+      size="small"
+      :color="palette[0]"
+      :invert="true"
+      @click="select"
+    />
   </div>
 </template>
 
@@ -15,11 +32,22 @@
 export default {
 
   props: [
+    'palette',
     'idea',
     'projects'
   ],
 
+  data() {
+    return {
+      hovering: false
+    }
+  },
+
   computed: {
+    elementId() {
+      return 'idea-summary-'+this.idea.id
+    },
+
     name() {
       return this.idea.fields.Name
     },
@@ -28,32 +56,103 @@ export default {
       return this.idea.fields.Description
     },
 
-    projectList() {
-      let result = []
+    shortenedDescription() {
+      let result = this.idea.fields.Description
 
-      if(this.idea.fields.Projects) {
-        let projectId, project, i, k
-        for(i=0; i<this.idea.fields.Projects.length; i++) {
-          projectId = this.idea.fields.Projects[i]
+      if(result.length > 100) {
+        result = result.substr(0, 98) //  <b>more</b>
 
-          for(k=0; i<this.projects.length; i++) {
-            project = this.projects[i]
-
-            if(project.id == projectId) {
-              result.push(project)
-            }
-          }
+        const lastIndex = result.lastIndexOf(' ')
+        if(lastIndex > result.length - 10) {
+          result = result.substr(0, lastIndex)
         }
-      }
 
-      if(result.length == 0) {
-        result = null
+        result += '...'
       }
 
       return result
+    }
+  },
+
+  methods: {
+    hover() {
+      this.hovering = true
+    },
+
+    unhover() {
+      this.hovering = false
+    },
+
+    select() {
+      this.$emit('select', this.idea.id)
     }
   }
 
 }
 </script>
+
+<style lang="scss">
+
+@import "@/assets/css/animations.scss";
+@import "@/assets/css/mixins.scss";
+
+.idea-list-item {
+  position: relative;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 20px 40px;
+  box-shadow: -8px 8px 0 rgba(black, 0.07);
+  flex-grow: 1;
+  transition: all 250ms $ease;
+  box-sizing: border-box;
+
+  h3 {
+    text-align: center;
+    @include r('font-size', 22, 27);
+    font-weight: 900;
+    color: black;
+    transition: all 150ms $ease;
+
+    &:hover {
+      color: var(--palette-0);
+      cursor: pointer;
+    }
+  }
+
+  p {
+    margin: 10px 0 0 0;
+    text-align: center;
+    @include r('font-size', 15, 18);
+    color: rgba(black, 0.75);
+
+    a {
+      color: black;
+    }
+  }
+
+  > a {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    transform: translate(-3px, 5px);
+    box-shadow: -4px 4px 0 rgba(black, 0.15);
+  }
+
+  @include media-query(medium) {
+    flex-basis: 40%;
+  }
+
+  @include media-query(large) {
+    flex-basis: 26%;
+  }
+}
+
+</style>
+
 

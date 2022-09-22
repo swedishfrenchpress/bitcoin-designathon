@@ -1,0 +1,154 @@
+[
+    {
+        "id": "recudoRs8nmX4WMFI",
+        "createdTime": "2022-09-13T08:43:38.000Z",
+        "fields": {
+            "Description": "We need many different solutions for bitcoin custody that work for diverse individuals and communities around the globe. For example, [FediMint](https://fedimint.org) is a protocol for payments and custody in a community-context. How will this be used considering cultural and geographical differences? What other custody solutions do we need?\n",
+            "Name": "Our keys, our coins"
+        }
+    },
+    {
+        "id": "rec1wpt2Iu14GgmvK",
+        "createdTime": "2022-09-22T08:58:11.000Z",
+        "fields": {
+            "Description": "Let's create open-source 3D assets to be used on bitcoin-related websites - basically make it easy for bitcoin sites to look great. For an example, see the [3D freebies](https://3d-freebies.peakshift.com) by Peakshift.\n",
+            "Name": "Bitcoin 3D assets"
+        }
+    },
+    {
+        "id": "recCUNxJFSoy2niWh",
+        "createdTime": "2022-09-20T16:47:27.000Z",
+        "fields": {
+            "Description": "Conceptualize and design a first point of contact game for bitcoin curious devs. Learners complete test-driven, repl-based (preferably [replit](https://replit.com/)) lessons by completing missions traveling through bitcoin history. Beginners can breeze through the basics while more advanced learners can dive into the harder challenges and discover easter eggs. In the future, we could add pay for lesson completion or offer real world challenges for pay like Ender’s Game.\n",
+            "Name": "Learn bitcoin coding via a game"
+        }
+    },
+    {
+        "id": "recd90OXCtbtOaMb5",
+        "createdTime": "2022-09-20T16:51:22.000Z",
+        "fields": {
+            "Description": "It can take a long time for technical changes to be broadly adopted by wallets, exchanges, etc. The Bitcoin Design Community is a good candidate to help promote standards and adoption, as the recent [Unified QR code](https://bitcoinqr.dev) effort has shown. Another one is in progress around Taproot. Let's think through what else we can do.\n\n",
+            "Name": "Tech adoption & standards"
+        }
+    },
+    {
+        "id": "recocibRiWfHIV0s1",
+        "createdTime": "2022-09-13T08:43:38.000Z",
+        "fields": {
+            "Description": "The foundation of Lightning is maturing, and new protocols and capabilities are built in top. Lightning applications are becoming incredibly easy to build. What new and exciting things can we do with that?\n",
+            "Name": "Lightning apps"
+        }
+    },
+    {
+        "id": "recFTNGXvy7zQUQq9",
+        "createdTime": "2022-09-20T16:32:14.000Z",
+        "fields": {
+            "Description": "Forget about how you use bitcoin today and think of your ideal experience now and in the future. What should that feel like? How would it manifest itself in your day-to-day? Whether it's realistic or Iron Man holographic UI, this project is about blue sky exploration.\n",
+            "Name": "Blank slate"
+        }
+    },
+    {
+        "id": "recNo1SaoTYgYRhLJ",
+        "createdTime": "2022-09-20T16:38:05.000Z",
+        "fields": {
+            "Description": "How can we gently introduce the next generation to bitcoin and managing money? What is appropriate at different ages, and how can this be expressed in different user experiences? Let's explore different scenarios and see how far we can take them.\n",
+            "Name": "A bitcoin app for kids"
+        }
+    },
+    {
+        "id": "recy955e0bfIwa8o6",
+        "createdTime": "2022-09-22T07:35:37.000Z",
+        "fields": {
+            "Description": "A website that creatively shows all of the documentaries and other well-produced educational content about Bitcoin. Basically a go-to source for carefully curated, highest quality content. For average person. Think Netflix for Bitcoin-related content (with awesome cover art).\n",
+            "Name": "Bitcoin documentary site"
+        }
+    },
+    {
+        "id": "recQMQluOsOFtoan7",
+        "createdTime": "2022-09-22T07:34:59.000Z",
+        "fields": {
+            "Description": "A website listing all of the politicians who have done something for Bitcoin, and all those who oppose it - for every major country. This way people can quickly search who is full of it and vote them out. Create a way to organize action around each elected individual - organize in some manner to create grassroots movements to get them out of their positions by promoting a bitcoin-only-friendly opponent.\n",
+            "Name": "Politicians & bitcoin"
+        }
+    },
+    {
+        "id": "recvRaUVb2HrbauBe",
+        "createdTime": "2022-09-13T08:43:38.000Z",
+        "fields": {
+            "Description": "Images created through artificial intelligence (Dall-E, Midjourney, Stable Diffusion) have been a hot trend (see [lexica.art](https://lexica.art)). Let’s explore these new tools together.\n",
+            "Name": "Bitcoin AI art"
+        }
+    },
+    {
+        "id": "rec3KvZzVM7AaMvm5",
+        "createdTime": "2022-09-22T09:00:47.000Z",
+        "fields": {
+            "Description": "What solutions could we design to make it easier to use bitcoin more privately. Some suggestions below:\n- How to design for BIP47\n- How to prevent users from re-using on-chain addresses\n- UTXO management for beginners\n\n",
+            "Name": "Privacy"
+        }
+    },
+    {
+        "id": "rec49iZvMKfatUiOg",
+        "createdTime": "2022-09-22T07:34:32.000Z",
+        "fields": {
+            "Description": "A website for professionals / academics that curates all of the research done / being done on bitcoin. Philosophy, psychology, social studies, environment, financial inclusion, anything that has been researched and perhaps tested in some way. Create this ultimate resource that policy makers can reference when creating bitcoin-related policies. Make it feel very academic-y ;)\n",
+            "Name": "Academic research site"
+        }
+    },
+    {
+        "id": "recHtl2ukj9pNyRUi",
+        "createdTime": "2022-09-22T07:36:50.000Z",
+        "fields": {
+            "Description": "How to hand bitcoin down to your family as seamlessly as possible? What happens if the bitcoiner in the family all of a sudden kicks the bucket? Who is going to assist the non-technical people and how? Could there be a website / platform that somehow guides the family member along the way, revealing certain information or directing them where to look? How will people be notified that this service exist - will they ignore it? … think it’s a scam? \n",
+            "Name": "Inheritance"
+        }
+    },
+    {
+        "id": "recam5ImsgWrprC17",
+        "createdTime": "2022-09-22T07:35:58.000Z",
+        "fields": {
+            "Description": "A creative website that estimates the usage of energy by the current fiat system - everything from administration required, the banking system, the systems that support the banking, the oversight, enforcement, and even perhaps down to the military (as a broad case). Then compares that to the energy usage of Bitcoin. Uses lots of research to support every claim, cite studies etc. Somehow have it interactive? It would just be great to have a resource that positions bitcoin against fiat, not against lower nothingburgers. \n",
+            "Name": "Site for energy usage"
+        }
+    },
+    {
+        "id": "recMoVDpCnFVslBX7",
+        "createdTime": "2022-09-22T07:33:00.000Z",
+        "fields": {
+            "Description": "Bitcoin resources are scattered and disorganized. Information is buried in untranscribed podcasts, youtube videos, [bitcointalk](https://bitcointalk.org/), [mailing list posts](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/), [IRC logs](https://bitcoin-irc.chaincode.com/), StackOverflow, Reddit, newsletters, GitHub comments, books, and Twitter. After years of tracking me, Google still doesn’t know what I mean by ‘Lightning’ or ‘wallets’. With a corpus of relevant materials, we could create: customized bitcoin search portals, customized curriculum and learning tools (e.g. auto-generated spaced repetition flashcards) and bots to answer questions. Neural networks can make the initial suggestions and humans can train the models with upvotes (and even earn some sats for their contributions).\n",
+            "Name": "Search bitcoin"
+        }
+    },
+    {
+        "id": "recAWWRUo230yd379",
+        "createdTime": "2022-09-22T07:36:21.000Z",
+        "fields": {
+            "Description": "A website that lists all of the concerns about bitcoin and addresses them / debunks them with facts. Perhaps designed as a card view or a quiz where you flip the card to see the answer? Would love to see all of the cards on one screen.\n",
+            "Name": "Debunking concerns"
+        }
+    },
+    {
+        "id": "rechomA4XgpNUuGd4",
+        "createdTime": "2022-09-22T07:16:42.000Z",
+        "fields": {
+            "Description": "The community has been around for over 2 years. What should its future look like? What role does it and should it play in the wider bitcoin ecosystem? We can discuss and also use this time to tweak the website, overall presentation, social media, create swag, and anything else we come up with.\n",
+            "Name": "The Bitcoin Design Community"
+        }
+    },
+    {
+        "id": "recBzMMVzNknsgmGp",
+        "createdTime": "2022-09-22T07:37:13.000Z",
+        "fields": {
+            "Description": "Being in control of our identity and data online is a bitcoin-adjacent topic that has seen a lot of discussion with efforts like [Web5](https://developer.tbd.website/projects/web5/) and [Slashtags](https://github.com/synonymdev/slashtags). Let's investigate how credentials (college degree, event attendance), digital ownership certificates (e-books), real-world ownership certificate (land, house, pets, sneakers…), in-game assets, and similar use cases could work.\n\n",
+            "Name": "Decentralized identifiers"
+        }
+    },
+    {
+        "id": "recanb2hzIWpULZId",
+        "createdTime": "2022-09-20T16:36:04.000Z",
+        "fields": {
+            "Description": "Taro will allow for the creation and use of assets on the lightning network. What will those assets be? How will we create and interact with them? What will they enable us to do? Let's learn about this tech, envision use cases and user experiences, and if there's some time create mock-ups and prototypes.\n\n[More about Taro](https://bitcoinmagazine.com/technical/how-bitcoin-taro-protocol-works)\n",
+            "Name": "Taro!"
+        }
+    }
+]

@@ -1,15 +1,16 @@
 <template>
-  <div class="ideas-section -section">
+  <div id="ideas" class="ideas-section -section">
     <SectionHeader
       :title="copy.title"
       :description="copy.description"
       :link="copy.link"
       :linkLabel="copy.linkLabel"
-      :color="palette[1]"
+      :color="palette[0]"
     />
     <IdeasIdeaList
-      v-if="false"
-      :ideas="ideas"
+      v-if="ideas"
+      :ideas="cleanIdeas"
+      :projects="projects"
       :palette="palette"
     />
   </div>
@@ -29,6 +30,40 @@ export default {
   data() {
     return {
       copy: copy.ideas
+    }
+  },
+
+  computed: {
+    cleanIdeas() {
+      const result = []
+
+      let idea
+      for(let i=0; i<this.ideas.length; i++) {
+        idea = this.ideas[i]
+
+        if(idea.fields.Name && 
+          idea.fields.Name.length > 0 && 
+          idea.fields.Description && 
+          idea.fields.Description.length > 0
+        ) {
+          result.push(idea)
+        }
+      }
+
+      return this.shuffle(result)
+    }
+  },
+
+  methods: {
+    shuffle(a) {
+      let j, x, i;
+      for(i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+      }
+      return a;
     }
   }
 

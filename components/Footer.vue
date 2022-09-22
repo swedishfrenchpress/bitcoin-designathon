@@ -12,8 +12,7 @@
       <li><p><a href="https://twitter.com/bitcoin_design" target="_blank" rel="me">Twitter</a></p></li>
       <li><p><a href="https://bitcoindesign.substack.com" target="_blank" rel="me">Newsletter</a></p></li>
       <li><p><a href="https://bitcointv.com/a/bitcoin_design/video-channels" target="_blank" rel="me">BitcoinTV</a> & <a href="http://youtube.com/c/BitcoinDesign" target="_blank" rel="me">YouTube</a></p></li>
-      <li><p></p></li>
-      <li><p></p></li>
+      <li><p><a href="https://github.com/GBKS/bitcoin-designathon" target="_blank" rel="nofollow noindex">Code on Github</a></p></li>
     </ul>
   </footer>
 </template>

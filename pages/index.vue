@@ -25,6 +25,9 @@
 </template>
 
 <script>
+import dummyIdeas from "~/assets/ideas.json";
+import dummyProjects from "~/assets/projects.json";
+
 export default {
 
   data() {
@@ -37,13 +40,18 @@ export default {
 
      */
     const palettes = [
-      ['#E88BCA', '#B1F5FD', '#E63E2A', '#E63E2A'],
+      ['#E88BCA', '#B1F5FD', '#E63E2A', '#E63E2A', null, null],
       ['#A64AC9', '#FFB38F', '#FD6E23', '#FFFFFF', '#1F185B', 'dark'],
-      ['#EA2E00', '#16A9E1', '#17E9E0', '#FFFFFF'],
-      ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF']
+      ['#EA2E00', '#16A9E1', '#17E9E0', '#FFFFFF', null, null],
+      ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF', null, null]
     ]
 
     const paletteIndex = Math.floor(Math.random()*palettes.length)
+    const palette = palettes[paletteIndex]
+
+    // console.log('data', this.paletteIndex)
+
+    // console.log('paletteIndex', paletteIndex, palette)
 
     let windowSize, isMobile
 
@@ -60,20 +68,41 @@ export default {
       windowSize,
       isMobile: isMobile,
       palettes,
-      palette: palettes[paletteIndex],
+      paletteIndex,
+      palette,
       hoveredLetter: null,
       projects: null,
       ideas: null
     }
   },
 
+  // beforeMount() {
+  //   console.log('mounted', this.paletteIndex)
+  // },
+
+  // mounted() {
+  //   console.log('mounted', this.paletteIndex)
+  // },
+
   async asyncData({ $axios, env }) {
-    return {}
+    const useDummyData = !true
 
-    // const baseUrl = 'https://api.airtable.com/v0/'
+    if(useDummyData) {
+      return {
+        ideas: dummyIdeas,
+        projects: []
+      }
+    } else {
+      const baseUrl = 'https://api.airtable.com/v0/'
 
-    // const ideasUrl = baseUrl + 'appE17V3A75B99zBa/Ideas?api_key=' + env.airtableApiKey
-    // const ideas = await $axios.$get(ideasUrl)
+      const ideasUrl = baseUrl + 'appE17V3A75B99zBa/Ideas?api_key=' + env.airtableApiKey
+      const ideas = await $axios.$get(ideasUrl)
+
+      return {
+        ideas: ideas.records,
+        projects: []
+      }
+    }
 
     // const projectsUrl = baseUrl + 'appE17V3A75B99zBa/Projects?api_key=' + env.airtableApiKey
     // const projects = await $axios.$get(projectsUrl)
@@ -95,15 +124,16 @@ export default {
     classObject() {
       const c = ['home']
 
-      if(this.palette.length > 5) {
+      // Dark theme
+      if(this.palette[5]) {
         c.push('-'+this.palette[5])
       }
 
-      let paletteIndex = 0
-      if(this.hoveredLetter) {
-        paletteIndex = this.hoveredLetter%this.palettes.length
-      }
-      c.push('-palette-'+paletteIndex)
+      c.push('-palette-'+this.paletteIndex)
+
+      // console.log('classObject', this.paletteIndex)
+      // console.log('palette', this.palette)
+      // console.log('c', c)
 
       return c.join(' ')
     },
@@ -111,9 +141,13 @@ export default {
     styleObject() {
       const s = {}
 
-      if(this.palette.length > 4) {
+      if(process.browser && this.palette[4]) {
         s.backgroundColor = this.palette[4]
       }
+
+      // console.log('styleObject', this.paletteIndex)
+      // console.log('palette', this.palette)
+      // console.log('s', s)
 
       return s
     }
@@ -122,7 +156,8 @@ export default {
   methods: {
     hoverBannerLetter(letter) {
       this.hoveredLetter = letter
-      this.palette = this.palettes[letter%this.palettes.length]
+      this.paletteIndex = letter%this.palettes.length
+      this.palette = this.palettes[this.paletteIndex]
     },
     
     unhoverBannerLetter(letter) {
