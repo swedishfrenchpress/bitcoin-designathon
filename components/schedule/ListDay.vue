@@ -99,10 +99,13 @@ export default {
       let scheduleEvent, eventDay
       for(let i=0; i<this.schedule.length; i++) {
         scheduleEvent = this.schedule[i]
-        eventDay = scheduleEvent.fields.Date.substr(0, 10)
 
-        if(eventDay == this.dayId) {
-          result.push(scheduleEvent)
+        if(scheduleEvent.fields.Date) {
+          eventDay = scheduleEvent.fields.Date.substr(0, 10)
+
+          if(eventDay == this.dayId) {
+            result.push(scheduleEvent)
+          }
         }
       }
 
