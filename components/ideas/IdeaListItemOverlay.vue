@@ -36,7 +36,7 @@
             v-if="false"
             :link="'#'"
             label="Create project"
-            :color="palette[0]"
+            :color="color"
             size="small"
             :invert="true"
           />
@@ -53,7 +53,8 @@ export default {
     'activeId',
     'palette',
     'ideas',
-    'projects'
+    'projects',
+    'color'
   ],
 
   data() {

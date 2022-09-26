@@ -5,13 +5,14 @@
       :description="copy.description"
       :link="copy.link"
       :linkLabel="copy.linkLabel"
-      :color="palette[0]"
+      :color="color"
     />
     <IdeasIdeaList
       v-if="ideas"
       :ideas="cleanIdeas"
       :projects="projects"
       :palette="palette"
+      :color="color"
     />
   </div>
 </template>
@@ -51,6 +52,10 @@ export default {
       }
 
       return this.shuffle(result)
+    },
+
+    color() {
+      return this.palette[0]
     }
   },
 

@@ -4,7 +4,7 @@
       v-if="paginationPages > 1"
       :index="paginationIndex"
       :pages="paginationPages"
-      :color="palette[0]"
+      :color="color"
       @paginate="paginate"
     />
     <div class="wrap">
@@ -14,6 +14,7 @@
         :palette="palette"
         :idea="item"
         :projects="projects"
+        :color="color"
         @select="select"
       />
     </div>
@@ -22,6 +23,7 @@
       :palette="palette"
       :ideas="ideas"
       :projects="projects"
+      :color="color"
       @close="closeOverlay"
     />
   </div>
@@ -33,7 +35,8 @@ export default {
   props: [
     'palette',
     'ideas',
-    'projects'
+    'projects',
+    'color'
   ],
 
   data() {

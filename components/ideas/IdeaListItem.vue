@@ -7,7 +7,7 @@
     @mouseleave="unhover"
   >
     <BoxSideDepth
-      :color="palette[0]"
+      :color="color"
       :hovering="hovering"
     />
     <h3 role="button" @click="select">{{ name }}</h3>
@@ -21,7 +21,7 @@
       :link="'#idea-'+this.idea.id"
       label="More info"
       size="small"
-      :color="palette[0]"
+      :color="color"
       :invert="true"
       @click="select"
     />
@@ -34,7 +34,8 @@ export default {
   props: [
     'palette',
     'idea',
-    'projects'
+    'projects',
+    'color'
   ],
 
   data() {

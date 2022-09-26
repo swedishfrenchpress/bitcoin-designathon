@@ -16,11 +16,6 @@
       :ideas="ideas"
       :projects="projects"
     />
-    <ProjectsSection
-      :palette="palette"
-      :ideas="ideas"
-      :projects="projects"
-    />
     <SponsorSearchSection :palette="palette" />
     <PartnersSection :palette="palette" />
     <QuestionsSection :palette="palette" />
@@ -124,6 +119,10 @@ export default {
 
   mounted() {
     window.addEventListener('resize', this.onResize.bind(this))
+
+    // console.log('ideas', this.ideas)
+    // console.log('projects', this.projects)
+    // console.log('schedule', this.schedule)
   },
 
   computed: {
