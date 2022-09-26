@@ -21,7 +21,7 @@
             </svg>
           </button>
           <BoxSideDepth
-            :color="palette[0]"
+            :color="color"
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
@@ -33,9 +33,8 @@
             :ideas="ideas"
           />
           <SuperButton
-            v-if="false"
-            :link="'#'"
-            label="Create project"
+            :link="joinLink"
+            label="Join project"
             :color="color"
             size="small"
             :invert="true"
@@ -91,6 +90,10 @@ export default {
       result = result.split('<a').join('<a target="_blank" rel="nofollow noindex"')
 
       return result
+    },
+
+    joinLink() {
+      return 'https://airtable.com/shrKk3LXmnAe1YsGV?prefill_Project='+this.project.id
     }
   },
 

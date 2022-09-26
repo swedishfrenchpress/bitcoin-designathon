@@ -30,8 +30,13 @@ export default {
 
   data() {
     return {
-      copy: copy.projects
+      copy: copy.projects,
+      shuffleProjects: false
     }
+  },
+
+  mounted() {
+    this.shuffleProjects = true
   },
 
   computed: {
@@ -51,7 +56,11 @@ export default {
         }
       }
 
-      return this.shuffle(result)
+      if(this.shuffleProjects) {
+        return this.shuffle(result)
+      } else {
+        return result
+      }
     },
 
     color() {

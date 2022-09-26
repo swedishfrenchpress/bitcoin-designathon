@@ -16,6 +16,11 @@
       :ideas="ideas"
       :projects="projects"
     />
+    <ProjectsSection
+      :palette="palette"
+      :ideas="ideas"
+      :projects="projects"
+    />
     <SponsorSearchSection :palette="palette" />
     <PartnersSection :palette="palette" />
     <QuestionsSection :palette="palette" />
@@ -85,7 +90,7 @@ export default {
   // },
 
   async asyncData({ $axios, env }) {
-    const useDummyData = !true
+    const useDummyData = true
 
     if(useDummyData) {
       return {

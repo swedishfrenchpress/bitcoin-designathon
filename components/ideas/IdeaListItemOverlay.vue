@@ -33,8 +33,7 @@
             :projects="projects"
           />
           <SuperButton
-            v-if="false"
-            :link="'#'"
+            :link="createLink"
             label="Create project"
             :color="color"
             size="small"
@@ -116,6 +115,10 @@ export default {
       }
 
       return result
+    },
+
+    createLink() {
+      return 'https://airtable.com/shrwp1JAoY0oHiTnF?prefill_Idea='+this.idea.id
     }
   },
 
