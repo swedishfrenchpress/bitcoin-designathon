@@ -104,28 +104,22 @@ export default {
       const ideasUrl = baseUrl + 'appE17V3A75B99zBa/Ideas?api_key=' + env.airtableApiKey
       const ideas = await $axios.$get(ideasUrl)
 
+      const projectsUrl = baseUrl + 'appE17V3A75B99zBa/Projects?api_key=' + env.airtableApiKey
+      const projects = await $axios.$get(projectsUrl)
+
       const scheduleUrl = baseUrl + 'appE17V3A75B99zBa/Schedule?api_key=' + env.airtableApiKey
       const schedule = await $axios.$get(scheduleUrl)
 
-      console.log('s', schedule)
+      console.log('ideas', ideas)
+      console.log('projects', projects)
+      console.log('schedule', schedule)
 
       return {
         ideas: ideas.records,
-        projects: [],
-        schedule: schedule
+        projects: projects.records,
+        schedule: schedule.records
       }
     }
-
-    // const projectsUrl = baseUrl + 'appE17V3A75B99zBa/Projects?api_key=' + env.airtableApiKey
-    // const projects = await $axios.$get(projectsUrl)
-
-    // console.log('ideas', ideas)
-    // console.log('projects', projects)
-
-    // return {
-    //   ideas: ideas.records,
-    //   projects: projects.records
-    // }
   },
 
   mounted() {
