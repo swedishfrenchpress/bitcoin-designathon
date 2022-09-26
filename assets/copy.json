@@ -58,7 +58,9 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Projects are how we organize and collaborate during the designathon. Anyone can form a project with an idea they would like to work on, independently or with others. Once we are closer to the start date, we will open up registrations for projects. Keep an eye on this spot."
+    "description": "Projects are how we organize and collaborate during the designathon. Anyone can form a project with an idea they would like to work on, independently or with others. Join one of the ones below, or start your own.<br/><br/>When adding your project, you will also have the option to register with bolt.fun for the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Legends of Lightning tournament</a>.",
+    "link": "https://airtable.com/shrgXiBFgzRh8Fik4",
+    "linkLabel": "Start a project"
   },
   "partners": {
     "title": "Co-mingle",

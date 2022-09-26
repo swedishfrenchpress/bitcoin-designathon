@@ -90,12 +90,12 @@ export default {
   // },
 
   async asyncData({ $axios, env }) {
-    const useDummyData = true
+    const useDummyData = !true
 
     if(useDummyData) {
       return {
         ideas: dummyIdeas,
-        projects: [],
+        projects: dummyProjects,
         schedule: dummySchedule
       }
     } else {
