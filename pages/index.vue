@@ -7,10 +7,6 @@
       @unhoverLetter="unhoverBannerLetter"
     />
     <InfoSection :palette="palette" />
-    <ScheduleSection
-      :schedule="schedule"
-      :palette="palette"
-    />
     <IdeasSection
       :palette="palette"
       :ideas="ideas"
@@ -20,6 +16,10 @@
       :palette="palette"
       :ideas="ideas"
       :projects="projects"
+    />
+    <ScheduleSection
+      :schedule="schedule"
+      :palette="palette"
     />
     <SponsorSearchSection :palette="palette" />
     <PartnersSection :palette="palette" />

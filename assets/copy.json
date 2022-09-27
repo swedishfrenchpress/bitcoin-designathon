@@ -91,7 +91,7 @@
   },
   "schedule": {
     "title": "Schedule",
-    "description": "Other than the kick-off and wrap-up, there is no fixed schedule. We put together a few open work sessions and workshops. If you’d like to list an event here, reach out on Slack.",
+    "description": "The designathon has generally a loose schedule, with projects deciding their own pace. Important are the kick-off, mid-event check-in, and wrap-up calls. We are currently working on scheduling a few workshops, design jam sessions and other calls. You can submit an event via <a href=\"https://airtable.com/shrHfeVw43m5WlPg7\" target=\"_blank\" rel=\"nofollow noindex\">this form</a>.",
     "dates": {
       "2022-10-12": {
         "label": "Wednesday, Oct 12 <i>/ Day 1</i>"
