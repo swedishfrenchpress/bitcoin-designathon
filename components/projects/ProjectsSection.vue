@@ -3,13 +3,27 @@
     <SectionHeader
       :title="copy.title"
       :description="copy.description"
-      :color="palette[2]"
+      :link="copy.link"
+      :linkLabel="copy.linkLabel"
+      :color="color"
     />
-    <ProjectsProjectList
-      v-if="false"
-      :questions="questions"
+    <ProjectsList
+      v-if="projects"
+      :projects="cleanProjects"
+      :ideas="ideas"
       :palette="palette"
+      :color="color"
     />
+
+    <div class="registration">
+      <p>{{ copy.general.text }}</p>
+      <SuperButton
+        :link="copy.general.link"
+        label="Register"
+        size="small"
+        :color="color"
+      />
+    </div>
   </div>
 </template>
 
@@ -26,10 +40,86 @@ export default {
 
   data() {
     return {
-      copy: copy.projects
+      copy: copy.projects,
+      shuffleProjects: false
+    }
+  },
+
+  mounted() {
+    this.shuffleProjects = true
+  },
+
+  computed: {
+    cleanProjects() {
+      const result = []
+
+      let project
+      for(let i=0; i<this.projects.length; i++) {
+        project = this.projects[i]
+
+        if(project.fields.Name && 
+          project.fields.Name.length > 0 && 
+          project.fields.Description && 
+          project.fields.Description.length > 0 && 
+          project.fields.Status == 'Visible'
+        ) {
+          result.push(project)
+        }
+      }
+
+      if(this.shuffleProjects) {
+        return this.shuffle(result)
+      } else {
+        return result
+      }
+    },
+
+    color() {
+      return this.palette[2]
+    }
+  },
+
+  methods: {
+    shuffle(a) {
+      let j, x, i;
+      for(i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+      }
+      return a;
     }
   }
 
 }
 </script>
+
+<style lang="scss">
+
+@import "@/assets/css/animations.scss";
+@import "@/assets/css/mixins.scss";
+
+.projects-section {
+  .registration {
+    margin-top: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    p {
+      @include r('font-size', 18, 20);
+      text-align: center;
+    }
+
+    .super-button {
+      flex-shrink: 1;
+    }
+  }
+}
+
+</style>
+
 

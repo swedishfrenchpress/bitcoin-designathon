@@ -113,7 +113,7 @@ export default {
       for(let i=0; i<this.schedule.length; i++) {
         scheduleEvent = this.schedule[i]
 
-        if(scheduleEvent.fields.Date) {
+        if(scheduleEvent.fields.Date && scheduleEvent.fields.Status == 'Visible') {
           eventDay = scheduleEvent.fields.Date.substr(0, 10)
 
           if(eventDay == this.dayId) {

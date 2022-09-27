@@ -5,13 +5,14 @@
       :description="copy.description"
       :link="copy.link"
       :linkLabel="copy.linkLabel"
-      :color="palette[0]"
+      :color="color"
     />
     <IdeasIdeaList
       v-if="ideas"
       :ideas="cleanIdeas"
       :projects="projects"
       :palette="palette"
+      :color="color"
     />
   </div>
 </template>
@@ -29,8 +30,13 @@ export default {
 
   data() {
     return {
-      copy: copy.ideas
+      copy: copy.ideas,
+      shuffleIdeas: false
     }
+  },
+
+  mounted() {
+    this.shuffleIdeas = true
   },
 
   computed: {
@@ -44,13 +50,22 @@ export default {
         if(idea.fields.Name && 
           idea.fields.Name.length > 0 && 
           idea.fields.Description && 
-          idea.fields.Description.length > 0
+          idea.fields.Description.length > 0 && 
+          idea.fields.Status == 'Visible'
         ) {
           result.push(idea)
         }
       }
 
-      return this.shuffle(result)
+      if(this.shuffleIdeas) {
+        return this.shuffle(result)
+      } else {
+        return result
+      }
+    },
+
+    color() {
+      return this.palette[0]
     }
   },
 

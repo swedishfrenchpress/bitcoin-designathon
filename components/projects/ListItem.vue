@@ -1,7 +1,7 @@
 <template>
   <div
     :id="elementId"
-    class="idea-list-item" 
+    class="project-list-item" 
     role="button"
     @mouseenter="hover" 
     @mouseleave="unhover"
@@ -10,15 +10,15 @@
       :color="color"
       :hovering="hovering"
     />
-    <h3><a :href="'#project-'+this.idea.id">{{ name }}</a></h3>
+    <h3><a :href="'#project-'+this.project.id">{{ name }}</a></h3>
     <p v-if="description" v-html="shortenedDescription" />
-    <IdeasIdeaListItemProjects
-      :idea="idea"
-      :projects="projects"
+    <ProjectsListItemIdeas
+      :project="project"
+      :ideas="ideas"
       align="center"
     />
     <SuperButton
-      :link="'#idea-'+this.idea.id"
+      :link="'#project-'+this.project.id"
       label="More info"
       size="small"
       :color="color"
@@ -32,8 +32,8 @@ export default {
 
   props: [
     'palette',
-    'idea',
-    'projects',
+    'project',
+    'ideas',
     'color'
   ],
 
@@ -45,19 +45,19 @@ export default {
 
   computed: {
     elementId() {
-      return 'idea-summary-'+this.idea.id
+      return 'project-summary-'+this.project.id
     },
 
     name() {
-      return this.idea.fields.Name
+      return this.project.fields.Name
     },
 
     description() {
-      return this.idea.fields.Description
+      return this.project.fields.Description
     },
 
     shortenedDescription() {
-      let result = this.idea.fields.Description
+      let result = this.project.fields.Description
 
       if(result.length > 100) {
         result = result.substr(0, 98) //  <b>more</b>
@@ -92,7 +92,7 @@ export default {
 @import "@/assets/css/animations.scss";
 @import "@/assets/css/mixins.scss";
 
-.idea-list-item {
+.project-list-item {
   position: relative;
   background-color: white;
   border: 1px solid black;

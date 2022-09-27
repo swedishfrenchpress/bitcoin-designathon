@@ -1,42 +1,63 @@
 [
     {
-        "id": "recWNXfwT1Iu6jzCdsaz",
+        "id": "recWNXfwT1Iu6jzCz",
         "createdTime": "2022-09-21T09:02:06.000Z",
         "fields": {
             "Name": "Kick-off call",
             "Description": "Test copy.\n",
-            "Date": "2022-10-12T14:00:00.000Z",
+            "Date": "2022-10-12T17:00:00.000Z",
+            "Status": "Visible",
             "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
         }
     },
     {
-        "id": "recWNXfwT1Iu6jzadsCz",
-        "createdTime": "2022-09-21T09:02:06.000Z",
+        "id": "recWpi73r3ietIDAB",
+        "createdTime": "2022-09-22T12:20:27.000Z",
         "fields": {
-            "Name": "Panel on open design",
-            "Description": "Let’s discuss how we collaborate in open source.",
-            "Date": "2022-10-12T15:00:00.000Z",
+            "Name": "Community call #39",
+            "Description": "Our regular Bitcoin Design Community Call. Let's use this time to do a mid-event check-in to see what everyone has been doing.\n",
+            "Date": "2022-10-19T17:00:00.000Z",
+            "Status": "Visible",
+            "Link": "[Info](https://github.com/BitcoinDesign/Meta/issues/397)\n"
+        }
+    },
+    {
+        "id": "recbGUuGqoJVDyxH3",
+        "createdTime": "2022-09-26T11:41:21.000Z",
+        "fields": {
+            "Name": "Final presentations",
+            "Description": "Let's get together and share what we came up with during the designathon.\n",
+            "Date": "2022-10-23T17:00:00.000Z",
+            "Status": "Visible",
             "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
         }
     },
     {
-        "id": "recWNXfwT1Iu6jzdsadasCz",
-        "createdTime": "2022-09-21T09:02:06.000Z",
+        "id": "reckTy9uYQIpzeYky",
+        "createdTime": "2022-09-26T11:43:41.000Z",
         "fields": {
-            "Name": "Open design session",
-            "Description": "Stop by on Jitsi to discuss your project and tune in to what others are working on.",
-            "Date": "2022-10-13T10:00:00.000Z",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+            "Name": "Penpot workshop",
+            "Status": "Hidden"
         }
     },
     {
-        "id": "recWNXfwT1Iu6adsajzCz",
+        "id": "reckmmqYIzgi9H2BB",
+        "createdTime": "2022-09-22T12:22:07.000Z",
+        "fields": {
+            "Name": "Community call #38",
+            "Description": "Our regular Bitcoin Design Community Call. This one is leading up to the event, a good time to give an overview, review the schedule, ask questions, and more.\n",
+            "Date": "2022-09-28T17:00:00.000Z",
+            "Status": "Visible",
+            "Link": "[Info](https://github.com/BitcoinDesign/Meta/issues/328)\n"
+        }
+    },
+    {
+        "id": "reclFBbTf4gNoR4wE",
         "createdTime": "2022-09-21T09:02:06.000Z",
         "fields": {
-            "Name": "Intro to the Bitcoin UI Kit",
-            "Description": "A 1-hour collaborative work session using the UI Kit to design a simple mobile app. If there’s interest, we can spend the first half with Figma basics.",
-            "Date": "2022-10-13T17:00:00.000Z",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+            "Name": "Bitcoin UI Kit workshop",
+            "Description": "Introduction to the [Bitcoin UI Kit](https://www.bitcoinuikit.com) and how to use it for quickly mocking-up interfaces for bitcoin applications. Hosted by Christoph.\n",
+            "Status": "Hidden"
         }
     }
 ]

@@ -1,5 +1,5 @@
 <template>
-  <div class="idea-list">
+  <div class="project-list">
     <Pagination
       v-if="paginationPages > 1"
       :index="paginationIndex"
@@ -8,20 +8,20 @@
       @paginate="paginate"
     />
     <div class="wrap">
-      <IdeasIdeaListItem
-        v-for="item in filteredIdeas"
+      <ProjectsListItem
+        v-for="item in filteredProjects"
         :key="item.id"
         :palette="palette"
-        :idea="item"
-        :projects="projects"
+        :project="item"
+        :ideas="ideas"
         :color="color"
       />
     </div>
-    <IdeasIdeaListItemOverlay
+    <ProjectsListItemOverlay
       :activeId="activeId"
       :palette="palette"
-      :ideas="ideas"
       :projects="projects"
+      :ideas="ideas"
       :color="color"
       @close="closeOverlay"
     />
@@ -33,8 +33,8 @@ export default {
 
   props: [
     'palette',
-    'ideas',
     'projects',
+    'ideas',
     'color'
   ],
 
@@ -47,8 +47,8 @@ export default {
   },
 
   mounted() {
-    // On load, check if deep-linking to an idea
-    // If so, show overlay and scroll to ideas section
+    // On load, check if deep-linking to a project
+    // If so, show overlay and scroll to projects section
     // Hash is not available during build, so doing this here
     if(process.browser) {
       window.addEventListener('hashchange', this.checkHash.bind(this))
@@ -61,19 +61,19 @@ export default {
     paginationPages() {
       let result = 0
 
-      if(this.ideas && this.ideas.length > 0) {
-        result = Math.ceil(this.ideas.length / this.perPage)
+      if(this.projects && this.projects.length > 0) {
+        result = Math.ceil(this.projects.length / this.perPage)
       }
 
       return result
     },
 
-    filteredIdeas() {
-      let result = this.ideas
+    filteredProjects() {
+      let result = this.projects
 
       if(this.paginationPages > 1) {
         const start = this.paginationIndex * this.perPage
-        result = this.ideas.slice(start, start + this.perPage)
+        result = this.projects.slice(start, start + this.perPage)
       }
 
       return result
@@ -98,24 +98,24 @@ export default {
     checkHash(scrollToSection) {
       let newActiveId
 
-      // Looks like #idea-recd90OXCtbtOaMb5
+      // Looks like #project-recd90OXCtbtOaMb5
       const fullHash = window.location.hash
 
       if(fullHash && fullHash.indexOf('-') !== -1) {
         let hash = fullHash.split('-')[1]
 
-        for(let i=0; i<this.ideas.length; i++) {
-          if(this.ideas[i].id == hash) {
+        for(let i=0; i<this.projects.length; i++) {
+          if(this.projects[i].id == hash) {
             newActiveId = hash
 
             if(scrollToSection) {
-              const ideaSection = document.getElementById('ideas')
-              const sectionCenter = ideaSection.offsetTop + ideaSection.offsetHeight/2
+              const projectSection = document.getElementById('projects')
+              const sectionCenter = projectSection.offsetTop + projectSection.offsetHeight/2
               const delta = Math.abs(sectionCenter - window.pageYOffset)
 
 
               if(delta > 600) {
-                window.scrollTo(0, ideaSection.offsetTop)
+                window.scrollTo(0, projectSection.offsetTop)
               }
             }
 
@@ -136,7 +136,7 @@ export default {
 @import "@/assets/css/animations.scss";
 @import "@/assets/css/mixins.scss";
 
-.idea-list {
+.project-list {
   margin-top: 10px;
   display: flex;
   flex-direction: column;

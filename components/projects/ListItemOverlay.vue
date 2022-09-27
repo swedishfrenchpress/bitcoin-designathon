@@ -1,11 +1,11 @@
 <template>
   <transition
-    v-if="idea"
+    v-if="project"
     appear
   >
     <div
       ref="canvas"
-      class="idea-list-item-overlay"
+      class="project-list-item-overlay"
       @click="clickBackground"
     >
       <div class="wrap">
@@ -21,20 +21,20 @@
             </svg>
           </button>
           <BoxSideDepth
-            :color="palette[0]"
+            :color="color"
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
           <div class="description">
             <p v-html="formattedDescription" />
           </div>
-          <IdeasIdeaListItemProjects
-            :idea="idea"
-            :projects="projects"
+          <ProjectsListItemIdeas
+            :project="project"
+            :ideas="ideas"
           />
           <SuperButton
-            :link="createLink"
-            label="Create project"
+            :link="joinLink"
+            label="Join project"
             :color="color"
             size="small"
             :invert="true"
@@ -51,8 +51,8 @@ export default {
   props: [
     'activeId',
     'palette',
-    'ideas',
     'projects',
+    'ideas',
     'color'
   ],
 
@@ -63,12 +63,12 @@ export default {
   },
 
   computed: {
-    idea() {
+    project() {
       let result
 
-      for(let i=0; i<this.ideas.length; i++) {
-        if(this.ideas[i].id == this.activeId) {
-          result = this.ideas[i]
+      for(let i=0; i<this.projects.length; i++) {
+        if(this.projects[i].id == this.activeId) {
+          result = this.projects[i]
           break
         }
       }
@@ -77,11 +77,11 @@ export default {
     },
 
     name() {
-      return this.idea.fields.Name
+      return this.project.fields.Name
     },
 
     description() {
-      return this.idea.fields.Description
+      return this.project.fields.Description
     },
 
     formattedDescription() {
@@ -92,33 +92,8 @@ export default {
       return result
     },
 
-    projectList() {
-      let result = []
-
-      if(this.idea.fields.Projects) {
-        let projectId, project, i, k
-        for(i=0; i<this.idea.fields.Projects.length; i++) {
-          projectId = this.idea.fields.Projects[i]
-
-          for(k=0; i<this.projects.length; i++) {
-            project = this.projects[i]
-
-            if(project.id == projectId) {
-              result.push(project)
-            }
-          }
-        }
-      }
-
-      if(result.length == 0) {
-        result = null
-      }
-
-      return result
-    },
-
-    createLink() {
-      return 'https://airtable.com/shrwp1JAoY0oHiTnF?prefill_Idea='+this.idea.id
+    joinLink() {
+      return 'https://airtable.com/shrKk3LXmnAe1YsGV?prefill_Projects='+this.project.id
     }
   },
 
@@ -151,7 +126,7 @@ export default {
 @import "@/assets/css/animations.scss";
 @import "@/assets/css/mixins.scss";
 
-.idea-list-item-overlay {
+.project-list-item-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -160,7 +135,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(var(--palette-0-rgb), 0.8);
+  background-color: rgba(var(--palette-2-rgb), 0.8);
   z-index: 10;
   overscroll-behavior-y: contain;
 

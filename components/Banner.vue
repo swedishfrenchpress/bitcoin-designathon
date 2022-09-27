@@ -183,8 +183,9 @@ export default {
       margin: 0;
       @include r('margin-top', 20, 40);
       @include r('font-size', 18, 27);
+      font-weight: 600;
       text-align: center;
-      color: #3F3B38;
+      color: rgba(var(--frontRGB), 0.75);
       transition: all 600ms $easeOutBack;
       transform: translateY(-50px);
       opacity: 0;
