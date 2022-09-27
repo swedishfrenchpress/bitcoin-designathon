@@ -45,7 +45,7 @@ export default {
 
   p {
     margin-top: 10px;
-    @include r('font-size', 18, 22);
+    @include r('font-size', 18, 20);
 
     a {
       color: var(--palette-0);
