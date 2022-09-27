@@ -135,7 +135,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(var(--palette-0-rgb), 0.8);
+  background-color: rgba(var(--palette-2-rgb), 0.8);
   z-index: 10;
   overscroll-behavior-y: contain;
 

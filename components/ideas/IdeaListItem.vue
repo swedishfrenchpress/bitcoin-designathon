@@ -10,7 +10,7 @@
       :color="color"
       :hovering="hovering"
     />
-    <h3 role="button" @click="select">{{ name }}</h3>
+    <h3><a :href="'#project-'+this.idea.id">{{ name }}</a></h3>
     <p v-if="description" v-html="shortenedDescription" />
     <IdeasIdeaListItemProjects
       :idea="idea"
@@ -23,7 +23,6 @@
       size="small"
       :color="color"
       :invert="true"
-      @click="select"
     />
   </div>
 </template>
@@ -82,10 +81,6 @@ export default {
 
     unhover() {
       this.hovering = false
-    },
-
-    select() {
-      this.$emit('select', this.idea.id)
     }
   }
 
@@ -116,12 +111,16 @@ export default {
     text-align: center;
     @include r('font-size', 22, 27);
     font-weight: 900;
-    color: black;
-    transition: all 150ms $ease;
 
-    &:hover {
-      color: var(--palette-0);
-      cursor: pointer;
+    a {
+      color: black;
+      text-decoration: none;
+      transition: all 150ms $ease;
+
+      &:hover {
+        color: var(--palette-0);
+        cursor: pointer;
+      }
     }
   }
 

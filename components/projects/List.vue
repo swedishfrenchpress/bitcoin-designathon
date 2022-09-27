@@ -15,7 +15,6 @@
         :project="item"
         :ideas="ideas"
         :color="color"
-        @select="select"
       />
     </div>
     <ProjectsListItemOverlay
@@ -48,10 +47,12 @@ export default {
   },
 
   mounted() {
-    // On load, check if deep-linking to an project
+    // On load, check if deep-linking to a project
     // If so, show overlay and scroll to projects section
     // Hash is not available during build, so doing this here
     if(process.browser) {
+      window.addEventListener('hashchange', this.checkHash.bind(this))
+
       this.checkHash(true)
     }
   },
@@ -80,10 +81,6 @@ export default {
   },
 
   methods: {
-    select(activeId) {
-      this.activeId = activeId
-    },
-
     closeOverlay() {
       if(process.browser) {
         if(window.location.hash == '#'+this.activeId) {
@@ -99,6 +96,8 @@ export default {
     },
 
     checkHash(scrollToSection) {
+      let newActiveId
+
       // Looks like #project-recd90OXCtbtOaMb5
       const fullHash = window.location.hash
 
@@ -107,17 +106,25 @@ export default {
 
         for(let i=0; i<this.projects.length; i++) {
           if(this.projects[i].id == hash) {
-            this.activeId = hash
+            newActiveId = hash
 
             if(scrollToSection) {
               const projectSection = document.getElementById('projects')
-              window.scrollTo(0, projectSection.offsetTop)
+              const sectionCenter = projectSection.offsetTop + projectSection.offsetHeight/2
+              const delta = Math.abs(sectionCenter - window.pageYOffset)
+
+
+              if(delta > 600) {
+                window.scrollTo(0, projectSection.offsetTop)
+              }
             }
 
             break;
           }
         }
       }
+
+      this.activeId = newActiveId
     }
   }
 

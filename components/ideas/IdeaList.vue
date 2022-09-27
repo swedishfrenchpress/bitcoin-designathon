@@ -15,7 +15,6 @@
         :idea="item"
         :projects="projects"
         :color="color"
-        @select="select"
       />
     </div>
     <IdeasIdeaListItemOverlay
@@ -52,6 +51,8 @@ export default {
     // If so, show overlay and scroll to ideas section
     // Hash is not available during build, so doing this here
     if(process.browser) {
+      window.addEventListener('hashchange', this.checkHash.bind(this))
+
       this.checkHash(true)
     }
   },
@@ -80,10 +81,6 @@ export default {
   },
 
   methods: {
-    select(activeId) {
-      this.activeId = activeId
-    },
-
     closeOverlay() {
       if(process.browser) {
         if(window.location.hash == '#'+this.activeId) {
@@ -99,6 +96,8 @@ export default {
     },
 
     checkHash(scrollToSection) {
+      let newActiveId
+
       // Looks like #idea-recd90OXCtbtOaMb5
       const fullHash = window.location.hash
 
@@ -107,17 +106,25 @@ export default {
 
         for(let i=0; i<this.ideas.length; i++) {
           if(this.ideas[i].id == hash) {
-            this.activeId = hash
+            newActiveId = hash
 
             if(scrollToSection) {
               const ideaSection = document.getElementById('ideas')
-              window.scrollTo(0, ideaSection.offsetTop)
+              const sectionCenter = ideaSection.offsetTop + ideaSection.offsetHeight/2
+              const delta = Math.abs(sectionCenter - window.pageYOffset)
+
+
+              if(delta > 600) {
+                window.scrollTo(0, ideaSection.offsetTop)
+              }
             }
 
             break;
           }
         }
       }
+
+      this.activeId = newActiveId
     }
   }
 
