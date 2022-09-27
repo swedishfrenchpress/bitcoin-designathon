@@ -110,9 +110,9 @@ export default {
       const scheduleUrl = baseUrl + 'appE17V3A75B99zBa/Schedule?api_key=' + env.airtableApiKey
       const schedule = await $axios.$get(scheduleUrl)
 
-      console.log('ideas', ideas)
-      console.log('projects', projects)
-      console.log('schedule', schedule)
+      // console.log('ideas', ideas)
+      // console.log('projects', projects)
+      // console.log('schedule', schedule)
 
       return {
         ideas: ideas.records,

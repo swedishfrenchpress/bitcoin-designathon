@@ -43,6 +43,9 @@
         "id": "recCUNxJFSoy2niWh",
         "createdTime": "2022-09-20T16:47:27.000Z",
         "fields": {
+            "Projects": [
+                "recgDYQhrUEpQLVZU"
+            ],
             "Description": "Conceptualize and design a first point of contact game for bitcoin curious devs. Learners complete test-driven, repl-based (preferably [replit](https://replit.com/)) lessons by completing missions traveling through bitcoin history. Beginners can breeze through the basics while more advanced learners can dive into the harder challenges and discover easter eggs. In the future, we could add pay for lesson completion or offer real world challenges for pay like Ender’s Game.\n",
             "Name": "Learn bitcoin coding via a game"
         }
@@ -59,7 +62,13 @@
         "id": "recHtl2ukj9pNyRUi",
         "createdTime": "2022-09-22T07:36:50.000Z",
         "fields": {
+            "Projects": [
+                "reczzM7Rvbxd2ddmh"
+            ],
             "Description": "How to hand bitcoin down to your family as seamlessly as possible? What happens if the bitcoiner in the family all of a sudden kicks the bucket? Who is going to assist the non-technical people and how? Could there be a website / platform that somehow guides the family member along the way, revealing certain information or directing them where to look? How will people be notified that this service exist - will they ignore it? … think it’s a scam? \n",
+            "Participants": [
+                "recqW7jzyMYmgCt19"
+            ],
             "Name": "Inheritance"
         }
     },
@@ -99,6 +108,9 @@
         "id": "recanb2hzIWpULZId",
         "createdTime": "2022-09-20T16:36:04.000Z",
         "fields": {
+            "Projects": [
+                "recDDtCkUhhw8WBEn"
+            ],
             "Description": "Taro will allow for the creation and use of assets on the lightning network. What will those assets be? How will we create and interact with them? What will they enable us to do? Let's learn about this tech, envision use cases and user experiences, and if there's some time create mock-ups and prototypes.\n\n[More about Taro](https://bitcoinmagazine.com/technical/how-bitcoin-taro-protocol-works)\n",
             "Name": "Taro!"
         }
@@ -131,9 +143,6 @@
         "id": "recudoRs8nmX4WMFI",
         "createdTime": "2022-09-13T08:43:38.000Z",
         "fields": {
-            "Projects": [
-                "recCDvi5Lkqb0KgBd"
-            ],
             "Description": "We need many different solutions for bitcoin custody that work for diverse individuals and communities around the globe. For example, [FediMint](https://fedimint.org) is a protocol for payments and custody in a community-context. How will this be used considering cultural and geographical differences? What other custody solutions do we need?\n",
             "Name": "Our keys, our coins"
         }
@@ -142,6 +151,9 @@
         "id": "recvRaUVb2HrbauBe",
         "createdTime": "2022-09-13T08:43:38.000Z",
         "fields": {
+            "Projects": [
+                "recCDvi5Lkqb0KgBd"
+            ],
             "Description": "Images created through artificial intelligence (Dall-E, Midjourney, Stable Diffusion) have been a hot trend (see [lexica.art](https://lexica.art)). Let’s explore these new tools together.\n",
             "Name": "Bitcoin AI art"
         }

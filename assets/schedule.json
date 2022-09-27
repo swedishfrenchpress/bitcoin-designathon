@@ -1,11 +1,11 @@
 [
     {
-        "id": "recWNXfwT1Iu6jzCdsaz",
+        "id": "recWNXfwT1Iu6jzCz",
         "createdTime": "2022-09-21T09:02:06.000Z",
         "fields": {
             "Name": "Kick-off call",
             "Description": "Test copy.\n",
-            "Date": "2022-10-12T14:00:00.000Z",
+            "Date": "2022-10-12T17:00:00.000Z",
             "Status": "Visible",
             "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
         }
@@ -16,19 +16,38 @@
         "fields": {
             "Name": "Community call #39",
             "Description": "Our regular Bitcoin Design Community Call. Let's use this time to do a mid-event check-in to see what everyone has been doing.\n",
-            "Date": "2022-10-19T19:00:00.000Z",
+            "Date": "2022-10-19T17:00:00.000Z",
+            "Status": "Visible",
             "Link": "[Info](https://github.com/BitcoinDesign/Meta/issues/397)\n"
+        }
+    },
+    {
+        "id": "recbGUuGqoJVDyxH3",
+        "createdTime": "2022-09-26T11:41:21.000Z",
+        "fields": {
+            "Name": "Final presentations",
+            "Description": "Let's get together and share what we came up with during the designathon.\n",
+            "Date": "2022-10-23T17:00:00.000Z",
+            "Status": "Visible",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+        }
+    },
+    {
+        "id": "reckTy9uYQIpzeYky",
+        "createdTime": "2022-09-26T11:43:41.000Z",
+        "fields": {
+            "Name": "Penpot workshop",
+            "Status": "Hidden"
         }
     },
     {
         "id": "reckmmqYIzgi9H2BB",
         "createdTime": "2022-09-22T12:22:07.000Z",
-        "id": "recWNXfwT1Iu6jzdsadasCz",
-        "createdTime": "2022-09-21T09:02:06.000Z",
         "fields": {
             "Name": "Community call #38",
             "Description": "Our regular Bitcoin Design Community Call. This one is leading up to the event, a good time to give an overview, review the schedule, ask questions, and more.\n",
-            "Date": "2022-09-28T19:00:00.000Z",
+            "Date": "2022-09-28T17:00:00.000Z",
+            "Status": "Visible",
             "Link": "[Info](https://github.com/BitcoinDesign/Meta/issues/328)\n"
         }
     },

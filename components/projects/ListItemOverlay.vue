@@ -93,7 +93,7 @@ export default {
     },
 
     joinLink() {
-      return 'https://airtable.com/shrKk3LXmnAe1YsGV?prefill_Project='+this.project.id
+      return 'https://airtable.com/shrKk3LXmnAe1YsGV?prefill_Projects='+this.project.id
     }
   },
 

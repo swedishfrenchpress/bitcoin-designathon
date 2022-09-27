@@ -3,11 +3,44 @@
         "id": "recCDvi5Lkqb0KgBd",
         "createdTime": "2022-09-13T08:46:23.000Z",
         "fields": {
-            "Ideas": [
-                "recudoRs8nmX4WMFI"
+            "Idea": [
+                "recvRaUVb2HrbauBe"
             ],
-            "Name": "Test project",
-            "Description": "Bitcoin ipsum dolor sit amet. Proof-of-work sats mining key pair electronic cash consensus proof-of-work, digital signature decentralized. Key pair, segwit, full node nonce electronic cash miner, block reward, mining. Halvening electronic cash consensus nonce hashrate difficulty, blockchain public key? Full node hashrate soft fork digital signature?"
+            "Name": "Artists Collective",
+            "Description": "Let's get together and try out all the cutting-edge AI image generation tools and create some cool visuals.\n"
+        }
+    },
+    {
+        "id": "recDDtCkUhhw8WBEn",
+        "createdTime": "2022-09-26T12:20:37.000Z",
+        "fields": {
+            "Idea": [
+                "recanb2hzIWpULZId"
+            ],
+            "Name": "Taro(t) Leaf Readers",
+            "Description": "Let's do a design sprint on Taro, starting with learning a bit about the tech, discussing use cases and UX challenges, and creating mock-ups and prototypes. Goal is to have a rough idea of how we might interact with Taro assets in a few years.\n\nStarted by Christoph, join via #designathon-taro.\n"
+        }
+    },
+    {
+        "id": "recgDYQhrUEpQLVZU",
+        "createdTime": "2022-09-26T12:18:55.000Z",
+        "fields": {
+            "Idea": [
+                "recCUNxJFSoy2niWh"
+            ],
+            "Name": "Coding game",
+            "Description": "More details coming soon.\n"
+        }
+    },
+    {
+        "id": "reczzM7Rvbxd2ddmh",
+        "createdTime": "2022-09-27T06:06:19.000Z",
+        "fields": {
+            "Idea": [
+                "recHtl2ukj9pNyRUi"
+            ],
+            "Name": "Passing the buck",
+            "Description": "More details coming soon.\n"
         }
     }
 ]

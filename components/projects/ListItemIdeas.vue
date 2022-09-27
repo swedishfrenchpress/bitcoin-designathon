@@ -40,10 +40,11 @@ export default {
     ideaList() {
       let result = []
 
-      if(this.project.fields.Ideas) {
+      const projectIdeas = this.project.fields.Idea
+      if(projectIdeas) {
         let ideaId, idea, i, k
-        for(i=0; i<this.project.fields.Ideas.length; i++) {
-          ideaId = this.project.fields.Ideas[i]
+        for(i=0; i<projectIdeas.length; i++) {
+          ideaId = projectIdeas[i]
 
           for(k=0; i<this.ideas.length; i++) {
             idea = this.ideas[i]

@@ -40,10 +40,11 @@ export default {
     projectList() {
       let result = []
 
-      if(this.idea.fields.Projects) {
+      const ideaProjects = this.idea.fields.Projects
+      if(ideaProjects) {
         let projectId, project, i, k
-        for(i=0; i<this.idea.fields.Projects.length; i++) {
-          projectId = this.idea.fields.Projects[i]
+        for(i=0; i<ideaProjects.length; i++) {
+          projectId = ideaProjects[i]
 
           for(k=0; i<this.projects.length; i++) {
             project = this.projects[i]
@@ -75,7 +76,7 @@ div {
   margin-top: 20px;
 
   h5 {
-    font-weight: 900;
+    font-weight: 600;
     @include r('font-size', 15, 18);
     color: black;
 

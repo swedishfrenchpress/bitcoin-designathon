@@ -14,6 +14,16 @@
       :palette="palette"
       :color="color"
     />
+
+    <div class="registration">
+      <p>{{ copy.general.text }}</p>
+      <SuperButton
+        :link="copy.general.link"
+        label="Register"
+        size="small"
+        :color="color"
+      />
+    </div>
   </div>
 </template>
 
@@ -83,4 +93,32 @@ export default {
 
 }
 </script>
+
+<style lang="scss">
+
+@import "@/assets/css/animations.scss";
+@import "@/assets/css/mixins.scss";
+
+.projects-section {
+  .registration {
+    margin-top: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    p {
+      @include r('font-size', 18, 20);
+      text-align: center;
+    }
+
+    .super-button {
+      flex-shrink: 1;
+    }
+  }
+}
+
+</style>
+
 
