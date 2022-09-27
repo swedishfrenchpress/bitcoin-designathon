@@ -60,7 +60,8 @@ export default {
         if(project.fields.Name && 
           project.fields.Name.length > 0 && 
           project.fields.Description && 
-          project.fields.Description.length > 0
+          project.fields.Description.length > 0 && 
+          project.fields.Status == 'Visible'
         ) {
           result.push(project)
         }

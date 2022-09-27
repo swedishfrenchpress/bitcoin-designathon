@@ -50,7 +50,8 @@ export default {
         if(idea.fields.Name && 
           idea.fields.Name.length > 0 && 
           idea.fields.Description && 
-          idea.fields.Description.length > 0
+          idea.fields.Description.length > 0 && 
+          idea.fields.Status == 'Visible'
         ) {
           result.push(idea)
         }
