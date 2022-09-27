@@ -86,5 +86,47 @@
         "link": "https://b.tc/conference/amsterdam"
       }
     ]
+  },
+  "schedule": {
+    "title": "Schedule",
+    "description": "The designathon has generally a loose schedule, with projects deciding their own pace. Important are the kick-off, mid-event check-in, and wrap-up calls. We are currently working on scheduling a few workshops, design jam sessions and other calls. You can submit an event via <a href=\"https://airtable.com/shrHfeVw43m5WlPg7\" target=\"_blank\" rel=\"nofollow noindex\">this form</a>.",
+    "dates": {
+      "2022-10-12": {
+        "label": "Wednesday, Oct 12 <i>/ Day 1</i>"
+      },
+      "2022-10-13": {
+        "label": "Thursday, Oct 13 <i>/ Day 2</i>"
+      },
+      "2022-10-14": {
+        "label": "Friday, Oct 14 <i>/ Day 3</i>"
+      },
+      "2022-10-15": {
+        "label": "Saturday, Oct 15 <i>/ Day 4</i>"
+      },
+      "2022-10-16": {
+        "label": "Sunday, Oct 16 <i>/ Day 5</i>"
+      },
+      "2022-10-17": {
+        "label": "Monday, Oct 17 <i>/ Day 6</i>"
+      },
+      "2022-10-18": {
+        "label": "Tuesday, Oct 18 <i>/ Day 7</i>"
+      },
+      "2022-10-19": {
+        "label": "Wednesday, Oct 19 <i>/ Day 8</i>"
+      },
+      "2022-10-20": {
+        "label": "Thursday, Oct 20 <i>/ Day 9</i>"
+      },
+      "2022-10-21": {
+        "label": "Friday, Oct 21 <i>/ Day 10</i>"
+      },
+      "2022-10-22": {
+        "label": "Saturday, Oct 22 <i>/ Day 11</i>"
+      },
+      "2022-10-23": {
+        "label": "Sunday, Oct 23 <i>/ Day 12</i>"
+      }
+    }
   }
 }
