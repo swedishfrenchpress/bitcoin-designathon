@@ -3,15 +3,18 @@
     :id="elementId"
     :class="classObject"
   >
-    <h3
-      role="button"
-      :aria-controls="'day-content-'+this.dayId"
-      :aria-expanded="expanded"
-      @click="toggleExpand"
-    >
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16.0781 10.7682L6.64018 18.6332C5.98886 19.176 5 18.7128 5 17.865L5 2.13504C5 1.2872 5.98886 0.824045 6.64018 1.36682L16.0781 9.23178C16.5579 9.63157 16.5579 10.3684 16.0781 10.7682Z" :fill="palette[1]" stroke="black"/>
-        </svg><span v-html="day.label" /></h3>
+    <div class="title">
+      <h3
+        role="button"
+        :aria-controls="'day-content-'+this.dayId"
+        :aria-expanded="expanded"
+        @click="toggleExpand"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.0781 10.7682L6.64018 18.6332C5.98886 19.176 5 18.7128 5 17.865L5 2.13504C5 1.2872 5.98886 0.824045 6.64018 1.36682L16.0781 9.23178C16.5579 9.63157 16.5579 10.3684 16.0781 10.7682Z" :fill="palette[1]" stroke="black"/>
+          </svg><span v-html="day.label" /></h3>
+      <p>{{ eventCount }}</p>
+    </div>
     <div
       :id="'day-content-'+this.dayId"
       :aria-hidden="expanded ? 'false' : 'true'"
@@ -76,6 +79,12 @@ export default {
         c.push('-visible')
       }
 
+      if(this.enabled) {
+        c.push('-enabled')
+      } else {
+        c.push('-disabled')
+      }
+
       return c.join(' ')
     },
 
@@ -91,6 +100,10 @@ export default {
 
     expanded() {
       return this.dayId == this.activeDayId
+    },
+
+    enabled() {
+      return this.eventCount > 0
     },
 
     events() {
@@ -112,6 +125,10 @@ export default {
       // Add sorting.
 
       return result
+    },
+
+    eventCount() {
+      return this.events.length
     }
   },
 
@@ -119,16 +136,18 @@ export default {
     toggleExpand() {
       // this.expanded = !this.expanded
 
-      this.$emit('toggle', {
-        id: this.dayId, 
-        expanded: !this.expanded
-      })
+      if(this.enabled) {
+        this.$emit('toggle', {
+          id: this.dayId, 
+          expanded: !this.expanded
+        })
+      }
     },
 
     updateContentHeight() {
       let result = 0
 
-      if(this.expanded && this.$refs.content) {
+      if(this.enabled && this.expanded && this.$refs.content) {
         result = this.$refs.content.offsetHeight
       }
 
@@ -151,32 +170,63 @@ export default {
   padding-top: 15px;
   padding-bottom: 15px;
 
-  h3 {
-    @include r('font-size', 18, 24);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 100ms $ease;
+  .title {
+    display: flex;
+    align-items: center;
 
-    svg {
-      margin-right: 10px;
-      transition: all 150ms $ease;
-      vertical-align: middle;
+    h3 {
+      @include r('font-size', 18, 24);
+      font-weight: 600;
+      transition: all 100ms $ease;
 
-      path {
-        stroke: var(--front);
+      svg {
+        margin-right: 10px;
+        transition: all 150ms $ease;
+        vertical-align: middle;
+        transform: translateY(-2px);
+
+        path {
+          stroke: var(--front);
+        }
+      }
+
+      span {
+        i {
+          font-weight: 400;
+          font-style: normal;
+          color: rgba(var(--frontRGB), 0.5);
+        }
       }
     }
 
-    span {
-      i {
-        font-weight: 400;
-        font-style: normal;
-        color: rgba(var(--frontRGB), 0.5);
+    p {
+      margin-left: 10px;
+      @include r('font-size', 12, 14);
+      font-weight: 600;
+      background-color: rgba(var(--frontRGB), 0.1);
+      border-radius: 5px;
+      padding: 0 6px;
+    }
+  }
+
+  &.-disabled {
+    .title {
+      h3,
+      p {
+        opacity: 0.25;
       }
     }
+  }
 
-    &:hover {
-      color: var(--palette-1);
+  &.-enabled {
+    .title {
+      h3 {
+        cursor: pointer;
+
+        &:hover {
+          color: var(--palette-1);
+        }
+      }
     }
   }
 
@@ -201,7 +251,7 @@ export default {
   &.-expanded {
     h3 {
       svg {
-        transform: rotate(90deg);
+        transform: translateY(-2px) rotate(90deg);
       }
     }
   }
