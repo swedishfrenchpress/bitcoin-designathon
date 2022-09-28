@@ -58,7 +58,21 @@ export default {
 
   data() {
     return {
-      hovering: false
+      hovering: false,
+      keyCallback: null
+    }
+  },
+
+  mounted() {
+    if(process.browser) {
+      this.keyCallback = this.keyUp.bind(this)
+      window.addEventListener('keyup', this.keyCallback)
+    }
+  },
+
+  beforeDestroy() {
+    if(process.browser) {
+      window.removeEventListener('keyup', this.keyCallback)
     }
   },
 
@@ -113,6 +127,12 @@ export default {
 
     clickBackground(event) {
       if(event.target == this.$refs.canvas) {
+        this.close()
+      }
+    },
+
+    keyUp(event) {
+      if(this.project && event.which == 27) {
         this.close()
       }
     }
