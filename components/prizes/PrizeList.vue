@@ -42,10 +42,9 @@ export default {
 @import "@/assets/css/mixins.scss";
 
 .prize-list {
-  margin-top: 10px;
+  @include r('margin-top', 80, 80);
   display: flex;
   align-items: center;
-  gap: 30px;
 
   .wrap {
     display: flex;
@@ -54,12 +53,13 @@ export default {
     max-width: 1340px;
   }
 
-  @include media-query(small) {
+  @include media-query(medium-down) {
     flex-direction: column;
+    gap: 120px;
   }
 
-  @include media-query(medium-up) {
-    
+  @include media-query(large) {
+    gap: 30px;
   }
 }
 

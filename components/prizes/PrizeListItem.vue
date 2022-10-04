@@ -70,6 +70,7 @@ export default {
   flex-grow: 1;
   transition: all 250ms $ease;
   box-sizing: border-box;
+  max-width: 425px;
 
   h3 {
     text-align: center;
@@ -93,7 +94,7 @@ export default {
     }
   }
 
-  @include media-query(medium) {
+  @include media-query(medium-down) {
     flex-basis: 40%;
   }
 

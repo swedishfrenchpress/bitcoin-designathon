@@ -135,7 +135,7 @@
   },
   "prizes": {
     "title": "Prizes",
-    "description": "Major thanks to our awesome sponsors for making these prizes possible. To learn more about how they will awarded, see the FAQ&nbsp;below.",
+    "description": "Major thanks to our awesome sponsors for making these prizes possible. To learn more about how they will awarded, see the <a href=\"#questions\">FAQ</a>&nbsp;below.",
     "prizes": [
       {
         "name": "1",

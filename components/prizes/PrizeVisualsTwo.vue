@@ -149,29 +149,61 @@ export default {
     border: 1px solid black;
     transform-origin: center center;
     box-shadow: -8px 8px 0 rgba(black, 0.07);
+  }
 
-    &:nth-child(1) {
-      top: -50%;
-      left: -120%;
-      transform: translate(-50%, -50%) rotate(8deg);
+  @include media-query(small) {
+    img {
+      &:nth-child(1) {
+        top: -50%;
+        left: -70%;
+        transform: translate(-50%, -50%) rotate(8deg) scale(0.75, 0.75);
+      }
+
+      &:nth-child(2) {
+        top: -50%;
+        left: -70%;
+        transform: translate(-50%, -50%) rotate(-6deg) scale(0.75, 0.75);
+      }
+
+      &:nth-child(3) {
+        top: -75%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-5deg) scale(0.75, 0.75);
+      }
+
+      &:nth-child(4) {
+        top: -50%;
+        left: 170%;
+        transform: translate(-50%, -50%) rotate(7deg) scale(0.75, 0.75);
+      }
     }
+  }
 
-    &:nth-child(2) {
-      top: -50%;
-      left: -120%;
-      transform: translate(-50%, -50%) rotate(-6deg);
-    }
+  @include media-query(medium-up) {
+    img {
+      &:nth-child(1) {
+        top: -50%;
+        left: -100%;
+        transform: translate(-50%, -50%) rotate(8deg);
+      }
 
-    &:nth-child(3) {
-      top: -75%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-5deg);
-    }
+      &:nth-child(2) {
+        top: -50%;
+        left: -100%;
+        transform: translate(-50%, -50%) rotate(-6deg);
+      }
 
-    &:nth-child(4) {
-      top: -50%;
-      left: 220%;
-      transform: translate(-50%, -50%) rotate(7deg);
+      &:nth-child(3) {
+        top: -75%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-5deg);
+      }
+
+      &:nth-child(4) {
+        top: -50%;
+        left: 200%;
+        transform: translate(-50%, -50%) rotate(7deg);
+      }
     }
   }
 }

@@ -132,23 +132,49 @@ export default {
     border: 1px solid black;
     transform-origin: center center;
     box-shadow: -8px 8px 0 rgba(black, 0.07);
+  }
 
-    &:nth-child(1) {
-      top: -50%;
-      left: -150%;
-      transform: translate(-50%, -50%) rotate(-8deg);
+  @include media-query(small) {
+    img {
+      &:nth-child(1) {
+        top: -50%;
+        left: -100%;
+        transform: translate(-50%, -50%) rotate(-8deg) scale(0.75, 0.75);
+      }
+
+      &:nth-child(2) {
+        top: -75%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(5deg) scale(0.75, 0.75);
+      }
+
+      &:nth-child(3) {
+        top: -50%;
+        left: 200%;
+        transform: translate(-50%, -50%) rotate(3deg) scale(0.75, 0.75);
+      }
     }
+  }
 
-    &:nth-child(2) {
-      top: -75%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(5deg);
-    }
+  @include media-query(medium-up) {
+    img {
+      &:nth-child(1) {
+        top: -50%;
+        left: -150%;
+        transform: translate(-50%, -50%) rotate(-8deg);
+      }
 
-    &:nth-child(3) {
-      top: -50%;
-      left: 250%;
-      transform: translate(-50%, -50%) rotate(3deg);
+      &:nth-child(2) {
+        top: -75%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(5deg);
+      }
+
+      &:nth-child(3) {
+        top: -50%;
+        left: 250%;
+        transform: translate(-50%, -50%) rotate(3deg);
+      }
     }
   }
 }
