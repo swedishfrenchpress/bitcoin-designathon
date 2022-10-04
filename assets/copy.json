@@ -37,9 +37,8 @@
       },
       {
         "i": "judging",
-        "hidden": true,
-        "q": "How will projects be judged?",
-        "a": "<p>Design projects will be judged on the following criteria:</p><ul><li><p><b>🌈 Innovation</b><br/>The design should be something new and never seen before in the bitcoin space. This can be a brand new concept, or a fresh take on something we already know.</p></li><li><p><b>⚡ Bitcoin Integration</b><br/>The design should make intelligent use of bitcoin (and/or surrounding technologies like lightning).</p></li><li><p><b>👀 Open design</b><br/>Encouraging designers to work and collaborate in public. Has the team been transparent throughout their design journey?</p></li><li><p><b>✅ Execution</b><br/>Designers should focus on attention to detail. How well has the project been executed? How strong was their design process?</p></li><li><p><b>🍒 UI/UX Design</b><br/>The design follows good design principles and is well-crafted. How well has the application or feature been designed?</p></li><li><p><b>🔥 Je ne sais quoi</b><br/>The design should have an extra level of pizazz, personality, creativity, or coolness.</p></li>"
+        "q": "How will prizes be awarded?",
+        "a": "<p>Design projects will be evaluated on the following criteria:</p><ul><li><p><b>🌈 Innovation</b><br/>The design should be something new and interesting. This can be a brand new concept, or a fresh take on something we already know.</p></li><li><p><b>⚡ Bitcoin Integration</b><br/>The design should make intelligent use of bitcoin (and/or surrounding technologies like lightning).</p></li><li><p><b>👀 Open design</b><br/>The design community is all about working and collaborating in public. Has the project been transparent throughout the design journey?</p></li><li><p><b>✅ Execution</b><br/>Designers should focus on attention to detail. How well has the project executed? How strong was the design process?</p></li><li><p><b>🍒 UX/UI Design</b><br/>The design is user-centered, follows good design principles and is well-crafted.</p></li><li><p><b>🔥 Je ne sais quoi</b><br/>The design should have an extra level of pizazz, personality, creativity, or coolness.</p></li>"
       },
       {
         "i": "ideas",
