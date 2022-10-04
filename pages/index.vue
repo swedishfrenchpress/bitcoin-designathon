@@ -21,7 +21,7 @@
       :schedule="schedule"
       :palette="palette"
     />
-    <SponsorSearchSection :palette="palette" />
+    <PrizesSection :palette="palette" />
     <PartnersSection :palette="palette" />
     <QuestionsSection :palette="palette" />
     <Footer :palette="palette" />

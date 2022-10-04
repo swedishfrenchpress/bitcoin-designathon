@@ -132,5 +132,60 @@
         "label": "Sunday, Oct 23 <i>/ Day 12</i>"
       }
     }
+  },
+  "prizes": {
+    "title": "Prizes",
+    "description": "Major thanks to our awesome sponsors for making these prizes possible. To learn more about how they will awarded, see the <a href=\"#questions\">FAQ</a>&nbsp;below.",
+    "prizes": [
+      {
+        "name": "1",
+        "description": "0.025 bitcoin, and a jumper and a shirt by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
+      },
+      {
+        "name": "2",
+        "description": "One highly-secure, bitcoin-only, Swiss made <a href=\"https://shiftcrypto.ch/bitbox02/\" target=\"_blank\" rel=\"nofollow noindex\">BitBox02</a> hardware wallet. Two $100 gift cards for the <a href=\"https://lightning.store/\" target=\"_blank\" rel=\"nofollow noindex\">Lightning Store</a>.  And a jumper by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
+      },
+      {
+        "name": "3",
+        "description": "Two shirts by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six & Lemon</a>. Two $100 gift cards for the <a href=\"https://lightning.store/\" target=\"_blank\" rel=\"nofollow noindex\">Lightning&nbsp;Store</a>."
+      }
+    ],
+    "sponsors": [
+      {
+        "image": "peak-shift.svg",
+        "name": "Peak Shift",
+        "description": "Peak Shift, design agency and huge supporter of bitcoin, lightning, and this&nbsp;event.",
+        "url": "https://peakshift.com/"
+      },
+      {
+        "image": "breez.svg",
+        "name": "Breez",
+        "description": "Breez is a versatile wallet and entry point into the lightning&nbsp;economy. ",
+        "url": "https://breez.technology/"
+      },
+      {
+        "image": "shift-crypto.svg",
+        "name": "Shift Crypto",
+        "description": "Manufacturer of hardware wallets. Authentic, minimalist, outside-the-box.",
+        "url": "https://shiftcrypto.ch/"
+      },
+      {
+        "image": "six-and-lemon.png",
+        "name": "Six & Lemon",
+        "description": "Rep the bitcoin brand with Six and Lemon’s custom designed jumpers and&nbsp;t-shirts.",
+        "url": "https://sixandlemon.com/"
+      },
+      {
+        "image": "lightning-store.svg",
+        "name": "Lightning Store",
+        "description": "Obscure #Bitcoin pop cult/punk mashups for&nbsp;sale.",
+        "url": "https://lightning.store/"
+      },
+      {
+        "image": "mystery.svg",
+        "name": "*****",
+        "description": "Mystery sponsor. Who could it&nbsp;be?"
+      }
+    ]
   }
 }
