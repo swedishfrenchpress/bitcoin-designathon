@@ -152,36 +152,48 @@
     "sponsors": [
       {
         "image": "peak-shift.svg",
+        "width": 223,
+        "height": 55,
         "name": "Peak Shift",
         "description": "Peak Shift, design agency and huge supporter of bitcoin, lightning, and this&nbsp;event.",
         "url": "https://peakshift.com/"
       },
       {
         "image": "breez.svg",
+        "width": 155,
+        "height": 55,
         "name": "Breez",
         "description": "Breez is a versatile wallet and entry point into the lightning&nbsp;economy. ",
         "url": "https://breez.technology/"
       },
       {
         "image": "shift-crypto.svg",
+        "width": 123,
+        "height": 30,
         "name": "Shift Crypto",
         "description": "Manufacturer of hardware wallets. Authentic, minimalist, outside-the-box.",
         "url": "https://shiftcrypto.ch/"
       },
       {
         "image": "six-and-lemon.png",
+        "width": 209,
+        "height": 44,
         "name": "Six & Lemon",
         "description": "Rep the bitcoin brand with Six and Lemon’s custom designed jumpers and&nbsp;t-shirts.",
         "url": "https://sixandlemon.com/"
       },
       {
         "image": "lightning-store.svg",
+        "width": 240,
+        "height": 42,
         "name": "Lightning Store",
         "description": "Obscure #Bitcoin pop cult/punk mashups for&nbsp;sale.",
         "url": "https://lightning.store/"
       },
       {
         "image": "mystery.svg",
+        "width": 103,
+        "height": 42,
         "name": "*****",
         "description": "Mystery sponsor. Who could it&nbsp;be?"
       }

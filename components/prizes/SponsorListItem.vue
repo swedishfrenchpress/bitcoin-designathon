@@ -9,6 +9,8 @@
       >
         <img
           :src="require(`~/assets/images/prizes/${sponsor.image}`)"
+          :width="sponsor.width"
+          :height="sponsor.height"
           :alt="sponsor.name"
           loading="lazy"
         >
@@ -16,6 +18,8 @@
       <img
         v-else
         :src="require(`~/assets/images/prizes/${sponsor.image}`)"
+        :width="sponsor.width"
+        :height="sponsor.height"
         :alt="sponsor.name"
         loading="lazy"
       >
