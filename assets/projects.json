@@ -1,13 +1,32 @@
 [
     {
+        "id": "rec8GvDUPMZanAubQ",
+        "createdTime": "2022-09-30T08:20:01.000Z",
+        "fields": {
+            "Idea": [
+                "rec3KvZzVM7AaMvm5"
+            ],
+            "Status": "Visible",
+            "Name": "[compactor]",
+            "Participants": [
+                "recKpIVmZv9TgDGwu"
+            ],
+            "Description": "Problem: \nAfter using bitcoin for a while, or after mixing larger amounts of bitcoin using popular CoinJoin tools, users will accumulate many UTXOs in their wallet. This bloats the UTXO set. But more importantly for the user, this creates a privacy problem when the user wants to transfer an amount of bitcoin that is larger than any of the UTXOs in their wallet: to make this transfer, they will need to combine multiple UTXOs in their wallet into a single larger output, creating a public link between the inputs of the transaction and making it possible to infer common ownership of them. As the user collects more and more UTXOs, they become more and more cumbersome to manage while preserving privacy.\n\nSee also \"common input ownership heuristic\" and \"unnecessary input heuristic\" sections of the [privacy page in the bitcoin wiki](https://en.bitcoin.it/wiki/Privacy#Blockchain_attacks_on_privacy).\n\nSolution: \n[compactor] is an app that is used to privately consolidate bitcoin UTXOs using a zero-knowledge sidechain (such as zSide by Nikita Chashchinskii) to consolidate bitcoin UTXOs in a way that does not create a public link between the UTXOs.\n\n[Wireframes and further explanation](https://github.com/john-light/compactor/blob/main/docs/%5Bcompactor%5D%20-%20shared.pdf)\n\nSlack channel: [#designathon-compactor](https://bitcoindesign.slack.com/archives/C0459PJFSBA)\n"
+        }
+    },
+    {
         "id": "recCDvi5Lkqb0KgBd",
         "createdTime": "2022-09-13T08:46:23.000Z",
         "fields": {
             "Idea": [
                 "recvRaUVb2HrbauBe"
             ],
+            "Status": "Visible",
             "Name": "Artists Collective",
-            "Description": "Let's get together and try out all the cutting-edge AI image generation tools and create some cool visuals.\n"
+            "Participants": [
+                "recpHtNJ0phMRS7mS"
+            ],
+            "Description": "Let's get together and try out all the cutting-edge AI image generation tools and create some cool visuals.\n\nOn Slack: [#designathon-aiart](https://bitcoindesign.slack.com/archives/C044A1C8LAG)\n"
         }
     },
     {
@@ -17,8 +36,41 @@
             "Idea": [
                 "recanb2hzIWpULZId"
             ],
+            "Status": "Visible",
             "Name": "Taro(t) Leaf Readers",
-            "Description": "Let's do a design sprint on Taro, starting with learning a bit about the tech, discussing use cases and UX challenges, and creating mock-ups and prototypes. Goal is to have a rough idea of how we might interact with Taro assets in a few years.\n\nStarted by Christoph, join via #designathon-taro.\n"
+            "Participants": [
+                "rech2LN6oAs9ZgpbD"
+            ],
+            "Description": "Let's do a design sprint on Taro, starting with learning a bit about the tech, discussing use cases and UX challenges, and creating mock-ups and prototypes. Goal is to have a rough idea of how we might interact with Taro assets in a few years.\n\nStarted by Christoph, join via [#designathon-taro](https://bitcoindesign.slack.com/archives/C0447DA0FLJ).\n"
+        }
+    },
+    {
+        "id": "recVLdKX09W2QAgL6",
+        "createdTime": "2022-09-30T08:21:00.000Z",
+        "fields": {
+            "Idea": [
+                "recocibRiWfHIV0s1"
+            ],
+            "Status": "Visible",
+            "Name": "LNDg.xyz",
+            "Participants": [
+                "rech2LN6oAs9ZgpbD"
+            ],
+            "Description": "Lite GUI web interface to analyze lnd data and manage your node with automation... at your fingertips!\n\nThe idea resulted from a need to improve the experience through UX/Ui for node runners and found on LNDg a valuable tool to automate and learn how to run a lightning node.\n\nLooking for collaborators to improve the [current proposal](https://github.com/SuperAtic/lndg).\n\nSource files for the design library are also [available on Figma](https://www.figma.com/file/LuCKQT96mN8Rt6XI7NHB3P/LNDg-2.0?node-id=169%3A3687).\n\nA [demo marketing website](https://lndg.xyz/landing.html) is available.\nA [demo of the current LNDg Ui](https://lndg.xyz/v1.0.3/).\nA [demo for the new proposal](https://lndg.xyz/app/).\n\nSlack channel: [#designathon-lndg](https://bitcoindesign.slack.com/archives/C0445FVBJLF)\n"
+        }
+    },
+    {
+        "id": "reccFSsN4r3da1mNv",
+        "createdTime": "2022-09-28T08:04:26.000Z",
+        "fields": {
+            "Status": "Visible",
+            "Name": "Redesign BTCPay Server merchant directory",
+            "Participants": [
+                "recAQwp3GJIIpxWFy",
+                "recueWmX2PEalqp43",
+                "reckCjdizLh8FhdoI"
+            ],
+            "Description": "BTCPay Server is an open-source payment processor for bitcoin. Since it's decentralized and self-hosted there's no way to know who is really using BTCPay. However, merchants that use BTCPay sometimes proudly display it on their website or social media. To help various merchants advertise that they accept bitcoin and use btcpay, we've created a directory where anyone can self-list themselves. The goal of this project is to completely re-design and improve directory. Right now all the listings are on a single homepage with infinite scroll. We'd like to propose that every merchant has their own page. So redesigning the homepage, a submission page and a single merchant page would be the goal of this project.\n\nJoin the Slack channel here: [#designathon-btcpay](https://bitcoindesign.slack.com/archives/C044FHE2STB)\n\nBTCPay Directory can be seen here [https://directory.btcpayserver.org](https://directory.btcpayserver.org/)\nOur Design guidelines can be found here [https://design.btcpayserver.org](https://design.btcpayserver.org/)\n\nDesigners are completely free to make their own design choices, we'd love you to be creative and help merchants who accept bitcoin get more visibility. \n"
         }
     },
     {
@@ -28,8 +80,15 @@
             "Idea": [
                 "recCUNxJFSoy2niWh"
             ],
-            "Name": "Coding game",
-            "Description": "More details coming soon.\n"
+            "Status": "Visible",
+            "Name": "Saving Satoshi",
+            "Participants": [
+                "recNImTkmaEEYodrk",
+                "recoTI3veCrSxp4iG",
+                "recrC9nceDUY5Wk46",
+                "recQhHSMxDoCw3aXV"
+            ],
+            "Description": "Our goal is to create a first point-of-contact for developers of all ages learning about bitcoin development. This would be a series of interactive coding tutorials that also takes learners through the history of bitcoin.\n\nJoin on Slack: [#designathon-game](https://bitcoindesign.slack.com/archives/C0442BRGJ5U)\n"
         }
     },
     {
@@ -39,8 +98,15 @@
             "Idea": [
                 "recHtl2ukj9pNyRUi"
             ],
+            "Status": "Visible",
             "Name": "Passing the buck",
-            "Description": "More details coming soon.\n"
+            "Participants": [
+                "recnUOYpCeIHMYxe6",
+                "recqW7jzyMYmgCt19",
+                "recmYuIdO7aZcZWIz",
+                "recQhHSMxDoCw3aXV"
+            ],
+            "Description": "How to hand bitcoin down to your family as seamlessly as possible? What happens if the bitcoiner in the family all of a sudden kicks the bucket? Who is going to assist the non-technical people and how? Could there be a website / platform that somehow guides the family member along the way, revealing certain information or directing them where to look? This team will be designing working on exactly this. \n\nSlack: [#designathon-inheritance](https://bitcoindesign.slack.com/archives/C0441TK0459)\n"
         }
     }
 ]

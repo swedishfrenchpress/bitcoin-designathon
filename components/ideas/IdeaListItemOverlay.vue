@@ -25,9 +25,7 @@
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
-          <div class="description">
-            <p v-html="formattedDescription" />
-          </div>
+          <div class="description" v-html="formattedDescription" />
           <IdeasIdeaListItemProjects
             :idea="idea"
             :projects="projects"
@@ -197,7 +195,7 @@ export default {
       align-items: flex-start;
       max-width: 800px;
       flex-direction: column;
-      padding: 30px 30px 30px 50px;
+      padding: 30px 10px 30px 50px;
       box-shadow: -8px 8px 0 rgba(black, 0.07);
       flex-grow: 1;
       max-height: 80vh;
@@ -223,15 +221,34 @@ export default {
 
       .description {
         overflow-y: scroll;
+        padding-right: 20px;
 
         p {
           margin-top: 10px;
           @include r('font-size', 16, 21);
           color: rgba(black, 0.75);
 
+          strong {
+            font-weight: 600;
+            color: black;
+          }
+
           a {
             color: black;
           }
+
+          & + p {
+            margin-top: 20px;
+          }
+        }
+
+        code {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          display: inline-block;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: rgba(black, 0.05);
         }
       }
 

@@ -59,6 +59,10 @@ export default {
     shortenedDescription() {
       let result = this.idea.fields.Description
 
+      // Strip Markdown
+      result = result.split('**').join('')
+      result = result.split('\\-').join('')
+
       if(result.length > 100) {
         result = result.substr(0, 98) //  <b>more</b>
 
