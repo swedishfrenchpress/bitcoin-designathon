@@ -123,6 +123,11 @@ export default {
       }
 
       // Add sorting.
+      result.sort(function(a, b){
+        if(a.fields.Date < b.fields.Date) return -1
+        if(a.fields.Date > b.fields.Date) return 1
+        return 0
+      })
 
       return result
     },
