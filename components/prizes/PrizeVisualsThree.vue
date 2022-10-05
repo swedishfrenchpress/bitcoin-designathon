@@ -15,14 +15,14 @@
       alt="Lightning Store gift card"
     />
     <img
-      :src="require(`~/assets/images/prizes/shirt.png`)"
+      :src="require(`~/assets/images/prizes/shirt-2.png`)"
       :srcset="shirtRetina"
       width="101"
       height="101"
       alt="Shirt by Six & Lemon"
     />
     <img
-      :src="require(`~/assets/images/prizes/shirt.png`)"
+      :src="require(`~/assets/images/prizes/shirt-2.png`)"
       :srcset="shirtRetina"
       width="101"
       height="101"
@@ -156,7 +156,7 @@ export default {
     },
 
     shirtRetina() {
-      return require(`~/assets/images/prizes/shirt.png`)+' 1x, '+require(`~/assets/images/prizes/shirt@2x.png`)+' 2x'
+      return require(`~/assets/images/prizes/shirt-2.png`)+' 1x, '+require(`~/assets/images/prizes/shirt-2@2x.png`)+' 2x'
     }
   }
 
@@ -184,26 +184,26 @@ export default {
     img {
       &:nth-child(1) {
         top: -75%;
-        left: 20%;
-        transform: translate(-50%, -50%) rotate(8deg) scale(0.75, 0.75);
+        left: 15%;
+        transform: translate(-50%, -50%) rotate(-8deg) scale(0.75, 0.75);
       }
 
       &:nth-child(2) {
         top: -75%;
-        left: 20%;
-        transform: translate(-50%, -50%) rotate(-8deg) scale(0.75, 0.75);
+        left: 25%;
+        transform: translate(-50%, -50%) rotate(8deg) scale(0.75, 0.75);
       }
 
       &:nth-child(3) {
         top: -75%;
         left: 80%;
-        transform: translate(-50%, -50%) rotate(-2deg) scale(0.75, 0.75);
+        transform: translate(-50%, -50%) rotate(-10deg) scale(0.75, 0.75);
       }
 
       &:nth-child(4) {
         top: -75%;
         left: 80%;
-        transform: translate(-50%, -50%) rotate(-10deg) scale(0.75, 0.75);
+        transform: translate(-50%, -50%) rotate(-2deg) scale(0.75, 0.75);
       }
     }
   }
@@ -212,26 +212,26 @@ export default {
     img {
       &:nth-child(1) {
         top: -75%;
-        left: 20%;
-        transform: translate(-50%, -50%) rotate(8deg);
+        left: 18%;
+        transform: translate(-50%, -50%) rotate(-8deg);
       }
 
       &:nth-child(2) {
         top: -75%;
-        left: 20%;
-        transform: translate(-50%, -50%) rotate(-8deg);
+        left: 22%;
+        transform: translate(-50%, -50%) rotate(8deg);
       }
 
       &:nth-child(3) {
         top: -75%;
-        left: 80%;
-        transform: translate(-50%, -50%) rotate(-2deg);
+        left: 78%;
+        transform: translate(-50%, -50%) rotate(-10deg);
       }
 
       &:nth-child(4) {
         top: -75%;
-        left: 80%;
-        transform: translate(-50%, -50%) rotate(-10deg);
+        left: 82%;
+        transform: translate(-50%, -50%) rotate(-2deg);
       }
     }
   }

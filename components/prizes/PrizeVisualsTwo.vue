@@ -22,7 +22,7 @@
       alt="BitBox02"
     />
     <img
-      :src="require(`~/assets/images/prizes/jumper.png`)"
+      :src="require(`~/assets/images/prizes/jumper-2.png`)"
       :srcset="jumperRetina"
       width="101"
       height="101"
@@ -127,7 +127,7 @@ export default {
     },
 
     jumperRetina() {
-      return require(`~/assets/images/prizes/jumper.png`)+' 1x, '+require(`~/assets/images/prizes/jumper@2x.png`)+' 2x'
+      return require(`~/assets/images/prizes/jumper-2.png`)+' 1x, '+require(`~/assets/images/prizes/jumper-2@2x.png`)+' 2x'
     }
   }
 
@@ -155,14 +155,14 @@ export default {
     img {
       &:nth-child(1) {
         top: -50%;
-        left: -70%;
-        transform: translate(-50%, -50%) rotate(8deg) scale(0.75, 0.75);
+        left: -75%;
+        transform: translate(-50%, -50%) rotate(-6deg) scale(0.75, 0.75);
       }
 
       &:nth-child(2) {
         top: -50%;
-        left: -70%;
-        transform: translate(-50%, -50%) rotate(-6deg) scale(0.75, 0.75);
+        left: -65%;
+        transform: translate(-50%, -50%) rotate(8deg) scale(0.75, 0.75);
       }
 
       &:nth-child(3) {
@@ -183,14 +183,14 @@ export default {
     img {
       &:nth-child(1) {
         top: -50%;
-        left: -100%;
-        transform: translate(-50%, -50%) rotate(8deg);
+        left: -105%;
+        transform: translate(-50%, -50%) rotate(-6deg);
       }
 
       &:nth-child(2) {
         top: -50%;
-        left: -100%;
-        transform: translate(-50%, -50%) rotate(-6deg);
+        left: -95%;
+        transform: translate(-50%, -50%) rotate(8deg);
       }
 
       &:nth-child(3) {
