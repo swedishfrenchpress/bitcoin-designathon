@@ -28,7 +28,7 @@
       {
         "i": "help-for-newcomers",
         "q": "This is my first time joining a hackathon, will there be help?",
-        "a": "<p>Our first few days of the designathon will be dedicated to providing makers with some amazing workshops. We will also provide guidance in terms of online tutorials and resources you can use to enjoy your design journey. <br/><br/>This should provide some good tools and resources for you to start designing and most importantly having fun! Next to that our <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">Slack channel</a> is always open for you to post your question and we will gladly direct you to any additional help you may need.</p>"
+        "a": "<p>Our first few days of the designathon will be dedicated to providing makers with some amazing workshops. We will also provide guidance in terms of online tutorials and resources you can use to enjoy your design journey. We also put together a brief <a href=\"https://docs.google.com/document/d/1ELgNQLPsxAs_zefM0CMBh_ATQho_sy35xjBDeok-Jro/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with some tips for participation.<br/><br/>This should provide some good tools and resources for you to start designing and most importantly having fun! Next to that our <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">Slack channel</a> is always open for you to post your question and we will gladly direct you to any additional help you may need.</p>"
       },
       {
         "i": "find-projects",
@@ -59,7 +59,7 @@
     "link": "https://airtable.com/shrwp1JAoY0oHiTnF",
     "linkLabel": "Start a project",
     "general": {
-      "text": "Have not seen anything yet that interests you? You can also register first and sort out later what to work on.",
+      "text": "Have not seen anything yet that interests you? You can also register first and sort out later what to work on. Also check out our <a href=\"https://docs.google.com/document/d/1ELgNQLPsxAs_zefM0CMBh_ATQho_sy35xjBDeok-Jro/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with participation&nbsp;tips.",
       "link": "https://airtable.com/shrKk3LXmnAe1YsGV"
     }
   },

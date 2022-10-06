@@ -16,7 +16,7 @@
     />
 
     <div class="registration">
-      <p>{{ copy.general.text }}</p>
+      <p v-html="copy.general.text" />
       <SuperButton
         :link="copy.general.link"
         label="Register"
