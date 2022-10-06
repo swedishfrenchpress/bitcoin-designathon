@@ -92,8 +92,11 @@
   },
   "schedule": {
     "title": "Schedule",
-    "description": "The designathon has generally a loose schedule, with projects deciding their own pace. Important are the kick-off, mid-event check-in, and wrap-up calls. We are currently working on scheduling a few workshops, design jam sessions and other calls. You can submit an event via <a href=\"https://airtable.com/shrHfeVw43m5WlPg7\" target=\"_blank\" rel=\"nofollow noindex\">this form</a>.",
+    "description": "The designathon has generally a loose schedule, with projects deciding their own pace. Important, but still optional, are the kick-off, mid-event check-in, and wrap-up calls. We are currently working on scheduling a few workshops, design jam sessions and other calls. You can submit an event via <a href=\"https://airtable.com/shrHfeVw43m5WlPg7\" target=\"_blank\" rel=\"nofollow noindex\">this form</a>.",
     "dates": {
+      "2022-10-10": {
+        "label": "Monday, Oct 10 <i>/ Day -2</i>"
+      },
       "2022-10-12": {
         "label": "Wednesday, Oct 12 <i>/ Day 1</i>"
       },
