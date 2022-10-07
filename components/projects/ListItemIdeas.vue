@@ -1,6 +1,6 @@
 <template>
   <div v-if="ideaList" :class="classObject">
-    <h5>Based on this idea</h5>
+    <h5>{{ title }}</h5>
     <a
       v-for="idea in ideaList"
       :key="idea.id"
@@ -37,6 +37,20 @@ export default {
       return c.join(' ')
     },
 
+    title() {
+      let result
+
+      if(this.ideaList) {
+        if(this.ideaList.length == 1) {
+          return 'Based on this idea'
+        } else {
+          return 'Based on these ideas'
+        }
+      }
+
+      return result
+    },
+
     ideaList() {
       let result = []
 
@@ -46,11 +60,12 @@ export default {
         for(i=0; i<projectIdeas.length; i++) {
           ideaId = projectIdeas[i]
 
-          for(k=0; i<this.ideas.length; i++) {
-            idea = this.ideas[i]
+          for(k=0; k<this.ideas.length; k++) {
+            idea = this.ideas[k]
 
             if(idea.id == ideaId) {
               result.push(idea)
+              break
             }
           }
         }
@@ -86,14 +101,17 @@ div {
   }
 
   a {
-    display: inline-block;
+    display: block;
     @include r('font-size', 15, 18);
-    text-align: center;
     color: rgba(black, 0.75);
   }
 
   &.-center {
     text-align: center;
+
+    a {
+      text-align: center;
+    }
   }
 }
 

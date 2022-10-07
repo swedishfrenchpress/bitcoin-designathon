@@ -16,9 +16,9 @@
         "id": "rec2CwOTkhwW6hU3d",
         "createdTime": "2022-10-04T12:18:11.000Z",
         "fields": {
-            "Name": "Deconstructing Bitcoin + Tech",
             "Description": "Bitcoin education can be life changing.  To spread knowledge on how to bitcoin & BUIDL should be simple & friendly. Visual elements for diagrams and workshops  may be a useful tool to help you share your thoughts on those rabbit holes that keep pulling you deeper.\n",
-            "Status": "Visible"
+            "Status": "Visible",
+            "Name": "Deconstructing Bitcoin + Tech"
         }
     },
     {
@@ -102,7 +102,9 @@
             "Participants": [
                 "recqW7jzyMYmgCt19",
                 "recmYuIdO7aZcZWIz",
-                "recQhHSMxDoCw3aXV"
+                "recQhHSMxDoCw3aXV",
+                "recDXtso9zpCEINbq",
+                "reciXsMQf7vl4e2mr"
             ],
             "Name": "Inheritance"
         }
@@ -122,6 +124,9 @@
         "fields": {
             "Description": "Design a lightning wallet that allows for quick and easy payments between friends, family, and other close contacts. Read about [the full idea here](https://makers.bolt.fun/story/hackathon-project-ln-app-focused-around-paying-requesting-people-you-know--124).\n",
             "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ"
+            ],
             "Name": "Lightning app with contacts"
         }
     },
@@ -156,7 +161,10 @@
             "Participants": [
                 "recueWmX2PEalqp43"
             ],
-            "Name": "A bitcoin app for kids"
+            "Name": "A bitcoin app for kids",
+            "Projects": [
+                "rec6l1IRlfij5QkwV"
+            ]
         }
     },
     {
@@ -199,6 +207,9 @@
             ],
             "Description": "Taro will allow for the creation and use of assets on the lightning network. What will those assets be? How will we create and interact with them? What will they enable us to do? Let's learn about this tech, envision use cases and user experiences, and if there's some time create mock-ups and prototypes.\n\n[More about Taro](https://bitcoinmagazine.com/technical/how-bitcoin-taro-protocol-works)\n",
             "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ"
+            ],
             "Name": "Taro!"
         }
     },
@@ -237,7 +248,8 @@
             "Status": "Visible",
             "Participants": [
                 "recueWmX2PEalqp43",
-                "recVnBrUzykMV64Ap"
+                "recVnBrUzykMV64Ap",
+                "recgbIIYqWk58kDbQ"
             ],
             "Project submissions": [
                 "recZNNfdxRqat3vi2",
@@ -252,16 +264,19 @@
         "fields": {
             "Description": "A LN Wallet for kids & analphabets as proposed here a while ago on [GitHub](https://github.com/BitcoinDesign/Guide/discussions/606) and [Slack](https://github.com/BitcoinDesign/Guide/discussions/606).\n\n",
             "Status": "Visible",
-            "Name": "LNKids wallet"
+            "Name": "LNKids wallet",
+            "Projects": [
+                "rec6l1IRlfij5QkwV"
+            ]
         }
     },
     {
         "id": "rectUuzbTc4mobWU1",
         "createdTime": "2022-10-04T12:16:47.000Z",
         "fields": {
-            "Name": "Who Builds Bitcoin",
             "Description": "**What is this?**\n\\- An exploration tool for the Bitcoin open-source ecosystem.\n\\- An easier way to point to innovation.\n\\- An easier way for someone to find interesting things to work on.\n\\- (extend) A platform to help financially support open-source contributors?\n\n**Origin Story**\nGoing down the open-source developer path, I wanted to educate myself around the funding opportunities that exist. That's how I [initially came up](https://twitter.com/kouloumos/status/1476570418521772033) with [whofundsbitcoin.com](http://whofundsbitcoin.com/), a website showcasing those that fund Bitcoin development. \n\nFrom the start, I didn't want that project to only be about funding, rather to further develop it as the go-to resource for anyone eager to explore what individual Bitcoin developers are working on, unraveling all the cool things happening on Bitcoin. This was meant to be an exploration tool for the Bitcoin open-source ecosystem. **I soon realized that funding-centric was not the way to go. It should be project-centric.** \n\nThat's how **\"Who Funds Bitcoin\" evolved to \"Who Builds Bitcoin\".**\n\n**Design Briefing**\nI’m playing with this idea in my mind for close to a year now. I've implemented it once (with [whofundsbitcoin.com](http://whofundsbitcoin.com/)) and **I’ve since observing shortcomings and thinking about the next iteration.** \n\nBelow are some of my thoughts on how I think this could be set up for success.\n\n**Visualizations**\nThe basis of the idea is a visualization. \"Who Funds Bitcoin\" uses nodes for entities and edges for the funding connections between them. This becomes very messy, very fast. \n\nA better idea could be click-to-expand like what [https://lnlighthouse.online/](https://lnlighthouse.online/https://lnlighthouse.online/) ([src](https://twitter.com/saiy2k/status/1560640578467303429)) uses. And you could click something like [this](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fkouloumos%2FLODruWQhGe.jpeg?alt=media&token=5ff7c088-d0de-4567-865c-0dc4e609398c) - Bitcoin as the central hexagon and on the outside: P2P, Privacy, Mining, Wallet, Bitcoin Core, Lightning, etc. You click on those and it further expands until you reach the contributors of each part, the people working on each innovation. \n\n**Attractive for contributors**\nMaintaining an aggregation side is hard. And even if you do so, you'll probably missing stuff. You have to make it self-reporting. Think about [https://bitcoindevlist.com/](https://bitcoindevlist.com/https://bitcoindevlist.com/) where developers submit their own information for people to support them. \n\nThat means that every contributor listed on the site is updating his own information. Think something like:\n`{\"name\": \"Andreas\", \"github\": \"...\", \"twitter\": \"...\", \"description\": \"...\", \"tags\": [\"Bitcoin Core\"]}`\n The tags attribute will then be used to add each one on the visualization. \n\nTaking it a step further, clicking on each contributors can open a sidebar with a **timeline of work related updates**. A contributor can maybe add an update once a quarter with his/her current interest, kind of how a summary is presented on funding announcements. **This could evolve to a better platform for financial support of contributors.**\n\n_Although I am ignoring some technical details since this is design talk, this part gets a bit more technical._\n**You now need a way to make this as easy as possible for contributors to self-report their own data.** I think the best tool for such a job is [nostr](https://github.com/nostr-protocol/nostr). People will be able to use whatever tool they want to submit data and Who Builds Bitcoin will be just a client, reading data from a relay. No need for a database, therefore providing an easy, interoperable way for people to add data. \n\nI've been obsessing over this idea for a long time now but my priorities do not allow me to start writing code for this. I was looking for an opportunity to get external input and maybe some design help, therefore this is the best opportunity to let this out in the wild.\n",
-            "Status": "Visible"
+            "Status": "Visible",
+            "Name": "Who Builds Bitcoin"
         }
     },
     {
@@ -270,6 +285,9 @@
         "fields": {
             "Description": "How to we include the next billion of users on Bitcoin? How to we make Bitcoin cater to the needs of the so-called unbanked population, that is generally not tech-savvy and may not have even access to Internet? How do we provide them with more much-needed services than just savings and payments? Let's explore some ideas together!\n",
             "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ"
+            ],
             "Name": "Bitcoin inclusion"
         }
     },
@@ -295,7 +313,8 @@
             "Description": "Images created through artificial intelligence (Dall-E, Midjourney, Stable Diffusion) have been a hot trend (see [lexica.art](https://lexica.art)). Let’s explore these new tools together.\n",
             "Status": "Visible",
             "Participants": [
-                "recpHtNJ0phMRS7mS"
+                "recpHtNJ0phMRS7mS",
+                "reciXsMQf7vl4e2mr"
             ],
             "Name": "Bitcoin AI art"
         }
@@ -306,6 +325,9 @@
         "fields": {
             "Description": "A website that creatively shows all of the documentaries and other well-produced educational content about Bitcoin. Basically a go-to source for carefully curated, highest quality content. For average person. Think Netflix for Bitcoin-related content (with awesome cover art).\n",
             "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ"
+            ],
             "Name": "Bitcoin documentary site"
         }
     }

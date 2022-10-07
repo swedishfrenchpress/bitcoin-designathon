@@ -41,16 +41,18 @@ export default {
       let result = []
 
       const ideaProjects = this.idea.fields.Projects
+
       if(ideaProjects) {
         let projectId, project, i, k
         for(i=0; i<ideaProjects.length; i++) {
           projectId = ideaProjects[i]
 
-          for(k=0; i<this.projects.length; i++) {
-            project = this.projects[i]
+          for(k=0; k<this.projects.length; k++) {
+            project = this.projects[k]
 
             if(project.id == projectId) {
               result.push(project)
+              break
             }
           }
         }
@@ -86,14 +88,17 @@ div {
   }
 
   a {
-    display: inline-block;
+    display: block;
     @include r('font-size', 15, 18);
-    text-align: center;
     color: rgba(black, 0.75);
   }
 
   &.-center {
     text-align: center;
+
+    a {
+      text-align: center;
+    }
   }
 }
 
