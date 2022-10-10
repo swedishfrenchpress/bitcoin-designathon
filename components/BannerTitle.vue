@@ -557,7 +557,9 @@ export default {
       animation: letter-hover 5018ms ease-in-out infinite;
 
       .wrap {
+        opacity: 0;
         animation: bubble 2000ms $easeOutBack;
+        animation-fill-mode: forwards;
       }
     }
 
@@ -663,6 +665,7 @@ export default {
 
 @keyframes bubble {
   0% {
+    opacity: 1;
     transform: scale(0.01, 0.01);
   }
 
@@ -671,6 +674,7 @@ export default {
   }
 
   100% {
+    opacity: 1;
     transform: scale(1, 1);
   }
 }
