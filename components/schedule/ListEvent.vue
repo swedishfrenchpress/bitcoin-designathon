@@ -4,7 +4,13 @@
     class="schedule-list-event" 
   >
     <div class="copy">
-      <h3>{{ name }}<span v-html="formattedDate" /></h3>
+      <h3>
+        {{ name }}
+        <span class="-date" v-html="formattedDate" />
+        <client-only>
+          <span class="-live" v-if="isLive">Happening now</span>
+        </client-only>
+      </h3>
       <p v-if="false" v-html="formattedDate" />
       <p v-if="description" v-html="description" />
     </div>
@@ -33,6 +39,21 @@ export default {
 
     description() {
       return this.event.fields.Description
+    },
+
+    isLive() {
+      let result = false
+
+      if(process.browser) {
+        const now = new Date()
+        const dateObject = new Date(this.event.fields.Date)
+        const delta = (dateObject - now)/60/60/1000
+        if(delta > 0 && delta < 1) {
+          result = true
+        }
+      }
+
+      return result
     },
 
     formattedDate() {
@@ -74,9 +95,22 @@ export default {
       font-weight: 600;
 
       span {
-        padding-left: 10px;
-        font-weight: 500;
-        color: rgba(var(--frontRGB), 0.5);
+        &.-date {
+          padding-left: 10px;
+          font-weight: 500;
+          color: rgba(var(--frontRGB), 0.5);
+        }
+
+        &.-live {
+          display: inline-block;
+          margin-left: 5px;
+          padding: 2px 9px 3px 9px;
+          @include r('font-size', 11, 13);
+          color: white;
+          background-color: var(--palette-0);
+          border-radius: 20px;
+          transform: translateY(-3px);
+        }
       }
     }
 

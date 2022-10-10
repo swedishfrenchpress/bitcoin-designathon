@@ -13,7 +13,10 @@
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.0781 10.7682L6.64018 18.6332C5.98886 19.176 5 18.7128 5 17.865L5 2.13504C5 1.2872 5.98886 0.824045 6.64018 1.36682L16.0781 9.23178C16.5579 9.63157 16.5579 10.3684 16.0781 10.7682Z" :fill="palette[1]" stroke="black"/>
           </svg><span v-html="day.label" /></h3>
-      <p>{{ eventCount }}</p>
+      <p class="-count">{{ eventCount }}</p>
+      <client-only>
+        <p class="-today" v-if="isToday">Today</p>
+      </client-only>
     </div>
     <div
       :id="'day-content-'+this.dayId"
@@ -86,6 +89,23 @@ export default {
       }
 
       return c.join(' ')
+    },
+
+    isToday() {
+      let result = false
+
+      if(process.browser) {
+        const now = new Date()
+        const dateObject = new Date(this.dayId)
+        if(now.getFullYear() == dateObject.getFullYear() &&
+          now.getMonth() == dateObject.getMonth() &&
+          now.getDate() == dateObject.getDate()
+        ) {
+          result = true
+        }
+      }
+
+      return result
     },
 
     contentStyle() {
@@ -205,12 +225,23 @@ export default {
     }
 
     p {
-      margin-left: 10px;
-      @include r('font-size', 12, 14);
-      font-weight: 600;
-      background-color: rgba(var(--frontRGB), 0.1);
-      border-radius: 5px;
-      padding: 0 6px;
+      &.-count {
+        margin-left: 10px;
+        @include r('font-size', 12, 14);
+        font-weight: 600;
+        background-color: rgba(var(--frontRGB), 0.1);
+        border-radius: 5px;
+        padding: 0 6px;
+      }
+
+      &.-today {
+        margin-left: 10px;
+        padding: 2px 9px 3px 9px;
+        @include r('font-size', 11, 13);
+        color: white;
+        background-color: var(--palette-0);
+        border-radius: 20px;
+      }
     }
   }
 
