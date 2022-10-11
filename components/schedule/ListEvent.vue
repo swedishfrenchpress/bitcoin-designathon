@@ -12,7 +12,7 @@
         </client-only>
       </h3>
       <p v-if="false" v-html="formattedDate" />
-      <p v-if="description" v-html="description" />
+      <p v-if="description" v-html="formattedDescription" />
     </div>
     <client-only>
       <div class="link" v-html="link" />
@@ -39,6 +39,10 @@ export default {
 
     description() {
       return this.event.fields.Description
+    },
+
+    formattedDescription() {
+      return this.$md.render(this.description)
     },
 
     isLive() {
