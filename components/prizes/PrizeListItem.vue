@@ -100,6 +100,7 @@ export default {
 
   @include media-query(large) {
     flex-basis: 26%;
+    justify-content: center;
   }
 }
 

@@ -141,6 +141,7 @@ export default {
 
 .prize-visuals-two {
   position: relative;
+  z-index: 1;
 
   img {
     display: block;
