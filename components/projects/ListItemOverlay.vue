@@ -25,9 +25,7 @@
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
-          <div class="description">
-            <p v-html="formattedDescription" />
-          </div>
+          <div class="description" v-html="formattedDescription" />
           <ProjectsListItemIdeas
             :project="project"
             :ideas="ideas"
@@ -206,6 +204,7 @@ export default {
 
           a {
             color: black;
+            word-break: break-word;
           }
         }
       }
