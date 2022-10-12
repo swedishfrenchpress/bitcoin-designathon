@@ -124,6 +124,7 @@ export default {
 
 .prize-visuals-one {
   position: relative;
+  z-index: 1;
 
   img {
     display: block;

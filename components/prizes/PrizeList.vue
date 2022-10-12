@@ -44,22 +44,16 @@ export default {
 .prize-list {
   @include r('margin-top', 80, 80);
   display: flex;
-  align-items: center;
-
-  .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1340px;
-  }
 
   @include media-query(medium-down) {
     flex-direction: column;
     gap: 120px;
+    align-items: center;
   }
 
   @include media-query(large) {
     gap: 30px;
+    align-items: stretch;
   }
 }
 

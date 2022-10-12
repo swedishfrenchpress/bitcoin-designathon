@@ -170,6 +170,7 @@ export default {
 
 .prize-visuals-three {
   position: relative;
+  z-index: 1;
 
   img {
     display: block;
