@@ -16,6 +16,10 @@
       v-if="prize.name == '3'" 
       :palette="palette"
     />
+    <PrizesPrizeVisualsFour 
+      v-if="prize.name == '4'" 
+      :palette="palette"
+    />
     <p v-html="prize.description" />
   </div>
 </template>
@@ -95,11 +99,21 @@ export default {
   }
 
   @include media-query(medium-down) {
-    flex-basis: 40%;
+    flex-basis: 70%;
   }
 
-  @include media-query(large) {
-    flex-basis: 26%;
+  @include media-query(large-mega) {
+    flex-basis: 35%;
+    justify-content: center;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-top: 75px;
+    }
+  }
+
+  @include media-query(mega) {
+    flex-basis: 20%;
     justify-content: center;
   }
 }

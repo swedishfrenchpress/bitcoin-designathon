@@ -1,25 +1,11 @@
 <template>
   <div class="prize-visuals-one">
     <img
-      :src="require(`~/assets/images/prizes/jumper.png`)"
-      :srcset="jumperRetina"
-      width="101"
-      height="101"
-      alt="Jumper by Six & Lemon"
-    />
-    <img
-      :src="require(`~/assets/images/prizes/bitcoin.png`)"
+      :src="require(`~/assets/images/prizes/lots-of-bitcoin.png`)"
       :srcset="bitcoinRetina"
       width="176"
       height="109"
-      alt="0.025 bitcoin"
-    />
-    <img
-      :src="require(`~/assets/images/prizes/shirt.png`)"
-      :srcset="shirtRetina"
-      width="101"
-      height="101"
-      alt="Shirt by Six & Lemon"
+      alt="0.25 bitcoin"
     />
     <svg alt="One" width="83" height="100" viewBox="0 0 83 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_209_15871)">
@@ -102,15 +88,7 @@ export default {
 
   computed: {
     bitcoinRetina() {
-      return require(`~/assets/images/prizes/bitcoin.png`)+' 1x, '+require(`~/assets/images/prizes/bitcoin@2x.png`)+' 2x'
-    },
-
-    shirtRetina() {
-      return require(`~/assets/images/prizes/shirt.png`)+' 1x, '+require(`~/assets/images/prizes/shirt@2x.png`)+' 2x'
-    },
-
-    jumperRetina() {
-      return require(`~/assets/images/prizes/jumper.png`)+' 1x, '+require(`~/assets/images/prizes/jumper@2x.png`)+' 2x'
+      return require(`~/assets/images/prizes/lots-of-bitcoin.png`)+' 1x, '+require(`~/assets/images/prizes/lots-of-bitcoin@2x.png`)+' 2x'
     }
   }
 
@@ -137,45 +115,17 @@ export default {
 
   @include media-query(small) {
     img {
-      &:nth-child(1) {
-        top: -50%;
-        left: -100%;
-        transform: translate(-50%, -50%) rotate(-8deg) scale(0.75, 0.75);
-      }
-
-      &:nth-child(2) {
-        top: -75%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(5deg) scale(0.75, 0.75);
-      }
-
-      &:nth-child(3) {
-        top: -50%;
-        left: 200%;
-        transform: translate(-50%, -50%) rotate(3deg) scale(0.75, 0.75);
-      }
+      top: -75%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(5deg) scale(0.75, 0.75);
     }
   }
 
   @include media-query(medium-up) {
     img {
-      &:nth-child(1) {
-        top: -50%;
-        left: -150%;
-        transform: translate(-50%, -50%) rotate(-8deg);
-      }
-
-      &:nth-child(2) {
-        top: -75%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(5deg);
-      }
-
-      &:nth-child(3) {
-        top: -50%;
-        left: 250%;
-        transform: translate(-50%, -50%) rotate(3deg);
-      }
+      top: -75%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(5deg);
     }
   }
 }
