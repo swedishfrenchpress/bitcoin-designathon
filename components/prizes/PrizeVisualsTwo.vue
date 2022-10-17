@@ -1,32 +1,25 @@
 <template>
   <div class="prize-visuals-two">
     <img
-      :src="require(`~/assets/images/prizes/gift-card.png`)"
-      :srcset="giftCardRetina"
-      width="101"
-      height="101"
-      alt="Lightning Store gift card"
-    />
-    <img
-      :src="require(`~/assets/images/prizes/gift-card.png`)"
-      :srcset="giftCardRetina"
-      width="101"
-      height="101"
-      alt="Lightning Store gift card"
-    />
-    <img
-      :src="require(`~/assets/images/prizes/bitbox.png`)"
-      :srcset="bitboxRetina"
-      width="100"
-      height="100"
-      alt="BitBox02"
-    />
-    <img
-      :src="require(`~/assets/images/prizes/jumper-2.png`)"
+      :src="require(`~/assets/images/prizes/jumper.png`)"
       :srcset="jumperRetina"
       width="101"
       height="101"
       alt="Jumper by Six & Lemon"
+    />
+    <img
+      :src="require(`~/assets/images/prizes/bitcoin.png`)"
+      :srcset="bitcoinRetina"
+      width="176"
+      height="109"
+      alt="0.025 bitcoin"
+    />
+    <img
+      :src="require(`~/assets/images/prizes/shirt.png`)"
+      :srcset="shirtRetina"
+      width="101"
+      height="101"
+      alt="Shirt by Six & Lemon"
     />
     <svg alt="Two" width="87" height="100" viewBox="0 0 87 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_209_15904)">
@@ -118,16 +111,16 @@ export default {
   },
 
   computed: {
-    giftCardRetina() {
-      return require(`~/assets/images/prizes/gift-card.png`)+' 1x, '+require(`~/assets/images/prizes/gift-card@2x.png`)+' 2x'
+    bitcoinRetina() {
+      return require(`~/assets/images/prizes/bitcoin.png`)+' 1x, '+require(`~/assets/images/prizes/bitcoin@2x.png`)+' 2x'
     },
 
-    bitboxRetina() {
-      return require(`~/assets/images/prizes/bitbox.png`)+' 1x, '+require(`~/assets/images/prizes/bitbox@2x.png`)+' 2x'
+    shirtRetina() {
+      return require(`~/assets/images/prizes/shirt.png`)+' 1x, '+require(`~/assets/images/prizes/shirt@2x.png`)+' 2x'
     },
 
     jumperRetina() {
-      return require(`~/assets/images/prizes/jumper-2.png`)+' 1x, '+require(`~/assets/images/prizes/jumper-2@2x.png`)+' 2x'
+      return require(`~/assets/images/prizes/jumper.png`)+' 1x, '+require(`~/assets/images/prizes/jumper@2x.png`)+' 2x'
     }
   }
 
@@ -156,26 +149,20 @@ export default {
     img {
       &:nth-child(1) {
         top: -50%;
-        left: -75%;
-        transform: translate(-50%, -50%) rotate(-6deg) scale(0.75, 0.75);
+        left: -100%;
+        transform: translate(-50%, -50%) rotate(-8deg) scale(0.75, 0.75);
       }
 
       &:nth-child(2) {
-        top: -50%;
-        left: -65%;
-        transform: translate(-50%, -50%) rotate(8deg) scale(0.75, 0.75);
+        top: -75%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(5deg) scale(0.75, 0.75);
       }
 
       &:nth-child(3) {
-        top: -75%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-5deg) scale(0.75, 0.75);
-      }
-
-      &:nth-child(4) {
         top: -50%;
-        left: 170%;
-        transform: translate(-50%, -50%) rotate(7deg) scale(0.75, 0.75);
+        left: 200%;
+        transform: translate(-50%, -50%) rotate(3deg) scale(0.75, 0.75);
       }
     }
   }
@@ -184,26 +171,20 @@ export default {
     img {
       &:nth-child(1) {
         top: -50%;
-        left: -105%;
-        transform: translate(-50%, -50%) rotate(-6deg);
+        left: -150%;
+        transform: translate(-50%, -50%) rotate(-8deg);
       }
 
       &:nth-child(2) {
-        top: -50%;
-        left: -95%;
-        transform: translate(-50%, -50%) rotate(8deg);
+        top: -75%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(5deg);
       }
 
       &:nth-child(3) {
-        top: -75%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-5deg);
-      }
-
-      &:nth-child(4) {
         top: -50%;
-        left: 200%;
-        transform: translate(-50%, -50%) rotate(7deg);
+        left: 250%;
+        transform: translate(-50%, -50%) rotate(3deg);
       }
     }
   }

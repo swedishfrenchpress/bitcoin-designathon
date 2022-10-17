@@ -147,14 +147,18 @@
     "prizes": [
       {
         "name": "1",
-        "description": "0.025 bitcoin, and a jumper and a shirt by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
+        "description": "0.25 bitcoin!!! Stack'em!!!"
       },
       {
         "name": "2",
-        "description": "One highly-secure, bitcoin-only, Swiss made <a href=\"https://shiftcrypto.ch/bitbox02/\" target=\"_blank\" rel=\"nofollow noindex\">BitBox02</a> hardware wallet. Two $100 gift cards for the <a href=\"https://lightning.store/\" target=\"_blank\" rel=\"nofollow noindex\">Lightning Store</a>.  And a jumper by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
+        "description": "0.025 bitcoin, and a jumper and a shirt by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
       },
       {
         "name": "3",
+        "description": "One highly-secure, bitcoin-only, Swiss made <a href=\"https://shiftcrypto.ch/bitbox02/\" target=\"_blank\" rel=\"nofollow noindex\">BitBox02</a> hardware wallet. Two $100 gift cards for the <a href=\"https://lightning.store/\" target=\"_blank\" rel=\"nofollow noindex\">Lightning Store</a>.  And a jumper by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
+      },
+      {
+        "name": "4",
         "description": "Two shirts by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six & Lemon</a>. Two $100 gift cards for the <a href=\"https://lightning.store/\" target=\"_blank\" rel=\"nofollow noindex\">Lightning&nbsp;Store</a>."
       }
     ],
@@ -204,7 +208,7 @@
         "width": 103,
         "height": 42,
         "name": "*****",
-        "description": "Mystery sponsor. Who could it&nbsp;be?"
+        "description": "Mystery sponsors. Who could they&nbsp;be?"
       }
     ]
   }

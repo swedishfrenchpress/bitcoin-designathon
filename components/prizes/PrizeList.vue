@@ -48,11 +48,18 @@ export default {
   @include media-query(medium-down) {
     flex-direction: column;
     gap: 120px;
-    align-items: center;
+    align-items: stretch;
   }
 
-  @include media-query(large) {
+  @include media-query(large-mega) {
     gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include media-query(mega) {
+    gap: 75px;
     align-items: stretch;
   }
 }
