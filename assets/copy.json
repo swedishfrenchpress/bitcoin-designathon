@@ -1,10 +1,10 @@
 {
   "banner": {
-    "text": "We're getting creative with bitcoin.<br/>Happening now until Oct 23. Join us."
+    "text": "We got creative with bitcoin.<br/>Join us for the <a href=\"https://twitter.com/i/spaces/1OdKrzkLbgyKX\" target=\"_blank\" rel=\"me\">price announcement</a>."
   },
   "info": {
-    "title": "It's on!!!",
-    "description": "We (the <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a>) are in the middle of a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. We are coordinating with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a> and <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>. To participate, join us on Slack in the <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>."
+    "title": "It's a wrap!",
+    "description": "We (the <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a>) just wrapped up a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal was to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. We coordinated with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a> and <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>, and chatted in Slack in the <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>."
   },
   "sponsors": {
     "title": "There will be prizes",
@@ -52,13 +52,13 @@
   },
   "ideas": {
     "title": "Ideas",
-    "description": "It all starts with ideas. In the time leading up to the designathon, we invited you to submit your ideas. Some of them turned into projects for you and/or others to collaborate on during the designathon.",
+    "description": "It all started with ideas. In the time leading up to the designathon, we invited you to submit your ideas. Some of them turned into projects for you and/or others to collaborate on during the&nbsp;event.",
     "link-dead": "https://airtable.com/shrPq4Yjb68x9vEO2",
     "linkLabel-dead": "Submit your idea"
   },
   "projects": {
     "title": "Projects",
-    "description": "These are the projects being worked on at Designathon right now. Peek in and join the&nbsp;action.",
+    "description": "These were the projects being worked on at Designathon. Some of them continue in the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Legends of Lightning tournament</a>.",
     "link-dead": "https://airtable.com/shrwp1JAoY0oHiTnF",
     "linkLabel-dead": "Start a project",
     "general": {
@@ -81,7 +81,7 @@
         "image": "tabconf.jpg",
         "retina": "tabconf@2x.jpg",
         "name": "TABConf",
-        "description": "Stephen will host a Bitcoin Design table at the TABConf Builder Day, which started the same day as the designathon. Stop by and hack on your designathon project. October 12 to 15",
+        "description": "Stephen will host a Bitcoin Design table at the TABConf Builder Day, which started the same day as the designathon. Stop by and hack on your designathon project. October 12 to 15.",
         "link": "https://tabconf.com"
       },
       {
@@ -95,7 +95,7 @@
   },
   "schedule": {
     "title": "Schedule",
-    "description": "The designathon has generally a loose schedule, with projects deciding their own pace. Important, but still optional, are the kick-off, mid-event check-in, and wrap-up calls. You can submit an event via <a href=\"https://airtable.com/shrHfeVw43m5WlPg7\" target=\"_blank\" rel=\"nofollow noindex\">this form</a>.",
+    "description": "The designathon generally had a loose schedule, with projects deciding their own pace. Important, but still optional, were the kick-off, mid-event check-in, and wrap-up calls.",
     "dates": {
       "2022-10-10": {
         "label": "Monday, Oct 10 <i>/ Day -2</i>"
@@ -143,7 +143,7 @@
   },
   "prizes": {
     "title": "Prizes",
-    "description": "Major thanks to our awesome sponsors for making these prizes possible. To learn more about how they will awarded, see the <a href=\"#questions\">FAQ</a>&nbsp;below.",
+    "description": "Major thanks to our awesome sponsors for making these prizes possible. To learn more about how they will be awarded, see the <a href=\"#questions\">FAQ</a>&nbsp;below.",
     "prizes": [
       {
         "name": "1",

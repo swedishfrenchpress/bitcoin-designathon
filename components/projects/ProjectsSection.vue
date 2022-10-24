@@ -15,7 +15,7 @@
       :color="color"
     />
 
-    <div class="registration">
+    <div class="registration" v-if="false">
       <p v-html="copy.general.text" />
       <SuperButton
         :link="copy.general.link"
