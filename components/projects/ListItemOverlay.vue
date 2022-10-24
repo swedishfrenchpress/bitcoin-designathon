@@ -31,6 +31,7 @@
             :ideas="ideas"
           />
           <SuperButton
+            v-if="false"
             :link="joinLink"
             label="Join project"
             :color="color"
