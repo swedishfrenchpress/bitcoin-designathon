@@ -68,7 +68,9 @@ export default {
       }
 
       if(this.shuffleProjects) {
-        return this.shuffle(result)
+        const shuffledResult = this.shuffle(result)
+        const resultWithWinnersAtFront = this.moveWinnersToFront(shuffledResult)
+        return resultWithWinnersAtFront
       } else {
         return result
       }
@@ -81,14 +83,30 @@ export default {
 
   methods: {
     shuffle(a) {
-      let j, x, i;
+      let j, x, i
       for(i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
+        j = Math.floor(Math.random() * (i + 1))
+        x = a[i]
+        a[i] = a[j]
+        a[j] = x
       }
-      return a;
+      return a
+    },
+
+    moveWinnersToFront(list) {
+      return list.sort(function(a, b) {
+        const aPrize = a.fields.Prize
+        const bPrize = b.fields.Prize
+        if(aPrize && bPrize) {
+          return parseInt(aPrize) < parseInt(bPrize) ? -1 : 1
+        } else if(aPrize) {
+          return -1
+        } else if(bPrize) {
+          return 1
+        } else {
+          return 0
+        }
+      })
     }
   }
 

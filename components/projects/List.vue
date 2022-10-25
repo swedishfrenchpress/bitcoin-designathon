@@ -137,7 +137,7 @@ export default {
 @import "@/assets/css/mixins.scss";
 
 .project-list {
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,6 +147,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    row-gap: 50px;
     max-width: 1340px;
   }
 
