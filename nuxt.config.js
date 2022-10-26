@@ -21,9 +21,9 @@ export default {
 
       { property: 'og:title', content: 'Bitcoin Designathon 2022' },
 
-      { hid: 'description', name: 'description', content:"Let's get creative with Bitcoin. October 12 to 23." },
-      { name: 'description', content: "Let's get creative with Bitcoin. October 12 to 23." },
-      { property: 'og:description', content: "Let's get creative with Bitcoin. October 12 to 23." },
+      { hid: 'description', name: 'description', content:"We got creative with Bitcoin. October 12 to 23." },
+      { name: 'description', content: "We got creative with Bitcoin. October 12 to 23." },
+      { property: 'og:description', content: "We got creative with Bitcoin. October 12 to 23." },
 
       { property: 'og:url', content: 'https://event.bitcoin.design' },
       { property: 'og:site_name', content: 'Bitcoin Designathon 2022' },
