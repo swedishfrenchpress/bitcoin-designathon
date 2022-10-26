@@ -12,16 +12,16 @@
       :ideas="ideas"
       :projects="projects"
     />
-    <ScheduleSection
-      :schedule="schedule"
-      :palette="palette"
-    />
+    <PrizesSection :palette="palette" />
     <IdeasSection
       :palette="palette"
       :ideas="ideas"
       :projects="projects"
     />
-    <PrizesSection :palette="palette" />
+    <ScheduleSection
+      :schedule="schedule"
+      :palette="palette"
+    />
     <PartnersSection :palette="palette" />
     <QuestionsSection :palette="palette" />
     <Footer :palette="palette" />

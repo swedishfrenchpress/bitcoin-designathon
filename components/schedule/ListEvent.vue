@@ -12,7 +12,9 @@
         </client-only>
       </h3>
       <p v-if="false" v-html="formattedDate" />
-      <p v-if="description" v-html="formattedDescription" />
+      <client-only>
+        <p v-if="description" v-html="formattedDescription" />
+      </client-only>
     </div>
     <client-only>
       <div class="link" v-html="link" />
