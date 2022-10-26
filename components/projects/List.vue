@@ -137,13 +137,13 @@ export default {
 @import "@/assets/css/mixins.scss";
 
 .project-list {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 
   .wrap {
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
