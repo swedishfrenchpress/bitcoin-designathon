@@ -108,11 +108,15 @@ export default {
   &.-left {
     left: 0;
     border-right: 1px solid black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
   }
 
   &.-right {
     right: 0;
     border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 }
 

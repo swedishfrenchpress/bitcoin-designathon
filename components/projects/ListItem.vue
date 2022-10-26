@@ -1,12 +1,19 @@
 <template>
   <div
     :id="elementId"
-    class="project-list-item" 
+    :class="classObject" 
     role="button"
     @mouseenter="hover" 
     @mouseleave="unhover"
   >
     <BoxSideDepth
+      :color="color"
+      :hovering="hovering"
+    />
+    <ProjectsListItemPrizeRibbon
+      v-if="isWinner"
+      :project="project"
+      :palette="palette"
       :color="color"
       :hovering="hovering"
     />
@@ -44,6 +51,16 @@ export default {
   },
 
   computed: {
+    classObject() {
+      const c = ['project-list-item']
+
+      if(this.isWinner) {
+        c.push('-winner')
+      }
+
+      return c.join(' ')
+    },
+
     elementId() {
       return 'project-summary-'+this.project.id
     },
@@ -71,6 +88,11 @@ export default {
       }
 
       return result
+    },
+
+    isWinner() {
+      const prizeField = this.project.fields.Prize
+      return prizeField && prizeField != '' && prizeField.length > 0
     }
   },
 
@@ -97,7 +119,6 @@ export default {
   background-color: white;
   border: 1px solid black;
   border-radius: 15px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,6 +158,10 @@ export default {
 
   > a {
     margin-top: 20px;
+  }
+
+  &.-winner {
+    padding-top: 40px;
   }
 
   &:hover {
