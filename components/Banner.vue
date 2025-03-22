@@ -21,14 +21,14 @@
       <p v-html="copy.text" />
       <div class="options" v-if="showButtons">
         <SuperButton
-          link="https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA"
-          label="Bitcoin Design Slack"
+          link="https://discord.gg/bitcoindesign"
+          label="Bitcoin Design Discord"
           size="small"
           :color="palette[1]"
         />
         <SuperIconButton
-          link="https://twitter.com/bitcoin_design"
-          icon="twitter"
+          link="https://x.com/bitcoin_design"
+          icon="x"
           size="small"
           :color="palette[1]"
         />
